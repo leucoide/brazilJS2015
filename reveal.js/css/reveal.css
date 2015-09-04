@@ -1143,11 +1143,58 @@ body {
 /*********************************************
  * BRAZILJS
  *********************************************/
-.topo {
-  background: url("../bg.png") 0 0 no-repeat transparent;
-  width: 100%; 
-  height: 120px;
-  position: absolute;
-  top: 0;
 
+ .reveal section img {
+    border: 0 !important;
+    box-shadow: none !important;
+    background: none !important;
+  }
+
+.topo {
+  position: absolute;
+  width: 100%;
+  background: url("../bg-devolta.jpg") -17px -175px no-repeat transparent;
+  padding: 15px !important;
+}
+
+.topo .header {
+  background: url("../header.png") 0 0 no-repeat transparent;
+  width: 534px; 
+  height: 49px;
+  margin: 10px;
+}
+
+.topo .delorean {
+  background: url("../delorean.png") 0 0 no-repeat transparent;
+  width: 302px;
+  height: 78px;
+  position: absolute;
+  top: 18px;
+  right: 30px;
+}
+
+.topo h1 {
+  font-size: 23px !important;
+  font-weight: bold !important;
+  margin: -2px 0 0 24px !important;
+  font-style: italic !important;
+}
+
+.academia {
+  background: url("../academia.jpg") 0 0 no-repeat transparent;
+  width: 208px; 
+  height: 81px;
+  position: absolute;
+  bottom: -15px;
+  left: 10px;
+}
+
+.tecnologia {
+  background: url("../tecnologia_globo.png") 0 0 no-repeat transparent;
+  width: 317px; 
+  height: 45px;
+  background-size: 70% 70%;
+  position: absolute;
+  bottom: 10px;
+  left: 265px;
 }
