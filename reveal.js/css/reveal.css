@@ -1144,6 +1144,11 @@ body {
  * BRAZILJS
  *********************************************/
 
+ .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    text-transform: none !important;
+    font-style: italic;
+ }
+
  .reveal section img {
     border: 0 !important;
     box-shadow: none !important;
