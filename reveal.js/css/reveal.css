@@ -1238,3 +1238,8 @@ body {
   left: 224px;
   top: 5px;
 }
+
+.nodebots figure{
+    width: 33.33333%;
+    float: left;
+}
