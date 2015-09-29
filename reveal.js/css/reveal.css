@@ -1238,3 +1238,11 @@ body {
   left: 224px;
   top: 5px;
 }
+
+.white, .white h2 {
+  color: #fff !important;
+}
+
+.round-border {
+  border-radius: 5px;
+}
