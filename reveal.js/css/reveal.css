@@ -1248,3 +1248,28 @@ body {
 .round-border {
   border-radius: 5px;
 }
+
+.parte {
+  color: #000;
+  border: 6px solid #000 !important;
+  background-color: #FFDE17;
+  font-size: 70px !important;
+  padding: 10px !important;
+  border-radius: 50%;
+  display: inline-block;
+  width: 95px;
+}
+
+.fotos img {
+  width: 470px;
+  border-radius: 10px;
+}
+
+.fotos img.pano {
+  width: 880px;
+  border-radius: 10px;
+}
+
+.opacidade-fundo .backgrounds {
+  opacity: 0.3;
+}
