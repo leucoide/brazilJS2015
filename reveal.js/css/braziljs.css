@@ -8,3 +8,10 @@
   font-size: 80px;
   font-weight: bold;
 }
+
+.reveal .slides section .fragment.inplace {
+  display:none;
+}
+.reveal .slides section .fragment.inplace.visible {
+  display:inline;
+}

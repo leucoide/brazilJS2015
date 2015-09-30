@@ -59,24 +59,21 @@
 				</section>
 
 				<section>
-					<div class="parte">1</div>
-					<h3>O Javascript estava em todo lugar?</h3>
+					<img src="js.jpg" width="200px">
+					<h3>O Javascript <span id="esta">está</span> <span class="fragment inplace grow highlight-red" data-fragment-index="1" id="estava">estava</span> em todo lugar<span class="fragment grow" data-fragment-index="1">?</span></h3>
 				</section>
 
 				<section>
-					<img src="js.jpg" width="200px">
-					<h3>O Javascript realmente está em todo lugar.</h3>
-					<h1>Mas ele estava?</h1>
+					<section>
+						<p>Linha do tempo:</p>
+						<img src="js-timeline.png" />						
+					</section>
+					<section data-state="cover" data-background-video="wat.mp4"></section>
 				</section>
 
 				<section>
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/u56b_HUj47E" frameborder="0" allowfullscreen></iframe>
 					<!-- ESSE É UM VÍDEO TEMPORÁRIO PORQUE O VÍDEO DA PALESTRA DELE NO BRAZILJS AINDA NÃO SAIU -->
-				</section>
-
-				<section>
-					<p>Linha do tempo:</p>
-					<img src="js-timeline.png" />
 				</section>
 
 				<section>
@@ -131,7 +128,7 @@
 
 				<section data-background="barra-shopping-sul.jpg">
 					<section>
-						<img src="ticket.png" width="400px" class="fragment">
+						<img src="ticket.png" width="400px">
 					</section>
 					<section class="fotos" data-state="opacidade-fundo">
 						<img src="braziljs-entrada.jpg">
@@ -175,6 +172,10 @@
 					<section>
 						Web Torrent = <span class="fragment">Torrent</span><span class="fragment"> + </span><span class="fragment">Browser</span>
 						<div><span class="fragment"><div class="over-webrtc">WebRTC</div></span></div>
+					</section>
+					<section data-background="https://media.giphy.com/media/pXPOApWXuJaMw/giphy.gif" data-transition="none">
+						Web Torrent = Torrent + Browser
+						<div><div class="over-webrtc">WebRTC</div></div>
 					</section>
 				</section>
 
@@ -542,5 +543,13 @@ Reveal.addEventListener( 'customevent', function() {
 
 		</script>
 
+		<script type="text/javascript">
+			Reveal.addEventListener('fragmentshown', function (ev) {
+				console.log('fragmentshown', ev.fragment, ev.fragment.id);
+				if (ev.fragment.id === 'estava') {
+					document.getElementById('esta').classList.add('strike', 'fragment', 'visible')
+				}
+			})
+		</script>
 	</body>
 </html>
