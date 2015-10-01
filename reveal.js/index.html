@@ -64,10 +64,18 @@
 
 				</section>
 
-				<section data-background="assets/wally1.jpg">
-					<img src="assets/js.jpg" width="200px">
-					<div class="clearboth"></div>
-					<div class="slogan-box">O Javascript <span id="esta">está</span> <span class="fragment inplace grow highlight-red" data-fragment-index="2" id="estava">estava</span> em todo lugar<span class="fragment" data-fragment-index="2">?</span><span class="fragment fade-out" id="porque" data-fragment-index="1"><br />e porque você deveria se interessar</span></div>
+				<section>
+					<section data-transition="none">
+						<img src="assets/js.jpg" width="200px">
+						<div class="clearboth"></div>
+						<div class="slogan-box">O Javascript está em todo lugar<br />e porque você deveria se interessar</div>
+					</section>
+					
+					<section data-background="assets/wally1.jpg" data-transition="none">
+						<div class="part"><div class="number">1</div></div>
+						<div class="clearboth"></div>
+						<div class="slogan-box">O Javascript <span id="esta">está</span> <span class="fragment inplace grow highlight-red" data-fragment-index="1" id="estava">estava</span> em todo lugar<span class="fragment" data-fragment-index="1">?</span></div>
+					</section>
 				</section>
 
 				<section>
@@ -97,10 +105,18 @@
 					<h4>O futuro do Javascript</h4>
 				</section>
 
-				<section class="voce">
-					<img src="assets/js.jpg" width="200px">
-					<div class="clearboth"></div>
-					<div class="slogan-box">Javascript está em todo lugar<br />e porque <span class="fragment highlight-red" data-fragment-index="1">você</span> deveria se interessar<span class="fragment" data-fragment-index="1"><img class="circulo" width="170px" src="assets/circulo.png" /></span></div>
+				<section>
+					<section data-transition="none">
+						<img src="assets/js.jpg" width="200px">
+						<div class="clearboth"></div>
+						<div class="slogan-box">O Javascript está em todo lugar<br />e porque você deveria se interessar</div>
+					</section>
+					
+					<section data-background="assets/uncle-sam.jpg" data-transition="none">
+						<div class="part"><div class="number">2</div></div>
+						<div class="clearboth"></div>
+						<div class="slogan-box">Javascript está em todo lugar<br />e porque <span class="fragment highlight-red" data-fragment-index="1" id="circulo">você</span> deveria se interessar<span class="fragment" data-fragment-index="1"><img class="circulo" width="170px" src="assets/circulo.png" /></span></div>
+					</section>
 				</section>
 
 				<section>
@@ -136,13 +152,22 @@
 					</section>
 				</section>
 					
-				<section data-background="assets/wally2.jpg">
-					<img src="assets/js.jpg" width="200px">
-					<div class="clearboth"></div>
-					<div class="slogan-box">O Javascript está em todo lugar!</div>
+
+				<section>
+					<section data-transition="none">
+						<img src="assets/js.jpg" width="200px">
+						<div class="clearboth"></div>
+						<div class="slogan-box">O Javascript está em todo lugar<br />e porque você deveria se interessar</div>
+					</section>
+
+					<section data-background="assets/wally2.jpg" data-transition="none">
+						<div class="part"><div class="number">3</div></div>
+						<div class="clearboth"></div>
+						<div class="slogan-box">O Javascript está em todo lugar!</div>
+					</section>
 				</section>
 
-				<section data-background="assets/barra-shopping-sul.jpg">
+				<section data-background="assets/barra-shopping-sul.jpg"> 
 					<section class="white">
 						<img src="assets/ticket.png" width="400px">
 						<h3 class="box">A maior convenção<br />(de Javascript) do universo</h3>
@@ -631,6 +656,17 @@ Reveal.addEventListener( 'customevent', function() {
 						break
 					case 'porque':
 						ev.fragment.style.display = 'none'
+						break
+					case 'circulo':
+						document.querySelector('.slide-background.present.stack .present').classList.add('move-ass')
+				}
+			})
+
+			Reveal.addEventListener('fragmenthidden', function (ev) {
+				console.log('fragmenthidden', ev.fragment, ev.fragment.id);
+				switch (ev.fragment.id) {
+					case 'circulo':
+						document.querySelector('.slide-background.present.stack .present').classList.remove('move-ass')
 						break
 				}
 			})

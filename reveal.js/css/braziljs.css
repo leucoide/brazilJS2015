@@ -205,3 +205,23 @@
   display:inline;
 }
 
+.reveal .slides section .part {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #F8DC3D;
+  margin: 0 auto;
+}
+
+.reveal .slides section .part .number {
+  position: absolute;
+  font-weight: bold;
+  bottom: -15px;
+  right: 15px;
+  font-size: 120px;
+  color: #2E2E2C;
+}
+
+.slide-background .move-ass {
+  background-position: 400px -350px;
+}
