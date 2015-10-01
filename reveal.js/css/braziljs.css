@@ -134,8 +134,12 @@
 
 .circulo {
   position: absolute;
-  left: 224px;
-  top: 5px;
+  left: 176px;
+  top: -9px;
+}
+
+.voce .fragment.highlight-red.visible {
+  color: #FC4C51 !important;
 }
 
 .round-border {
