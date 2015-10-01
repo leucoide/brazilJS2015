@@ -67,7 +67,7 @@
 				<section data-background="assets/wally1.jpg">
 					<img src="assets/js.jpg" width="200px">
 					<div class="clearboth"></div>
-					<div class="slogan-box">O Javascript <span id="esta">está</span> <span class="fragment inplace grow highlight-red" data-fragment-index="1" id="estava">estava</span> em todo lugar<span class="fragment" data-fragment-index="1">?</span></div>
+					<div class="slogan-box">O Javascript <span id="esta">está</span> <span class="fragment inplace grow highlight-red" data-fragment-index="2" id="estava">estava</span> em todo lugar<span class="fragment" data-fragment-index="2">?</span><span class="fragment fade-out" id="porque" data-fragment-index="1"><br />e porque você deveria se interessar</span></div>
 				</section>
 
 				<section>
@@ -571,8 +571,13 @@ Reveal.addEventListener( 'customevent', function() {
 		<script type="text/javascript">
 			Reveal.addEventListener('fragmentshown', function (ev) {
 				console.log('fragmentshown', ev.fragment, ev.fragment.id);
-				if (ev.fragment.id === 'estava') {
-					document.getElementById('esta').classList.add('strike', 'fragment', 'visible')
+				switch (ev.fragment.id) {
+					case 'estava':
+						document.getElementById('esta').classList.add('strike', 'fragment', 'visible')
+						break
+					case 'porque':
+						ev.fragment.style.display = 'none'
+						break
 				}
 			})
 		</script>
