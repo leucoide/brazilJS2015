@@ -20,6 +20,8 @@
 
 		<link rel="shortcut icon" href="favicon.png" type="image/png">
 
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900' rel='stylesheet' type='text/css'>
+
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -54,13 +56,18 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-				<section data-state="cover" data-background="assets/bg-intro.jpg">
-					<img src="assets/capa.png" />
+				<section data-state="capa" data-background="assets/bg-intro.jpg" class="slide-capa">
+					<img src="assets/titulo.png" />
+					<div class="slogan-box">Javascript está em todo lugar<br />e porque você deveria se interessar</div>
+					<img class="academia-capa" src="assets/academia-de-tecnologia.png" />
+					<img class="tecnologia-capa" src="assets/tecnologia-globo.png" />
+
 				</section>
 
 				<section>
 					<img src="assets/js.jpg" width="200px">
-					<h3>O Javascript <span id="esta">está</span> <span class="fragment inplace grow highlight-red" data-fragment-index="1" id="estava">estava</span> em todo lugar<span class="fragment" data-fragment-index="1">?</span></h3>
+					<div class="clearboth"></div>
+					<div class="slogan-box">O Javascript <span id="esta">está</span> <span class="fragment inplace grow highlight-red" data-fragment-index="1" id="estava">estava</span> em todo lugar<span class="fragment" data-fragment-index="1">?</span></div>
 				</section>
 
 				<section>
@@ -68,7 +75,7 @@
 						<p>Linha do tempo:</p>
 						<img src="assets/js-timeline.png" />						
 					</section>
-					<section data-state="cover" data-background-video="https://s3-us-west-2.amazonaws.com/brasiljs/wat.mp4" data-background="#000"></section>
+					<section data-state="cover" data-background-video="https://box.tvg.tv.br/public.php?service=files&t=2263f1277c697f4c8f58b93188c1530f"></section>
 				</section>
 
 				<section>
@@ -80,8 +87,8 @@
 					<section>
 						<h2>Javascript === Java <img src="assets/meme-duvida.png" width="200px"></h2>
 					</section>
-					<section data-state="header-white" data-background="assets/no.gif">
-						<span class="fragment"><img src="assets/java-hamster.jpg" /></span>
+					<section>
+						<img src="assets/java-hamster.jpg" />
 					</section>
 				</section>
 
@@ -138,12 +145,11 @@
 				</section>
 
 				<section data-background="assets/barra-shopping-sul.jpg">
-					<section class="white">
-						<img src="assets/ticket.png" width="400px">
-						<h2 class="white">MAIOR CONVENÇÃO<br>(de javascript)<br>DO UNIVERSO</h2>
+					<section>
+						<img src="assets/ticket.png" width="400px" class="fragment">
 					</section>
 					<section class="fotos" data-state="opacidade-fundo">
-						<img src="assets/braziljs-entrada.jpg">
+						<img src="assets/braziljs-entrada.jpg" class="fragment">
 						<img src="assets/braziljs-geral.jpg" class="fragment">
 					</section>
 					<section class="fotos" data-state="opacidade-fundo">
@@ -161,10 +167,6 @@
 						<img src="assets/braziljs-show.jpg">
 						<img src="assets/braziljs-participantes.jpg" class="fragment">
 					</section>
-				</section>
-
-				<section>
-					Tecnologias
 				</section>
 
 				<section>
@@ -189,7 +191,7 @@
 						Web Torrent = <span class="fragment">Torrent</span><span class="fragment"> + </span><span class="fragment">Browser</span>
 						<div><span class="fragment"><div class="over-webrtc">WebRTC</div></span></div>
 					</section>
-					<section data-background="assets/mindblown.gif" data-transition="none">
+					<section data-background="https://media.giphy.com/media/pXPOApWXuJaMw/giphy.gif" data-transition="none">
 						Web Torrent = Torrent + Browser
 						<div><div class="over-webrtc">WebRTC</div></div>
 					</section>
