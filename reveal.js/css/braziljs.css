@@ -74,6 +74,13 @@
     transform: skew(-15deg);
 }
 
+.box {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px 30px !important; 
+  display: inline-block;
+  border-radius: 5px;
+}
+
 .topo {
   position: absolute;
   width: 100%;
@@ -197,3 +204,4 @@
 .reveal .slides section .fragment.inplace.visible {
   display:inline;
 }
+
