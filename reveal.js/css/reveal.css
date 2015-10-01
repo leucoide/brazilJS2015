@@ -1181,14 +1181,14 @@ body {
 }
 
 .topo .header {
-  background: url("../header.png") 0 0 no-repeat transparent;
+  background: url("../assets/header.png") 0 0 no-repeat transparent;
   width: 534px; 
   height: 49px;
   margin: 10px;
 }
 
 .topo .delorean {
-  background: url("../delorean.png") 0 0 no-repeat transparent;
+  background: url("../assets/delorean.png") 0 0 no-repeat transparent;
   width: 302px;
   height: 78px;
   position: absolute;
@@ -1219,7 +1219,7 @@ body {
 }
 
 .academia {
-  background: url("../academia.jpg") 0 0 no-repeat transparent;
+  background: url("../assets/academia.jpg") 0 0 no-repeat transparent;
   width: 208px; 
   height: 81px;
   position: absolute;
@@ -1229,7 +1229,7 @@ body {
 }
 
 .tecnologia {
-  background: url("../tecnologia_globo.png") 0 0 no-repeat transparent;
+  background: url("../assets/tecnologia_globo.png") 0 0 no-repeat transparent;
   width: 317px; 
   height: 45px;
   background-size: 70% 70%;
