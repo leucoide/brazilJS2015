@@ -91,9 +91,10 @@
 
 .topo .header {
   background: url("../assets/header.png") 0 0 no-repeat transparent;
-  width: 534px; 
-  height: 49px;
+  width: 307px; 
+  height: 54px;
   margin: 10px;
+  background-size: 300px;
 }
 
 .topo .delorean {
