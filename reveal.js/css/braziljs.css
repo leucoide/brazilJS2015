@@ -288,7 +288,7 @@ ul li .small {
 }
 .reveal .slides section p.tltext:nth-child(even),
 .reveal .slides section p.tldate:nth-child(even) {
-  color: #757573;
+  color: #000;
 }
 
 .reveal .slides section p.tldate {
