@@ -115,13 +115,47 @@
 
 				<section>
 					<section data-background="assets/old-paper.jpg">
-						<h2>Linha do tempo</h2>
-						<img src="assets/js-timeline.png" />
+						<h2>Linha do tempo:</h2>
+						<hr>
+						<p class="tl tl1994 tldate fragment" data-fragment-index="1">1994</p>
+						<hr class="tl1994 tlrule fragment" data-fragment-index="1">
+						<p class="tl tl1994 tltext fragment" data-fragment-index="1">NETSCAPE É LANÇADO<br>(Nasce o LiveScript)</p>
+						<p class="tl tl1995 tldate fragment" data-fragment-index="2">1995</p>
+						<hr class="tl1995 tlrule fragment" data-fragment-index="2">
+						<p class="tl tl1995 tltext fragment" data-fragment-index="2">LIVESCRIPT MUDA O NOME<br>PARA JAVASCRIPT</p>
+						<p class="tl tl1997 tldate fragment" data-fragment-index="3">1997</p>
+						<hr class="tl1997 tlrule fragment" data-fragment-index="3">
+						<p class="tl tl1997 tltext fragment" data-fragment-index="3">PRIMEIRA VERSÃO DO<br>ECMA SCRIPT</p>
+						<p class="tl tl2002 tldate fragment" data-fragment-index="4">2002</p>
+						<hr class="tl2002 tlrule fragment" data-fragment-index="4">
+						<p class="tl tl2002 tltext fragment" data-fragment-index="4">JSON</p>
+						<p class="tl tl2004 tldate fragment" data-fragment-index="5">2004</p>
+						<hr class="tl2004 tlrule fragment" data-fragment-index="5">
+						<p class="tl tl2004 tltext fragment" data-fragment-index="5">FIREFOX</p>
+						<p class="tl tl2006 tldate fragment" data-fragment-index="6">2006</p>
+						<hr class="tl2006 tlrule fragment" data-fragment-index="6">
+						<p class="tl tl2006 tltext fragment" data-fragment-index="6">XMLHttpRequest<br>FIREBUG e JQUERY</p>
+						<p class="tl tl2009 tldate fragment" data-fragment-index="7">2009</p>
+						<hr class="tl2009 tlrule fragment" data-fragment-index="7">
+						<p class="tl tl2009 tltext fragment" data-fragment-index="7">NODEJS</p>
 						<aside class="notes">
-		        			<p>Javascript foi criado em 10 dias</p>
-			    		</aside>
+		        	<p>Javascript foi criado em 10 dias</p>
+		        	<p>Arrays eram só objetos com a propriedade "length"</p>
+		        	<p>O Date foi portado direto do Java e por isso que é um troço tão estranho com mês indexado pelo 0</p>
+		        	<p>Óbvio que o js teria os seus problemas [passa o slide]</p>
+			    	</aside>
 					</section>
-					<section data-state="capa" data-background-video="https://s3-us-west-2.amazonaws.com/brasiljs/wat.mp4" data-background="#000"></section>
+					<section data-background="#000">
+						<video class="stretch" data-autoplay="true" src="https://s3-us-west-2.amazonaws.com/brasiljs/wat.mp4" controls></video>
+						<aside class="notes">
+							<p>{} + {} é uma string "[object Object]"</p>
+							<p>tudo que não pode ser somado como número vira string</p>
+							<p>{} + [] : {} é um bloco, e +[] é um type cast pra number e por isso dá 0</p>
+						</aside>
+					</section>
+					<section>
+						<iframe src="https://www.youtube.com/embed/bM79WQ9iMZQ" frameborder="0" allowfullscreen></iframe>
+					</section>
 				</section>
 
 				<section data-background="assets/braziljs-brendan-eich.jpg" data-state="header-white">
@@ -138,11 +172,10 @@
 					<section data-state="white-cover" class="white" data-background="assets/no.gif">
 						<img src="assets/java-hamster.jpg" class="fragment round-border" />
 						<aside class="notes">
-				        	<p>Apesar disso, o nome realmente veio do Java</p>
-				        	<p>Havia uma pressão interna para que o javascript fosse igual a java</p>
-				        	<p></p>
-				        	<p></p>
-				    	</aside>
+		        	<p>Apesar disso, o nome realmente veio do Java</p>
+		        	<p>Havia uma pressão interna para que o javascript fosse igual a java</p>
+		        	<p>Java é tipado e javascript não é</p>
+			    	</aside>
 					</section>
 					<section>
 						<h2>JavaScript === jQuery <img src="assets/meme-duvida.png" width="200px"></h2>
@@ -244,6 +277,14 @@
 					<p><strong>Lei de Jeff Atwood</strong></p>
 					<blockquote class="fragment">Any application that <strong>CAN</strong> be written in JavaScript, <strong>WILL</strong> eventually be written in JavaScript</blockquote>
 					<p><span class="fragment"><img src="assets/codinghorror-app-icon.png"/> Coding Horror</span><span class="fragment jeff"><img src="assets/stackoverflow-logo.jpg"/></span></p>
+				</section>
+
+				<section>
+					Plataformas
+				</section>
+
+				<section>
+					Tooling
 				</section>
 
 				<section data-background="assets/barra-shopping-sul.jpg"> 
@@ -839,6 +880,7 @@ Reveal.addEventListener( 'customevent', function() {
 			</div>
 
 		</div>
+
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
@@ -865,12 +907,6 @@ Reveal.addEventListener( 'customevent', function() {
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
-
-
-    	var editor = ace.edit("editor");
-    	editor.setTheme("ace/theme/monokai");
-    	editor.getSession().setMode("ace/mode/ruby");
-    	editor.getSession().setTabSize(2); 
 
 		</script>
 

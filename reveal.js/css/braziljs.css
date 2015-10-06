@@ -245,3 +245,81 @@ ul li .small {
   color: #fff !important;
   text-shadow: none !important;
 }
+
+/* TIMELINE */
+
+.reveal .slides section hr {
+  background-color: #555;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 331px;
+  border: 0;
+}
+
+.reveal .slides section hr.tlrule {
+  width: 12px;
+  height: 2px;
+  position: absolute;
+  transform: rotate(90deg);
+  margin-left: 15px;
+  border: 0;
+}
+
+.reveal .slides section p.tl {
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  display: inline-block;
+}
+
+.reveal .slides section p.tltext {
+  transform: rotate(-41deg);
+  top: 113px;
+  line-height: 23px;
+  margin-left: -50px;
+  text-align: left;
+  width: 500px;
+}
+
+.reveal .slides section p.tltext:nth-child(odd),
+.reveal .slides section p.tldate:nth-child(odd) {
+  color: #484847;
+}
+.reveal .slides section p.tltext:nth-child(even),
+.reveal .slides section p.tldate:nth-child(even) {
+  color: #757573;
+}
+
+.reveal .slides section p.tldate {
+  top: 340px;
+}
+
+.reveal .slides section .tl1994 {
+  left: 100px;
+}
+
+.reveal .slides section .tl1995 {
+  left:180px;
+}
+
+.reveal .slides section .tl1997 {
+  left:288px;
+}
+
+.reveal .slides section .tl2002 {
+  left:413px;
+}
+
+.reveal .slides section .tl2004 {
+  left:516px;
+}
+
+.reveal .slides section .tl2006 {
+  left:619px;
+}
+
+.reveal .slides section .tl2009 {
+  left:747px;
+}
+
