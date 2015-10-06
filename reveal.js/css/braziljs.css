@@ -199,6 +199,10 @@
   font-weight: bold;
 }
 
+.reveal .slides section .fragment.highlight-yellow.visible {
+  color: yellow;
+}
+
 .reveal .slides section .fragment.inplace {
   display:none;
 }
