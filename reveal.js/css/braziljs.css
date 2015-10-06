@@ -98,6 +98,7 @@
   height: 54px;
   margin: 10px;
   background-size: 300px;
+  float: left;
 }
 
 .topo .delorean {
@@ -110,14 +111,19 @@
 }
 
 .topo .slogan {
-  font-size: 23px !important;
+  font-size: 20px !important;
   font-weight: bold !important;
-  margin: -2px 0 0 24px !important;
-  font-style: italic !important;
+  float: left;
+  margin: 16px 0 0 -3px !important;
+  background-color: #000;
+  color: #EFEDED;
+  transform: skew(-15deg);
+  padding: 12px 20px;
+  text-transform: uppercase;
 }
 
 .header-white .topo .slogan {
-  color: #C1BFBF;
+  color: #EFEDED;
 }
 
 .footer {
