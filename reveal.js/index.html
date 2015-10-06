@@ -92,8 +92,22 @@
 
 
 				<!-- NODEBOTS -->
+				<section class='nodebots' id='intro'>
+					<img src="nodebots.jpg" width="600px">
+				</section>
+
+				<section data-background='lights.gif'>
+					<pre>
+						<code>
+$("livingroom").bind("motion", function() {
+  $(this).find("lights").on();
+});
+						</code>
+					</pre>
+				</section>
+
 				<section>
-					<img src="nodebots.jpg" width="500px">
+					<img src="platforms-nodebots.jpg" width="900px">
 				</section>
 
 				<section class='nodebots'>
@@ -124,8 +138,40 @@
 							</a>
 						</figcaption>
 					</figure>
-					
+				</section>
 
+				<section data-background='jo3nny-five-bkg.png'>
+					<h2>Abstraction...</h2>
+					<ul>
+						<li>Accelerometer</li>
+						<li>LCD Screens</li>
+						<li>Relays</li>
+						<li>Motors</li>
+						<li>Sensors</li>
+						...
+					</ul>
+				</section>
+
+				<section>
+					<h4>Hello World!</h4>
+
+					<pre>
+						<code> 
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on("ready", function() {
+
+  // Create a standard `led` component instance
+  var led = new five.Led(13);
+
+  // "blink" the led in 500ms on-off phase periods
+  led.blink(500);
+});
+						</code>
+					</pre>
+
+					<img src="hello-johnny.png" width="200px">
 				</section>
 				<!-- NODEBOTS END-->
 				
