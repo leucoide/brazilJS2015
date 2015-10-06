@@ -31,6 +31,46 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
+		<!--ACE-->
+		<link rel="stylesheet" href="lib/css/ace/aceeditor.css">
+		<link rel="stylesheet" href="lib/css/ace/acetm.css">
+		<link rel="stylesheet" href="lib/css/ace/acemonokai.css">
+
+		<script src="lib/js/jquery-1.9.1.min.js"></script>
+		<script src="lib/js/events.js"></script>
+		<script src="lib/js/webruby.js"></script>
+
+		<script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/theme-monokai.js"></script>
+		<script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/mode-ruby.js"></script>
+
+		<style type="text/css">
+	    #editor-container {
+	    	position: relative;
+	      height: 200px;
+	      width: 100%;
+	      overflow-y: hidden;
+	    }
+
+	    #editor {
+	      width: 100%;
+	      height: 100%;
+	    }
+
+	    #output {
+	    	background-color: #EEE;
+	    	border: 1px solid black;
+	    	overflow-y: scroll;
+	    	height: 100px;
+	    	max-height: 100px;	
+	    	font-size: 18px;
+	    }
+
+	    #editor .ace_line {
+	    	font-size: 32px;
+	    }
+		</style>
+
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -319,16 +359,14 @@
 					<section>
 							<h2>Pra que serve?</h2>
 							<ul>
-								<li>Nos dá acesso à um conjunto de funcionalidades de baixo nível.</li>
+								<li>Dá acesso a um conjunto de funcionalidades de baixo nível.</li>
 							</ul>
-							<img src="/assets/questionmarks.png" class="fragment" />
-					</section>
-					<section>
 							<img src="/assets/what.gif" class="round-border"/>
 					</section>
 					<section>
 						<h2>Pra que serve?</h2>
-						<span>Maior diversidade para linguagens Web: <span class="fragment">uma alternativa</span></span>
+						<span>Maior diversidade para linguagens Web: </span><span class="fragment">uma alternativa!</span>
+						<span class="fragment">Criação de novas linguagens.</span>
 					</section>
 
 					<section>
@@ -336,6 +374,15 @@
 							<h2>Como?</h2>
 							<img src="/assets/webassembly1.jpg" class="round-border"/>
 						</div>
+					</section>
+					<section>
+						<h2>Interpretador Ruby - C++ => JavaScript</h2>
+						<div id="code-form">
+					    <div id="editor-container">
+					      <div id="editor" class=" ace_editor ace-monokai ace_dark"><textarea wrap="off" style="position: fixed; z-index: 100000; left: 324px; top: 477px;"></textarea><div class="ace_gutter"><div class="ace_gutter_active_line" style="top: 0px; height: 15.427px;"></div><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 231.854px; width: 39px;"></div></div><div class="ace_scroller" style="height: 201px; left: 39px; right: 15px;"><div class="ace_content" style="margin-top: 0px; width: 906px; height: 231.854px;"><div class="ace_layer ace_marker-layer"><div class="ace_active_line start" style="height:15.426997184753418px;width:898px;top:0px;left:0px;"></div></div><div class="ace_print_margin_layer"><div class="ace_print_margin" style="left: 483.339px; visibility: visible;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:15.426997184753418px"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer"><div class="ace_cursor ace_hidden" style="left: 4px; top: 0px; width: 5.99174px; height: 15.427px;"></div></div></div></div><div class="ace_sb" style="width: 20px; height: 201px;"><div style="height: 15.427px;"></div></div></div>
+					    </div>
+					    <button class="btn primary" id="submit-button" href="#">Submit</button>
+					  </div>
 					</section>
 				</section>
 
@@ -792,7 +839,6 @@ Reveal.addEventListener( 'customevent', function() {
 			</div>
 
 		</div>
-
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
@@ -819,6 +865,12 @@ Reveal.addEventListener( 'customevent', function() {
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
+
+    	var editor = ace.edit("editor");
+    	editor.setTheme("ace/theme/monokai");
+    	editor.getSession().setMode("ace/mode/ruby");
+    	editor.getSession().setTabSize(2); 
 
 		</script>
 
