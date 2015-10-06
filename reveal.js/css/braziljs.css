@@ -239,3 +239,8 @@
 .slide-background .move-ass {
   background-position: 400px -350px;
 }
+
+.nodebots figure{
+    width: 33.33333%;
+    float: left;
+}

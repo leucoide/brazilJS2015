@@ -331,6 +331,93 @@
 					</section>
 				</section>
 
+				<!-- NODEBOTS -->
+				<section class='nodebots' id='intro'>
+					<img src="assets/nodebots.jpg" width="600px">
+				</section>
+
+				<section data-background='assets/lights.gif'>
+					<pre>
+						<code>
+$("livingroom").bind("motion", function() {
+  $(this).find("lights").on();
+});
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<img src="assets/platforms-nodebots.jpg" width="900px">
+				</section>
+
+				<section class='nodebots'>
+					
+					<figure>
+						<img src="assets/chris-williams.jpg" width="200px" height="200px">
+						<figcaption>
+							<a href="https://github.com/voodootikigod/node-serialport">
+							Chris Williams: node-serialport
+							</a>
+						</figcaption>
+					</figure>
+
+					<figure>
+						<img src="assets/julian-gautier.jpg" width="200px" height="200px">
+						<figcaption>
+							<a href="https://github.com/jgautier/firmata">
+							Julian Gautier: firmata
+							</a>
+						</figcaption>
+					</figure>
+
+					<figure>
+						<img src="assets/rick-waldron.jpg" width="200px" height="200px">
+						<figcaption>
+							<a href="https://github.com/rwaldron/johnny-five">
+							Rick Waldron: johnny-five
+							</a>
+						</figcaption>
+					</figure>
+				</section>
+
+				<section data-background='assets/johnny-five-bkg.png'>
+					<div style='position:absolute'>
+						<h2>Abstraction...</h2>
+						<ul>
+							<li>Accelerometer</li>
+							<li>LCD Screens</li>
+							<li>Relays</li>
+							<li>Motors</li>
+							<li>Sensors</li>
+						...
+						</ul>
+					</div>
+					
+				</section>
+
+				<section>
+					<h4>Hello World!</h4>
+
+					<pre>
+						<code> 
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on("ready", function() {
+
+  // Create a standard `led` component instance
+  var led = new five.Led(13);
+
+  // "blink" the led in 500ms on-off phase periods
+  led.blink(500);
+});
+						</code>
+					</pre>
+
+					<img src="assets/hello-johnny.png" width="200px">
+				</section>
+				<!-- NODEBOTS END-->
+
 				<section>FIM</section>
 
 				<!-- FIM BRAZILJS2015 -->
