@@ -81,7 +81,7 @@
 }
 
 .box.padding {
-  padding: 20px 30px !important;
+  padding: 20px 30px 5px !important;
 }
 
 .topo {
@@ -116,7 +116,7 @@
   float: left;
   margin: 16px 0 0 -3px !important;
   background-color: #000;
-  color: #EFEDED;
+  color: #fff;
   transform: skew(-15deg);
   padding: 12px 20px;
   text-transform: uppercase;
