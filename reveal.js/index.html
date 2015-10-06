@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>TECHDAY.JS - Javascript está em todo lugar e porque você deveria se interessar</title>
+		<title>TECHDAY.JS - O Javascript está em todo lugar e porque você deveria se interessar</title>
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -31,6 +31,46 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
+		<!--ACE-->
+		<link rel="stylesheet" href="lib/css/ace/aceeditor.css">
+		<link rel="stylesheet" href="lib/css/ace/acetm.css">
+		<link rel="stylesheet" href="lib/css/ace/acemonokai.css">
+
+		<script src="lib/js/jquery-1.9.1.min.js"></script>
+		<script src="lib/js/events.js"></script>
+		<script src="lib/js/webruby.js"></script>
+
+		<script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/theme-monokai.js"></script>
+		<script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/mode-ruby.js"></script>
+
+		<style type="text/css">
+	    #editor-container {
+	    	position: relative;
+	      height: 200px;
+	      width: 100%;
+	      overflow-y: hidden;
+	    }
+
+	    #editor {
+	      width: 100%;
+	      height: 100%;
+	    }
+
+	    #output {
+	    	background-color: #EEE;
+	    	border: 1px solid black;
+	    	overflow-y: scroll;
+	    	height: 100px;
+	    	max-height: 100px;	
+	    	font-size: 18px;
+	    }
+
+	    #editor .ace_line {
+	    	font-size: 32px;
+	    }
+		</style>
+
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -42,7 +82,7 @@
 			
 			<div class="topo">
 				<div class="header"></div>
-				<div class="slogan">Javascript está em todo lugar e porque você deveria se interessar</div>
+				<div class="slogan">O Javascript está em todo lugar e porque você deveria se interessar</div>
 			</div>
 			<div class="footer">
 				<div class="tecnologia"></div>
@@ -54,10 +94,9 @@
 
 				<section data-state="capa" data-background="assets/bg-intro.jpg" class="slide-capa">
 					<img src="assets/header.png" />
-					<div class="slogan-box">Javascript está em todo lugar<br />e porque você deveria se interessar</div>
+					<div class="slogan-box">O Javascript está em todo lugar<br />e porque você deveria se interessar</div>
 					<img class="academia-capa" src="assets/academia-de-tecnologia.png" />
 					<img class="tecnologia-capa" src="assets/tecnologia-globo.png" />
-
 				</section>
 
 				<section>
@@ -75,35 +114,80 @@
 				</section>
 
 				<section>
-					<section>
-						<p>Linha do tempo:</p>
-						<img src="assets/js-timeline.png" />						
+					<section data-background="assets/old-paper.jpg">
+						<h2><strong>Linha do tempo</strong></h2>
+						<hr>
+						<p class="tl tl1994 tldate fragment" data-fragment-index="1">1994</p>
+						<hr class="tl1994 tlrule fragment" data-fragment-index="1">
+						<p class="tl tl1994 tltext fragment" data-fragment-index="1">NETSCAPE É LANÇADO<br>(Nasce o LiveScript)</p>
+						<p class="tl tl1995 tldate fragment" data-fragment-index="2">1995</p>
+						<hr class="tl1995 tlrule fragment" data-fragment-index="2">
+						<p class="tl tl1995 tltext fragment" data-fragment-index="2">LIVESCRIPT MUDA O NOME<br>PARA JAVASCRIPT</p>
+						<p class="tl tl1997 tldate fragment" data-fragment-index="3">1997</p>
+						<hr class="tl1997 tlrule fragment" data-fragment-index="3">
+						<p class="tl tl1997 tltext fragment" data-fragment-index="3">PRIMEIRA VERSÃO DO<br>ECMA SCRIPT</p>
+						<p class="tl tl2002 tldate fragment" data-fragment-index="4">2002</p>
+						<hr class="tl2002 tlrule fragment" data-fragment-index="4">
+						<p class="tl tl2002 tltext fragment" data-fragment-index="4">JSON</p>
+						<p class="tl tl2004 tldate fragment" data-fragment-index="5">2004</p>
+						<hr class="tl2004 tlrule fragment" data-fragment-index="5">
+						<p class="tl tl2004 tltext fragment" data-fragment-index="5">FIREFOX</p>
+						<p class="tl tl2006 tldate fragment" data-fragment-index="6">2006</p>
+						<hr class="tl2006 tlrule fragment" data-fragment-index="6">
+						<p class="tl tl2006 tltext fragment" data-fragment-index="6">XMLHttpRequest<br>FIREBUG e JQUERY</p>
+						<p class="tl tl2009 tldate fragment" data-fragment-index="7">2009</p>
+						<hr class="tl2009 tlrule fragment" data-fragment-index="7">
+						<p class="tl tl2009 tltext fragment" data-fragment-index="7">NODEJS</p>
+						<aside class="notes">
+		        	<p>Javascript foi criado em 10 dias</p>
+		        	<p>Arrays eram só objetos com a propriedade "length"</p>
+		        	<p>O Date foi portado direto do Java e por isso que é um troço tão estranho com mês indexado pelo 0</p>
+		        	<p>Óbvio que o js teria os seus problemas [passa o slide]</p>
+			    	</aside>
 					</section>
-					<section data-state="capa" data-background-video="https://s3-us-west-2.amazonaws.com/brasiljs/wat.mp4" data-background="#000"></section>
+					<section data-background="#000">
+						<video class="stretch" data-autoplay="true" src="https://s3-us-west-2.amazonaws.com/brasiljs/wat.mp4" controls></video>
+						<aside class="notes">
+							<p>{} + {} é uma string "[object Object]"</p>
+							<p>tudo que não pode ser somado como número vira string</p>
+							<p>{} + [] : {} é um bloco, e +[] é um type cast pra number e por isso dá 0</p>
+						</aside>
+					</section>
+					<section>
+						<iframe src="https://www.youtube.com/embed/bM79WQ9iMZQ" frameborder="0" allowfullscreen></iframe>
+					</section>
 				</section>
 
 				<section data-background="assets/braziljs-brendan-eich.jpg" data-state="header-white">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/u56b_HUj47E" frameborder="0" allowfullscreen class="fragment"></iframe>
-					<!-- ESSE É UM VÍDEO TEMPORÁRIO PORQUE O VÍDEO DA PALESTRA DELE NO BRAZILJS AINDA NÃO SAIU -->				
+					<aside class="notes">
+				       Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+				   </aside>			
 					
 				</section>
 
 				<section>
 					<section>
-						<h2>Javascript === Java <img src="assets/meme-duvida.png" width="200px"></h2>
+						<h2>JavaScript === Java <img src="assets/meme-duvida.png" width="200px"></h2>
 					</section>
 					<section data-state="white-cover" class="white" data-background="assets/no.gif">
-						<div class="fragment box padding">Javascript !== Java</div>
 						<img src="assets/java-hamster.jpg" class="fragment round-border" />
-						<div class="fragment box padding">Javascript !== jQuery</div>
+						<aside class="notes">
+		        	<p>Apesar disso, o nome realmente veio do Java</p>
+		        	<p>Havia uma pressão interna para que o javascript fosse igual a java</p>
+		        	<p>Java é tipado e javascript não é</p>
+			    	</aside>
 					</section>
-					<section data-transition="none" data-background="assets/no.gif">
+					<section>
+						<h2>JavaScript === jQuery <img src="assets/meme-duvida.png" width="200px"></h2>
+					</section>
+					<section data-state="white-cover" class="white" data-background="assets/no.gif">
+						<img src="assets/ovos-omelete.jpg" class="fragment round-border" />
 					</section>
 				</section>
 
 				<section class="white box" data-background="assets/road.jpg">
 					<h1>ECMAScript 6 <span class="fragment">, 7</span><span class="fragment">, 8...</span></h1>
-					<h4 class="fragment">O futuro do Javascript</h4>
+					<h4 class="fragment">O futuro do JavaScript</h4>
 					<h4>
 						<span class="fragment">Class</span>
 						<span class="fragment">, Arrow functions (lambdas)</span>
@@ -135,9 +219,13 @@
 						<img src="assets/facilidade3.png" class="fragment" height="300px">
 					</section>
 					<section>
-						<img src="assets/dev-tool.jpg" class="round-border">
+						<h1>Devtools!</h1>
 					</section>
-					<section data-background="assets/500days.jpg"></section>
+					<section data-background="assets/500days.jpg">
+						<aside class="notes">
+					    	Rafael Amorim conta que resolveu aprender Javascript porque tava na moda, os amigos falavam bem etc. Foi lá, aprendeu e se baseou em um gringo pra fazer os 500 dias de commits (500 dias seguidos que teria que fazer pelo menos um commit útil). Isso ajudaria em outro objetivo dele que era aprender a fundo o git.
+					   	</aside>
+					</section>
 				</section>
 
 				<section>
@@ -154,14 +242,14 @@
 
 				<section data-state="header-white" data-background="assets/quadro-negro.jpg" class="white">
 					<section>
-						<h2>Não é difícil começar a aprender JS</h2>
-						<ul class="fragment">
-							<li>nodeschool.io</li>
-							<li>codeschool.com</li>
-							<li>codecademy.com</li>
-							<li>thimble.webmaker.org</li>
-							<li>github.com/ericelliott/essential-javascript-links</li>
-							<li>bevacqua.github.io/promisees</li>
+						<h2>Aprender é fácil</h2>
+						<ul class="fragment aprender">
+							<li><a href="nodeschool.io">nodeschool.io</a></li>
+							<li><a href="codeschool.com">codeschool.com</a></li>
+							<li><a href="codecademy.com">codecademy.com</a></li>
+							<li><a href="thimble.webmaker.org">thimble.webmaker.org</a></li>
+							<li><a href="github.com/ericelliott/essential-javascript-links">github.com/ericelliott/essential-javascript-links</a></li>
+							<li><a href="bevacqua.github.io/promisees">bevacqua.github.io/promisees</a></li>
 							<li>entre outros...</li>
 						</ul>
 					</section>
@@ -185,21 +273,38 @@
 					</section>
 				</section>
 
+				<section>
+					<p><strong>Lei de Jeff Atwood</strong></p>
+					<blockquote class="fragment">Any application that <strong>CAN</strong> be written in JavaScript, <strong>WILL</strong> eventually be written in JavaScript</blockquote>
+					<img src="assets/codinghorror-app-icon.png" height="200px" class="fragment" />
+					<img src="assets/stackoverflow-logo.jpg" height="200px" class="fragment" />
+				</section>
+
 				<section data-background="assets/barra-shopping-sul.jpg"> 
 					<section class="white">
-						<img src="assets/ticket.png" width="400px">
-						<h3 class="box padding">A maior convenção<br />(de Javascript) do universo</h3>
+						<span class="fragment">
+							<img src="assets/braziljs.svg" width="300px">
+							<img src="assets/ticket.png" width="300px">
+						</span>
+						<p class="box padding fragment"><strong>A MAIOR CONFERÊNCIA JAVASCRIPT DO UNIVERSO</strong></p>
+						<h6 class="box padding fragment">Porto Alegre / RS</h6>
+					</section>
+					<section class="white">
+						<h3 class="box padding">1300 participantes</h3>
+						<h3 class="box padding fragment">22 palestrantes</h3>
 					</section>
 					<section class="white">
 						<div class="box padding">
-							<h2>Números</h2>
 							<ul>
-								<li><strong>1300</strong> participantes</li>
-								<li><strong>22</strong> palestrantes</li>
-								<li><strong>2</strong> dias</li>
+								<li><strong>CHRISTIAN HEILMANN</strong> <span class="small">/ Microsoft</span></li>
+								<li class="fragment"><strong>FELIPE RIBEIRO</strong> <span class="small">/ Spotify</span></li>
+								<li class="fragment"><strong>SEBASTIAN MCKENZIE</strong> <span class="small">/ Criador do BabelJS</span></li>
+								<li class="fragment"><strong>JAMES HALLIDAY (SUBSTACK)</strong> <span class="small">/ Criador do Browserify</span></li>
+								<li class="fragment"><strong>BRENDAN EICH</strong> <span class="small">/ Criador do JavaScript</span></li>
 							</ul>
 						</div>
 					</section>
+					<section data-background="assets/palmas.gif"></section>
 					<section class="fotos" data-state="opacidade-fundo">
 						<img src="assets/braziljs-entrada.jpg">
 						<img src="assets/braziljs-geral.jpg" class="fragment">
@@ -252,7 +357,7 @@
 						<div>WebRTC (Real-Time Communications)</div>
 						<span class="fragment"><div>Peer-to-Peer <span class="fragment">(really!)</span></div></span>
 						<span class="fragment"><div>Chats ao vivo com vídeo</div></span>
-						<span class="fragment"><div>Acesso a camera e microfone</div></span>
+						<span class="fragment"><div>Acesso à câmera e microfone</div></span>
 						<span class="fragment"><div>WebTorrent</div></span>
 					</section>
 					<section>
@@ -276,7 +381,7 @@
 				</section>
 
 				<section>
-					<section class="white box" data-background="/assets/webassembly-back.jpeg" data-state="header-white">
+					<section class="white box" data-background="assets/webassembly-back.jpeg" data-state="header-white">
 						<h2>Web Assembly (WASM)</h2>
 						<h3>O Que é?</h3>
 						<ul>
@@ -289,16 +394,14 @@
 					<section>
 							<h2>Pra que serve?</h2>
 							<ul>
-								<li>Nos dá acesso à um conjunto de funcionalidades de baixo nível.</li>
+								<li>Dá acesso a um conjunto de funcionalidades de baixo nível.</li>
 							</ul>
-							<img src="/assets/questionmarks.png" class="fragment" />
-					</section>
-					<section>
 							<img src="/assets/what.gif" class="round-border"/>
 					</section>
 					<section>
 						<h2>Pra que serve?</h2>
-						<span>Maior diversidade para linguagens Web: <span class="fragment">uma alternativa</span></span>
+						<span>Maior diversidade para linguagens Web: </span><span class="fragment">uma alternativa!</span>
+						<span class="fragment">Criação de novas linguagens.</span>
 					</section>
 
 					<section>
@@ -307,28 +410,24 @@
 							<img src="/assets/webassembly1.jpg" class="round-border"/>
 						</div>
 					</section>
+					<section>
+						<h2>Interpretador Ruby - C++ => JavaScript</h2>
+						<div id="code-form">
+					    <div id="editor-container">
+					      <div id="editor" class=" ace_editor ace-monokai ace_dark"><textarea wrap="off" style="position: fixed; z-index: 100000; left: 324px; top: 477px;"></textarea><div class="ace_gutter"><div class="ace_gutter_active_line" style="top: 0px; height: 15.427px;"></div><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 231.854px; width: 39px;"></div></div><div class="ace_scroller" style="height: 201px; left: 39px; right: 15px;"><div class="ace_content" style="margin-top: 0px; width: 906px; height: 231.854px;"><div class="ace_layer ace_marker-layer"><div class="ace_active_line start" style="height:15.426997184753418px;width:898px;top:0px;left:0px;"></div></div><div class="ace_print_margin_layer"><div class="ace_print_margin" style="left: 483.339px; visibility: visible;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:15.426997184753418px"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer"><div class="ace_cursor ace_hidden" style="left: 4px; top: 0px; width: 5.99174px; height: 15.427px;"></div></div></div></div><div class="ace_sb" style="width: 20px; height: 201px;"><div style="height: 15.427px;"></div></div></div>
+					    </div>
+					    <button class="btn primary" id="submit-button" href="#">Submit</button>
+					  </div>
+					</section>
 				</section>
-				
+
 				<section>
-					Plataformas
+					<h2>Plataformas</h2>
+					<img src="assets/plataformas.jpg" height="400px" class="fragment">
 				</section>
 
 				<section>
 					Tooling
-				</section>
-
-				<section>
-					<section data-transition="none">
-						<img src="assets/js.jpg" width="200px">
-						<div class="clearboth"></div>
-						<div class="slogan-box">O Javascript está em todo lugar<br />e porque você deveria se interessar</div>
-					</section>
-					
-					<section data-transition="none">
-						<div class="part"><div class="number">4</div></div>
-						<div class="clearboth"></div>
-						<div class="slogan-box"><span class="fragment visible highlight-yellow" data-fragment-index="0">porque você deveria se interessar</span></div>
-					</section>
 				</section>
 
 				<!-- NODEBOTS -->
@@ -441,6 +540,29 @@ board.on("ready", function() {
 
 
 				<!-- NODEBOTS END-->
+
+				<section>
+					<section data-transition="none">
+						<img src="assets/js.jpg" width="200px">
+						<div class="clearboth"></div>
+						<div class="slogan-box">O Javascript está em todo lugar<br />e porque você deveria se interessar</div>
+					</section>
+					
+					<section data-transition="none">
+						<div class="part"><div class="number">4</div></div>
+						<div class="clearboth"></div>
+						<div class="slogan-box"><span class="fragment visible" data-fragment-index="0">porque você deveria se interessar</span></div>
+					</section>
+				</section>
+
+				<section>
+					<section data-background="assets/favela.jpg" class="white">
+						<h1 class="fragment box padding">
+							Comunidade
+						</h1>
+					</section>
+					<section data-background="assets/500days.jpg"></section>
+				</section>
 
 				<section>FIM</section>
 
@@ -798,6 +920,7 @@ Reveal.addEventListener( 'customevent', function() {
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/remotes/remotes.js', async: true },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
