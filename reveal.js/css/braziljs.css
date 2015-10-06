@@ -77,11 +77,11 @@
 .box {
   background: rgba(0, 0, 0, 0.7);
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .box.padding {
-  padding: 20px 30px 5px !important;
+  padding: 20px 30px !important;
 }
 
 .topo {
@@ -169,7 +169,7 @@
 }
 
 .round-border {
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .parte {
@@ -243,4 +243,8 @@
 .nodebots figure{
     width: 33.33333%;
     float: left;
+}
+
+ul li .small {
+  font-size: 20px;
 }
