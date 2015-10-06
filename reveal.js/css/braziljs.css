@@ -12,20 +12,12 @@
     text-transform: none !important;
     font-style: italic;
     color: #fff !important;
-    text-shadow:
-   -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000 !important;
+
  ]}
 
 .white .fragment {
   color: #FFF;
-  text-shadow:
-   -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000 !important;
+
 }
 
 .reveal section img {
@@ -247,4 +239,9 @@
 
 ul li .small {
   font-size: 20px;
+}
+
+.aprender li a {
+  color: #fff !important;
+  text-shadow: none !important;
 }
