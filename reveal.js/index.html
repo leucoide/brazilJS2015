@@ -77,7 +77,10 @@
 				<section>
 					<section>
 						<p>Linha do tempo:</p>
-						<img src="assets/js-timeline.png" />						
+						<img src="assets/js-timeline.png" />
+						<aside class="notes">
+		        	<p>Javascript foi criado em 10 dias</p>
+			    	</aside>
 					</section>
 					<section data-state="capa" data-background-video="https://s3-us-west-2.amazonaws.com/brasiljs/wat.mp4" data-background="#000"></section>
 				</section>
@@ -96,6 +99,12 @@
 						<div class="fragment box padding">Javascript !== Java</div>
 						<img src="assets/java-hamster.jpg" class="fragment round-border" />
 						<div class="fragment box padding">Javascript !== jQuery</div>
+						<aside class="notes">
+		        	<p>Apesar disso, o nome realmente veio do Java</p>
+		        	<p>Havia uma pressão interna para que o javascript fosse igual a java</p>
+		        	<p></p>
+		        	<p></p>
+			    	</aside>
 					</section>
 					<section data-transition="none" data-background="assets/no.gif">
 					</section>
@@ -183,6 +192,20 @@
 						<div class="clearboth"></div>
 						<div class="slogan-box">O Javascript está em todo lugar!</div>
 					</section>
+				</section>
+
+				<section>
+					<p><strong>Lei de Jeff Atwood</strong></p>
+					<blockquote class="fragment">Any application that <strong>CAN</strong> be written in JavaScript, <strong>WILL</strong> eventually be written in JavaScript</blockquote>
+					<p><span class="fragment"><img src="assets/codinghorror-app-icon.png"/> Coding Horror</span><span class="fragment jeff"><img src="assets/stackoverflow-logo.jpg"/></span></p>
+				</section>
+
+				<section>
+					Plataformas
+				</section>
+
+				<section>
+					Tooling
 				</section>
 
 				<section data-background="assets/barra-shopping-sul.jpg"> 
@@ -276,7 +299,7 @@
 				</section>
 
 				<section>
-					<section class="white box" data-background="/assets/webassembly-back.jpeg" data-state="header-white">
+					<section class="white box" data-background="assets/webassembly-back.jpeg" data-state="header-white">
 						<h2>Web Assembly (WASM)</h2>
 						<h3>O Que é?</h3>
 						<ul>
@@ -309,14 +332,6 @@
 					</section>
 				</section>
 				
-				<section>
-					Plataformas
-				</section>
-
-				<section>
-					Tooling
-				</section>
-
 				<section>
 					<section data-transition="none">
 						<img src="assets/js.jpg" width="200px">
@@ -774,6 +789,7 @@ Reveal.addEventListener( 'customevent', function() {
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/remotes/remotes.js', async: true },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
