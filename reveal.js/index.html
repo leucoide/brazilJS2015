@@ -341,6 +341,9 @@
 						<img src="assets/braziljs-substack.jpg" class="fragment">
 					</section>
 					<section class="fotos" data-state="opacidade-fundo">
+						<img src="assets/bolo.jpg">
+					</section>
+					<section class="fotos" data-state="opacidade-fundo">
 						<img src="assets/braziljs-show.jpg">
 						<img src="assets/braziljs-participantes.jpg" class="fragment">
 					</section>
@@ -503,113 +506,114 @@
 				</section>
 
 				<!-- NODEBOTS -->
-				<section class='nodebots' id='intro'>
-					<img src="assets/nodebots.jpg" width="600px">
-				</section>
-
-				<section data-background='assets/lights.gif'>
-					<pre>
-						<code>
-$("livingroom").bind("motion", function() {
-  $(this).find("lights").on();
-});
-						</code>
-					</pre>
-				</section>
-
 				<section>
-					<img src="assets/platforms-nodebots.jpg" width="900px">
+					<section class='nodebots' id='intro'>
+						<img src="assets/nodebots.jpg" width="600px">
+					</section>
 
-					<aside class="notes">
-      					Particle,Respberrypi,Tessel(first 100% javascript support),IntelGalileo,BeagleBone Black
-   					</aside>
-				</section>
+					<section data-background='assets/lights.gif'>
+						<pre>
+							<code>
+	$("livingroom").bind("motion", function() {
+	  $(this).find("lights").on();
+	});
+							</code>
+						</pre>
+					</section>
 
-				<section class='nodebots'>
+					<section>
+						<img src="assets/platforms-nodebots.jpg" width="900px">
+
+						<aside class="notes">
+	      					Particle,Respberrypi,Tessel(first 100% javascript support),IntelGalileo,BeagleBone Black
+	   					</aside>
+					</section>
+
+					<section class='nodebots'>
+						
+						<figure>
+							<img src="assets/chris-williams.jpg" width="200px" height="200px">
+							<figcaption>
+								<a href="https://github.com/voodootikigod/node-serialport">
+								Chris Williams: node-serialport
+								</a>
+							</figcaption>
+						</figure>
+
+						<figure>
+							<img src="assets/julian-gautier.jpg" width="200px" height="200px">
+							<figcaption>
+								<a href="https://github.com/jgautier/firmata">
+								Julian Gautier: firmata
+								</a>
+							</figcaption>
+						</figure>
+
+						<figure>
+							<img src="assets/rick-waldron.jpg" width="200px" height="200px">
+							<figcaption>
+								<a href="https://github.com/rwaldron/johnny-five">
+								Rick Waldron: johnny-five
+								</a>
+							</figcaption>
+						</figure>
+					</section>
+
+					<section data-background='assets/johnny-five-bkg.png'>
+						<div style='position:absolute'>
+							<h2>Abstraction...</h2>
+							<ul>
+								<li>Accelerometer</li>
+								<li>LCD Screens</li>
+								<li>Relays</li>
+								<li>Motors</li>
+								<li>Sensors</li>
+							...
+							</ul>
+						</div>
+						
+					</section>
+
+					<section>
+						<h1>Get Started!</h1>
+
+						<ol>
+							<li class='fragment'>Install Node.js</li>
+							<li class='fragment'>Setup your board</li>
+							<li class='fragment'>npm install johnny-five</li>
+						</ol>
+					</section>
 					
-					<figure>
-						<img src="assets/chris-williams.jpg" width="200px" height="200px">
-						<figcaption>
-							<a href="https://github.com/voodootikigod/node-serialport">
-							Chris Williams: node-serialport
-							</a>
-						</figcaption>
-					</figure>
+					<section>
+						<h4>Hello World!</h4>
 
-					<figure>
-						<img src="assets/julian-gautier.jpg" width="200px" height="200px">
-						<figcaption>
-							<a href="https://github.com/jgautier/firmata">
-							Julian Gautier: firmata
-							</a>
-						</figcaption>
-					</figure>
+						<pre>
+							<code> 
+	var five = require("johnny-five");
+	var board = new five.Board();
 
-					<figure>
-						<img src="assets/rick-waldron.jpg" width="200px" height="200px">
-						<figcaption>
-							<a href="https://github.com/rwaldron/johnny-five">
-							Rick Waldron: johnny-five
-							</a>
-						</figcaption>
-					</figure>
+	board.on("ready", function() {
+
+	  // Create a standard `led` component instance
+	  var led = new five.Led(13);
+
+	  // "blink" the led in 500ms on-off phase periods
+	  led.blink(500);
+	});
+							</code>
+						</pre>
+
+						<pre>
+
+						<img src="assets/hello-johnny.png" width="200px">
+					</section>
+
+
+					<section data-background='assets/robots.jpg'>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/zIioT7wzBYQ" frameborder="0" allowfullscreen></iframe>
+					</section>
+
 				</section>
-
-				<section data-background='assets/johnny-five-bkg.png'>
-					<div style='position:absolute'>
-						<h2>Abstraction...</h2>
-						<ul>
-							<li>Accelerometer</li>
-							<li>LCD Screens</li>
-							<li>Relays</li>
-							<li>Motors</li>
-							<li>Sensors</li>
-						...
-						</ul>
-					</div>
-					
-				</section>
-
-				<section>
-					<h1>Get Started!</h1>
-
-					<ol>
-						<li class='fragment'>Install Node.js</li>
-						<li class='fragment'>Setup your board</li>
-						<li class='fragment'>npm install johnny-five</li>
-					</ol>
-				</section>
-				
-				<section>
-					<h4>Hello World!</h4>
-
-					<pre>
-						<code> 
-var five = require("johnny-five");
-var board = new five.Board();
-
-board.on("ready", function() {
-
-  // Create a standard `led` component instance
-  var led = new five.Led(13);
-
-  // "blink" the led in 500ms on-off phase periods
-  led.blink(500);
-});
-						</code>
-					</pre>
-
-					<pre>
-
-					<img src="assets/hello-johnny.png" width="200px">
-				</section>
-
-
-				<section data-background='assets/robots.jpg'>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/zIioT7wzBYQ" frameborder="0" allowfullscreen></iframe>
-				</section>
-
-
 
 				<!-- NODEBOTS END-->
 
@@ -636,9 +640,9 @@ board.on("ready", function() {
 						<img src="assets/stackoverflow-logo.jpg" class="fragment round-border" height="140px" />
 						<img src="assets/github.gif" class="fragment round-border" height="140px" />
 						<img src="assets/google-code.png" class="fragment round-border" height="140px" />
-						<img src="assets/jsfiddle.svg" class="fragment round-border" height="140px" />
+						<img src="assets/slack.png" class="fragment round-border" height="140px" />
 						<img src="assets/fb.png" class="fragment round-border" height="140px" />
-						<img src="assets/braziljs.svg" class="fragment round-border" height="140px" />
+						<img src="assets/braziljs.png" class="fragment round-border" height="140px" />
 					</section>
 					<section data-background="assets/500days.jpg"></section>
 				</section>
