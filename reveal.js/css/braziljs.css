@@ -345,3 +345,28 @@ img.webtorrent {
   left:747px;
 }
 
+
+/* Editor Ruby */
+
+#editor .ace_line {
+  font-size: 30px;
+  height: 40px !important;
+  background-color: #49483E;
+  padding: 0 10px;
+}
+
+#editor .ace_line .ace_identifier {
+  float: left;
+}
+
+#editor-container .ace_cursor.ace_hidden {
+  height: 40px !important;
+  color: #fff !important;
+  font-size: 40px !important;
+}
+
+#editor-container .ace_marker-layer .ace_active_line {
+  height: 40px !important;
+  color: #fff !important;
+  font-size: 40px !important;
+}
