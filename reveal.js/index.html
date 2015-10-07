@@ -62,7 +62,7 @@
 	    	border: 1px solid black;
 	    	overflow-y: scroll;
 	    	height: 100px;
-	    	max-height: 100px;	
+	    	max-height: 100px;
 	    	font-size: 18px;
 	    }
 
@@ -79,7 +79,7 @@
 	<body>
 
 		<div class="reveal">
-			
+
 			<div class="topo">
 				<div class="header"></div>
 				<div class="slogan">O Javascript está em todo lugar e porque você deveria se interessar</div>
@@ -105,7 +105,7 @@
 						<div class="clearboth"></div>
 						<div class="slogan-box">O Javascript está em todo lugar<br />e porque você deveria se interessar</div>
 					</section>
-					
+
 					<section data-background="assets/wally1.jpg" data-transition="none">
 						<div class="part"><div class="number">1</div></div>
 						<div class="clearboth"></div>
@@ -188,7 +188,7 @@
 					<h3 class="box padding">Hoje o JavaScript faz 20 anos</h3>
 					<aside class="notes">
 				    Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-				   </aside>					
+				   </aside>
 				</section>
 
 				<section class="white box" data-background="assets/road.jpg">
@@ -210,7 +210,7 @@
 						<div class="clearboth"></div>
 						<div class="slogan-box">O Javascript está em todo lugar<br />e porque você deveria se interessar</div>
 					</section>
-					
+
 					<section data-background="assets/uncle-sam.jpg" data-transition="none">
 						<div class="part"><div class="number">2</div></div>
 						<div class="clearboth"></div>
@@ -268,7 +268,7 @@
 						<img src="assets/lastnight.jpg" class="round-border">
 					</section>
 				</section>
-					
+
 
 				<section>
 					<section data-transition="none">
@@ -299,25 +299,73 @@
 						<p>Ele é o criador do StackOverflow e tem um blog chamado Coding Horror</p>
 					</aside>
 				</section>
-
 				<section>
-					<div class="part"><div class="number">3.1</div></div>
-					<div class="clearboth"></div>
-					<div class="slogan-box">Plataformas</div>
-				</section>
 
-				<section>
-					<h2>Plataformas</h2>
-					<img src="assets/plataformas.jpg" height="400px">
-				</section>
+					<section>
+						<div class="part"><div class="number">3.1</div></div>
+						<div class="clearboth"></div>
+						<div class="slogan-box">Plataformas</div>
+					</section>
 
+					<section>
+						<h2>Plataformas</h2>
+						<img src="assets/plataformas.jpg" height="400px">
+					</section>
+
+					<section>
+					  <h2>browser</h2>
+					  <img src="assets/browser-logos.jpg" alt="" />
+					</section>
+					<section>
+					  <img class='stretch' src="assets/captain_obvious.jpg"/>
+					</section>
+					<section>
+					  <h2>Not so obvious!</h2>
+					  <h3>
+					    <ul>
+					      <li class="fragment"> Embarcado</li>
+					      <li class="fragment"> Browser API</li>
+					      <li class="fragment"> DOM API</li>
+					    </ul>
+					  </h3>
+					  <aside class="notes">
+					    <p>O javascript nasceu embarcado</p>
+					    <p> HTML extends XML</p>
+					  </aside>
+					</section>
+					<section class="center" data-background="assets/node.jpg">
+					  <h2>nodejs</h2>
+					  <h2>iojs</h2>
+					</section>
+					<section>
+					  <img class='stretch' src="assets/event-loop.png"/>
+					</section>
+					<section>
+					  <img class='stretch' src="assets/buzz-woody.jpg"/>
+					</section>
+
+					<section>
+					  <h2 >mobile</h2>
+					  <img width="200" class='fragment' src="assets/ionic.png"/>
+					  <img width="200" src="assets/cordova.png"/>
+					</section>
+					<section>
+					  <h2>Desktop</h2>
+					    <img src="assets/nwjs.png" class="fragment" width="200" />
+					    <img src="assets/electron.png" class="fragment" width="200" />
+					    <img src="assets/atom.png" class="fragment" width="200" />
+
+					</section>
+
+
+				</section>
 				<section>
 					<div class="part"><div class="number">3.2</div></div>
 					<div class="clearboth"></div>
 					<div class="slogan-box">Tooling</div>
 				</section>
 
-				<section data-background="assets/barra-shopping-sul.jpg"> 
+				<section data-background="assets/barra-shopping-sul.jpg">
 					<section>
 						<div class="part"><div class="number">3.3</div></div>
 						<div class="clearboth"></div>
@@ -561,7 +609,7 @@
 					</section>
 
 					<section class='nodebots'>
-						
+
 						<figure>
 							<img src="assets/chris-williams.jpg" width="200px" height="200px">
 							<figcaption>
@@ -602,7 +650,7 @@
 							...
 							</ul>
 						</div>
-						
+
 					</section>
 
 					<section>
@@ -614,12 +662,12 @@
 							<li class='fragment'>npm install johnny-five</li>
 						</ol>
 					</section>
-					
+
 					<section>
 						<h4>Hello World!</h4>
 
 						<pre>
-							<code> 
+							<code>
 	var five = require("johnny-five");
 	var board = new five.Board();
 
@@ -649,7 +697,7 @@
 						<div class="clearboth"></div>
 						<div class="slogan-box">O Javascript está em todo lugar<br />e porque você deveria se interessar</div>
 					</section>
-					
+
 					<section data-transition="none">
 						<div class="part"><div class="number">4</div></div>
 						<div class="clearboth"></div>
@@ -1032,7 +1080,7 @@ Reveal.addEventListener( 'customevent', function() {
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
-			
+
 	    var editor = ace.edit("editor");
 	    editor.setTheme("ace/theme/monokai");
 	    editor.getSession().setMode("ace/mode/ruby");
