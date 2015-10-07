@@ -406,27 +406,56 @@
 					</section>
 					<section class="white fotos" data-background="assets/confused.gif">
 						<h3 class="box padding">Legal, maaaaaas, pra que serve?</h3>
-						<img class="fragment" src="assets/networktypes.png" alt="">
+						<p id="pirate" class="fragment webtorrent" data-fragment-index="1">
+							<img src="assets/pirate-bay.png"/>
+						</p>
+
+						<p id="network" style="display:none" class="fragment webtorrent" data-fragment-index="3">
+							<img src="assets/networktypes.png">
+						</p>
+
+						<span class="fragment" data-fragment-index="2"><hr class="fragment banned x1 fade-out" data-fragment-index="3"></span>
+						<span class="fragment" data-fragment-index="2"><hr class="fragment banned x2 fade-out" data-fragment-index="3"></span>
 
 						<aside class="notes">
 							<p>Pra que serve torrent no browser?</p>
+							<p>Primera coisa que vem a cabeça é: torrent = pirataria</p>
 							<p>Se pensarmos em teoria de redes, temos esses 3 modelos. Centralzado, decentralizado e distribuido</p>
 							<p>Hoje os sites estão no primeiro modelo. Alguns sites federados como o Diaspora estão no segundo, aonde há nós centrais e os nós se comunicam</p>
 							<p>Torrent como todos sabem está no terceiro modelo.</p>
-							<p>Agora imaginem que, ao acessar um site, o seu navegador passa a ser um seeder do próprio site que está sendo acessado?</p>
 							<p>Quer falar de escala?</p>
 						</aside>
 					</section>
 
 					<section class="white" data-background="assets/servers.jpg">
 						<h3 class="box padding">Quer falar de escala?</h3>
-						<h3 class="box padding fragment">Mas quem garante que não vai ter um <em>man in the middle</em>?</h3>
+					</section>
+
+					<section class="white" data-background="assets/browsers.gif">
+						<h3 class="box padding">Que tal se cada acesso se transformasse em um peer do site?</h3>
+						<h3 class="box padding fragment">Maaaaaas, tem um porém...</h3>
+						<aside class="notes">
+							<p>Agora imaginem que, ao acessar um site, o seu navegador passa a ser um seeder do próprio site que está sendo acessado?</p>
+							<p>Deploy distribuído de todos os assets</p>
+						</aside>
+					</section>
+
+					<section class="white" data-background="assets/man-in-middle.jpg">
+						<h3 class="box padding">Quem garante que não vai ter um <em>man in the middle</em>?</h3>
 					</section>
 
 					<section class="white" data-background="assets/math.png">
-						<h3 class="box padding" style="margin-top: 250px;">
-							Matemática e criptografia
+						<h3 class="box padding">
+							Math, bitches!!
+						</h3><br>
+						<h3 class="box padding fragment">
+							E criptografia
 						</h3>
+
+						<aside class="notes">
+							<p>Os arquivos via torrent são endereçáveis pelos hashes criptográficos do seu conteúdo.</p>
+							<p>Então é praticamente garantido que uma vez que se requisite um conteúdo pelo seu hash, este conteúdo é matematicamente verificável</p>
+						</aside>
 					</section>
 
 				</section>
@@ -995,6 +1024,9 @@ Reveal.addEventListener( 'customevent', function() {
 						break
 					case 'circulo':
 						document.querySelector('.slide-background.present.stack .present').classList.add('move-ass')
+					case 'network':
+						ev.fragment.previousElementSibling.style.display = 'none'
+						ev.fragment.style.display = 'block'
 				}
 			})
 
@@ -1004,6 +1036,9 @@ Reveal.addEventListener( 'customevent', function() {
 					case 'circulo':
 						document.querySelector('.slide-background.present.stack .present').classList.remove('move-ass')
 						break
+					case 'network':
+						ev.fragment.previousElementSibling.style.display = 'block'
+						ev.fragment.style.display = 'none'
 				}
 			})
 		</script>

@@ -246,6 +246,28 @@ ul li .small {
   text-shadow: none !important;
 }
 
+img.webtorrent {
+  margin: auto;
+}
+
+/* WEBTORRENT */
+
+.reveal .slides section hr.banned {
+  border: 0;
+  width: 470px;
+  height: 10px;
+  background-color: red;
+  margin-left:250px;
+  margin-top: -20px;
+}
+
+.reveal .slides section hr.banned.x1 {
+  transform: rotate(45deg);
+}
+.reveal .slides section hr.banned.x2 {
+  transform: rotate(-45deg);
+}
+
 /* TIMELINE */
 
 .reveal .slides section hr {
