@@ -175,13 +175,15 @@
   width: 95px;
 }
 
-.fotos img {
+.reveal section.fotos img {
   width: 470px;
   border-radius: 10px;
+  border: 2px solid #fff !important;
+  box-shadow: 4px 4px 10px #000 !important;
 }
 
-.fotos img.pano {
-  width: 880px;
+.reveal section.fotos img.pano {
+  width: 920px;
   border-radius: 10px;
 }
 
