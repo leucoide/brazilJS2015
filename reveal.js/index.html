@@ -97,6 +97,13 @@
 					<div class="slogan-box">O Javascript está em todo lugar<br />e porque você deveria se interessar</div>
 					<img class="academia-capa" src="assets/academia-de-tecnologia.png" />
 					<img class="tecnologia-capa" src="assets/tecnologia-globo.png" />
+					<aside class="notes">
+						<p>Contextualizar a apresentação, dizendo que fomos na brjs e pelo que foi visto lá, ao invés de fazer uma aprensentação apenas sobre o evento, resolvemos fazer algo mais abrangente</p>
+						<p>O js faz 20 anos, e vamos falar um pouco sobre o passado e o futuro da linguagem</p>
+						<p>Estamos fazendo algumas afirmações e vamos tentar provar elas ao longo da apresentação</p>
+						<p>Esperamos que, assim como nós saimos inspirados e instigados do evento, vocês entendam um porque</p>
+						<p>Alguém aqui nunca ouviu falar em js?</p>
+					</aside>
 				</section>
 
 				<section>
@@ -110,6 +117,9 @@
 						<div class="part"><div class="number">1</div></div>
 						<div class="clearboth"></div>
 						<div class="slogan-box">O Javascript <span id="esta">está</span> <span class="fragment inplace grow highlight-red" data-fragment-index="1" id="estava">estava</span> em todo lugar<span class="fragment" data-fragment-index="1">?</span></div>
+						<aside class="notes">
+							<p></p>
+						</aside>
 					</section>
 				</section>
 
@@ -117,9 +127,9 @@
 					<section data-background="assets/old-paper.jpg">
 						<h2><strong>Linha do tempo</strong></h2>
 						<hr>
-						<p class="tl tl1994 tldate fragment" data-fragment-index="1">1994</p>
-						<hr class="tl1994 tlrule fragment" data-fragment-index="1">
-						<p class="tl tl1994 tltext fragment" data-fragment-index="1">NETSCAPE É LANÇADO<br>(Nasce o LiveScript)</p>
+						<p class="tl tl1994 tldate">1994</p>
+						<hr class="tl1994 tlrule">
+						<p class="tl tl1994 tltext">NETSCAPE É LANÇADO<br>(Nasce o LiveScript)</p>
 						<p class="tl tl1995 tldate fragment" data-fragment-index="2">1995</p>
 						<hr class="tl1995 tlrule fragment" data-fragment-index="2">
 						<p class="tl tl1995 tltext fragment" data-fragment-index="2">LIVESCRIPT MUDA O NOME<br>PARA JAVASCRIPT</p>
@@ -140,17 +150,27 @@
 						<p class="tl tl2009 tltext fragment" data-fragment-index="7">NODEJS</p>
 						<aside class="notes">
 		        	<p>Javascript foi criado em 10 dias</p>
-		        	<p>Arrays eram só objetos com a propriedade "length"</p>
-		        	<p>O Date foi portado direto do Java e por isso que é um troço tão estranho com mês indexado pelo 0</p>
-		        	<p>Óbvio que o js teria os seus problemas [passa o slide]</p>
+		        	<p>Foi criado para ganhar a guerra dos browsers entre a netscape e o ie</p>
+		        	<!-- <p>Arrays eram só objetos com a propriedade "length"</p> -->
+		        	<!-- <p>O Date foi portado direto do Java e por isso que é um troço tão estranho com mês indexado pelo 0</p> -->
 			    	</aside>
 					</section>
+
+					<section class="white" data-background="assets/braziljs-brendan-eich.jpg" data-state="header-white">
+						<h3 class="box padding">Hoje o JavaScript faz 20 anos</h3>
+						<aside class="notes">
+		        	<p>Óbvio que o js teria os seus problemas [passa o slide]</p>
+					   </aside>
+					</section>
+
 					<section data-background="#000">
 						<video class="stretch" data-autoplay="true" src="https://s3-us-west-2.amazonaws.com/brasiljs/wat.mp4" controls></video>
+
 						<aside class="notes">
 							<p>{} + {} é uma string "[object Object]"</p>
 							<p>tudo que não pode ser somado como número vira string</p>
 							<p>{} + [] : {} é um bloco, e +[] é um type cast pra number e por isso dá 0</p>
+							<p>Por causa disso e de outras coisas que o javascript tem suas próprias confusões [muda slide]</p>
 						</aside>
 					</section>
 				</section>
@@ -158,6 +178,11 @@
 				<section>
 					<section>
 						<h2>JavaScript === Java <img src="assets/meme-duvida.png" width="200px"></h2>
+
+						<aside class="notes">
+							<p>Primeira confusão</p>
+							<p>Perguntar: JavaScript é igual a JAVA</p>
+						</aside>
 					</section>
 
 					<section data-state="white-cover" class="white" data-background="assets/no.gif">
@@ -175,20 +200,20 @@
 
 						<aside class="notes">
 							<p>Outra grande confusão</p>
-							<p>Existe muito programador jQuery que não sabe javascript</p>
+							<p>Perguntar: JavaScript é igual a jQuery</p>
+							<p>Perguntar: JavaScript é igual a jQuery?</p>
 						</aside>
 					</section>
 
-					<section data-state="white-cover" class="white" data-background="assets/no.gif">
+					<section class="white" data-state="white-cover" class="white" data-background="assets/no.gif">
 						<img src="assets/ovos-omelete.jpg" class="fragment round-border" />
+						<div class="box padding fragment">jQuery é o designer falando que sabe JavaScript</div>
+						<aside class="notes">
+							<p>Existe muito programador jQuery que não sabe javascript</p>
+							<p>Dúvidas em javascript no google muitas vezes tem a solução em jQuery</p>
+							<p>Tomar cuidado com as apis do jquery pois muitas vezes difere da api do javascript, exemplo, forEach</p>
+						</aside>
 					</section>
-				</section>
-
-				<section class="white" data-background="assets/braziljs-brendan-eich.jpg" data-state="header-white">
-					<h3 class="box padding">Hoje o JavaScript faz 20 anos</h3>
-					<aside class="notes">
-				    Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-				   </aside>
 				</section>
 
 				<section class="white box" data-background="assets/road.jpg">
@@ -220,6 +245,22 @@
 
 				<section>
 					<section>
+						<h2>É para todos!</h2>
+						<p>Desenvolvedores backend, desenvolvedores frontend, designers, curiosos...</p>
+						<img src="assets/designer-or-coder.jpg" class="fragment" width="700px">
+
+						<aside class="notes">
+							<p>Cada um tem uma historia com javascript</p>
+						</aside>
+					</section>
+					<section>
+						<img src="assets/javascript-in-fe-and-be.jpg" class="round-border">
+					</section>
+					<section data-background="assets/yes.gif" data-state="header-white"></section>
+				</section>
+
+				<section>
+					<section>
 						<h1>Facilidade</h1>
 						<img src="assets/facilidade1.png" class="fragment" height="300px">
 						<img src="assets/facilidade2.png" class="fragment" height="300px">
@@ -233,18 +274,6 @@
 					    	Rafael Amorim conta que resolveu aprender Javascript porque tava na moda, os amigos falavam bem etc. Foi lá, aprendeu e se baseou em um gringo pra fazer os 500 dias de commits (500 dias seguidos que teria que fazer pelo menos um commit útil). Isso ajudaria em outro objetivo dele que era aprender a fundo o git.
 					   	</aside>
 					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>É para todos!</h2>
-						<p>Desenvolvedores backend, desenvolvedores frontend, designers, curiosos...</p>
-						<img src="assets/designer-or-coder.jpg" class="fragment" width="700px">
-					</section>
-					<section>
-						<img src="assets/javascript-in-fe-and-be.jpg" class="round-border">
-					</section>
-					<section data-background="assets/yes.gif" data-state="header-white"></section>
 				</section>
 
 				<section data-state="header-white" data-background="assets/quadro-negro.jpg" class="white">
@@ -286,10 +315,10 @@
 
 				<section class='white'>
 					<p><strong>Lei de Jeff Atwood</strong></p>
-					<h3 class="box padding fragment">
-						<em>Any application that CAN be written in JavaScript, WILL eventually be written in JavaScript</em>
+					<h3 class="box padding fragment" data-fragment-index="2">
+						<em>"Any application that CAN be written in JavaScript, WILL eventually be written in JavaScript" - Jeff Atwood, 2007</em>
 					</h3>
-					<div class="fragment">
+					<div class="fragment" data-fragment-index="1">
 						<a href="http://stackoverflow.com/" target="stackoverflow"><img src="assets/stackoverflow-logo.jpg" height="200px" /></a>
 						<a href="http://blog.codinghorror.com/" target="codinghorror"><img src="assets/codinghorror-app-icon.png" height="200px" /></a>
 					</div>
@@ -309,16 +338,17 @@
 
 					<section>
 						<h2>Plataformas</h2>
-						<img src="assets/plataformas.jpg" height="400px">
 					</section>
 
 					<section>
 					  <h2>browser</h2>
 					  <img src="assets/browser-logos.jpg" alt="" />
 					</section>
+					
 					<section>
-					  <img class='stretch' src="assets/captain_obvious.jpg"/>
+					  <img class='stretch round-border' src="assets/captain_obvious.jpg"/>
 					</section>
+					
 					<section>
 					  <h2>Not so obvious!</h2>
 					  <h3>
@@ -330,18 +360,19 @@
 					  </h3>
 					  <aside class="notes">
 					    <p>O javascript nasceu embarcado</p>
-					    <p> HTML extends XML</p>
+					    <p>HTML extends XML</p>
 					  </aside>
 					</section>
-					<section class="center" data-background="assets/node.jpg">
-					  <h2>nodejs</h2>
-					  <h2>iojs</h2>
+
+					<section class="white center" data-background="assets/node.jpg">
+					  <h2 class="box padding">
+					  	<p>nodejs</p>
+					  	<p>iojs</p>
+				  	</h2>
 					</section>
+
 					<section>
-					  <img class='stretch' src="assets/event-loop.png"/>
-					</section>
-					<section>
-					  <img class='stretch' src="assets/buzz-woody.jpg"/>
+					  <img class='stretch round-border' src="assets/event-loop.png"/>
 					</section>
 
 					<section>
@@ -349,81 +380,32 @@
 					  <img width="200" class='fragment' src="assets/ionic.png"/>
 					  <img width="200" src="assets/cordova.png"/>
 					</section>
+
 					<section>
 					  <h2>Desktop</h2>
-					    <img src="assets/nwjs.png" class="fragment" width="200" />
-					    <img src="assets/electron.png" class="fragment" width="200" />
-					    <img src="assets/atom.png" class="fragment" width="200" />
-
+				    <img src="assets/nwjs.png" class="fragment" width="200" />
+				    <img src="assets/electron.png" class="fragment" width="200" />
+				    <img src="assets/atom.png" class="fragment" width="200" />
 					</section>
 
+					<section class="white">
+						<h2 class="box padding">Resumindo</h2>
+						<div><img src="assets/plataformas.jpg" height="400px"></div>
+					</section>
 
+					<section>
+					  <img class='stretch round-border' src="assets/buzz-woody.jpg"/>
+					</section>
 				</section>
+
 				<section>
 					<div class="part"><div class="number">3.2</div></div>
 					<div class="clearboth"></div>
 					<div class="slogan-box">Tooling</div>
 				</section>
 
-				<section data-background="assets/barra-shopping-sul.jpg">
-					<section>
-						<div class="part"><div class="number">3.3</div></div>
-						<div class="clearboth"></div>
-						<div class="slogan-box">BrazilJS</div>
-					</section>
-
-					<section class="white">
-						<span>
-							<img src="assets/braziljs.svg" width="300px">
-							<img src="assets/ticket.png" width="300px">
-						</span>
-						<h3 class="box padding">
-							<strong>A MAIOR CONFERÊNCIA JAVASCRIPT DO UNIVERSO</strong>
-						</h3>
-						<h6 class="box padding">Porto Alegre / RS</h6>
-					</section>
-					<section class="white">
-						<h3 class="box padding">1300 participantes</h3>
-						<h3 class="box padding fragment">22 palestrantes</h3>
-					</section>
-					<section class="white">
-						<div class="box padding">
-							<ul>
-								<li><strong>CHRISTIAN HEILMANN</strong> <span class="small">/ Microsoft</span></li>
-								<li class="fragment"><strong>FELIPE RIBEIRO</strong> <span class="small">/ Spotify</span></li>
-								<li class="fragment"><strong>SEBASTIAN MCKENZIE</strong> <span class="small">/ Criador do BabelJS</span></li>
-								<li class="fragment"><strong>JAMES HALLIDAY (SUBSTACK)</strong> <span class="small">/ Criador do Browserify</span></li>
-								<li class="fragment"><strong>BRENDAN EICH</strong> <span class="small">/ Criador do JavaScript</span></li>
-							</ul>
-						</div>
-					</section>
-					<section data-background="assets/palmas.gif"></section>
-					<section class="fotos" data-background="assets/braziljs-pano.jpg">
-						<img src="assets/braziljs-entrada.jpg" class="fragment">
-						<img src="assets/braziljs-geral.jpg" class="fragment">
-					</section>
-					<section class="fotos" data-background="assets/braziljs-pano.jpg">
-						<img src="assets/braziljs-pano.jpg" class="pano">
-					</section>
-					<section class="fotos" data-background="assets/braziljs-pano.jpg">
-						<img src="assets/braziljs-intro.jpg">
-						<img src="assets/braziljs-vr.jpg" class="fragment">
-					</section>
-					<section class="fotos" data-background="assets/braziljs-pano.jpg">
-						<img src="assets/braziljs-brendan-eich.jpg">
-						<img src="assets/braziljs-substack.jpg" class="fragment">
-					</section>
-					<section class="fotos" data-background="assets/braziljs-pano.jpg">
-						<img src="assets/bolo.jpg" class="round-border" width="600px">
-					</section>
-					<section class="fotos" data-background="assets/braziljs-pano.jpg">
-						<img src="assets/braziljs-show.jpg">
-						<img src="assets/braziljs-participantes.jpg" class="fragment">
-					</section>
-				</section>
-
 				<section>
-					<div class="part"><div class="number">3.4</div></div>
+					<div class="part"><div class="number">3.3</div></div>
 					<div class="clearboth"></div>
 					<div class="slogan-box">Tecnologias</div>
 				</section>
@@ -717,6 +699,61 @@
 						<img src="assets/braziljs.png" class="fragment round-border" height="140px" />
 					</section>
 					<section data-background="assets/500days.jpg"></section>
+				</section>
+
+				<section data-background="assets/barra-shopping-sul.jpg">
+					<section>
+						<div class="slogan-box">BrazilJS</div>
+					</section>
+
+					<section class="white">
+						<span>
+							<img src="assets/braziljs.svg" width="300px">
+							<img src="assets/ticket.png" width="300px">
+						</span>
+						<h3 class="box padding">
+							<strong>A MAIOR CONFERÊNCIA JAVASCRIPT DO UNIVERSO</strong>
+						</h3>
+						<h6 class="box padding">Porto Alegre / RS</h6>
+					</section>
+					<section class="white">
+						<h3 class="box padding">1300 participantes</h3>
+						<h3 class="box padding fragment">22 palestrantes</h3>
+					</section>
+					<section class="white">
+						<div class="box padding">
+							<ul>
+								<li><strong>CHRISTIAN HEILMANN</strong> <span class="small">/ Microsoft</span></li>
+								<li class="fragment"><strong>FELIPE RIBEIRO</strong> <span class="small">/ Spotify</span></li>
+								<li class="fragment"><strong>SEBASTIAN MCKENZIE</strong> <span class="small">/ Criador do BabelJS</span></li>
+								<li class="fragment"><strong>JAMES HALLIDAY (SUBSTACK)</strong> <span class="small">/ Criador do Browserify</span></li>
+								<li class="fragment"><strong>BRENDAN EICH</strong> <span class="small">/ Criador do JavaScript</span></li>
+							</ul>
+						</div>
+					</section>
+					<section data-background="assets/palmas.gif"></section>
+					<section class="fotos" data-background="assets/braziljs-pano.jpg">
+						<img src="assets/braziljs-entrada.jpg" class="fragment">
+						<img src="assets/braziljs-geral.jpg" class="fragment">
+					</section>
+					<section class="fotos" data-background="assets/braziljs-pano.jpg">
+						<img src="assets/braziljs-pano.jpg" class="pano">
+					</section>
+					<section class="fotos" data-background="assets/braziljs-pano.jpg">
+						<img src="assets/braziljs-intro.jpg">
+						<img src="assets/braziljs-vr.jpg" class="fragment">
+					</section>
+					<section class="fotos" data-background="assets/braziljs-pano.jpg">
+						<img src="assets/braziljs-brendan-eich.jpg">
+						<img src="assets/braziljs-substack.jpg" class="fragment">
+					</section>
+					<section class="fotos" data-background="assets/braziljs-pano.jpg">
+						<img src="assets/bolo.jpg" class="round-border" width="600px">
+					</section>
+					<section class="fotos" data-background="assets/braziljs-pano.jpg">
+						<img src="assets/braziljs-show.jpg">
+						<img src="assets/braziljs-participantes.jpg" class="fragment">
+					</section>
 				</section>
 
 				<section>
@@ -1092,7 +1129,6 @@ Reveal.addEventListener( 'customevent', function() {
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/remotes/remotes.js', async: true },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
@@ -1107,7 +1143,6 @@ Reveal.addEventListener( 'customevent', function() {
 
 		<script type="text/javascript">
 			Reveal.addEventListener('fragmentshown', function (ev) {
-				console.log('fragmentshown', ev.fragment, ev.fragment.id);
 				switch (ev.fragment.id) {
 					case 'estava':
 						document.getElementById('esta').classList.add('strike', 'fragment', 'visible')
@@ -1124,7 +1159,6 @@ Reveal.addEventListener( 'customevent', function() {
 			})
 
 			Reveal.addEventListener('fragmenthidden', function (ev) {
-				console.log('fragmenthidden', ev.fragment, ev.fragment.id);
 				switch (ev.fragment.id) {
 					case 'circulo':
 						document.querySelector('.slide-background.present.stack .present').classList.remove('move-ass')
