@@ -523,10 +523,62 @@
 				<section>
 					<section>
 						<div class="slogan-box">Web Assembly (WASM)</div>
+						<img class="fragment" src="assets/wasm/wasm.jpg">
 					</section>
 					<section class="white box" data-background="assets/webassembly-back.jpeg" data-state="header-white">
-						<h2>Web Assembly (WASM)</h2>
-						<h3>O que é?</h3>
+						<h2>WASM - linguagem Assembly para a web</h2>
+						<p class="fragment">Definição de "assembly language": é uma linguagem de programação de baixo nível para um computador, ou outros dispositivos programaveis, que possui uma correspondência muito forte com as instruções da arquitetura da máquina.</p>
+
+						<aside class="notes">
+							<p>JavaScript é uma linguagem de programação de alto nível. Ela é interpretada para bytecode que, por sua vez, é traduzido para linguagem de máquina. Cada browser - navegador - possui a sua VM que "entende" JavaScript.</p>
+						</aside>
+						
+					</section>
+					<section>
+						<h3>JavaScript - VM ubíqua instalada em todas as máquinas</h3>						
+						<div class="fragment">
+							<p>Um ótimo "alvo" de compilação</p>
+							<img src="assets/wasm/target.jpg" width="300px">
+						</div>
+					</section>
+					<section>
+						<h3>Algumas linguagens...</h3>
+						<img class="fragment round-border" height="140px" src="assets/wasm/ts.png">
+						<img class="fragment round-border" height="140px" src="assets/wasm/coffeescript.png">
+						<img class="fragment round-border" height="140px" src="assets/wasm/dart.png">
+						
+						<aside class="notes">
+							<p>Elas são transformadas e não compiladas e, além disso, tendem a gerar códigos JavaScript diversos.</p>
+						</aside>
+					</section>
+					<section>
+						<h2>ASM.JS</h2>		
+						<p class="fragment">sub-conjunto do JavaScript</p>
+
+						<aside class="notes">
+							<p>Pensando nisso, por que não ter como "alvo" um subconjunto do JavaScript?</p>
+							<p> It’s a specialized subset of JavaScript that’s optimized for performance, especially for this use case of applications compiled to JavaScript</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Características e Limitações</h2>
+						<img src="assets/wasm/asm.png">
+
+						<aside class="notes">
+							<p>ASM.JS só é capaz de manipular uma seleção de diferentes tipos de números e nenhum outro tipo de dado ou estrutura de dados (incluindo strings, booleans, ou objects).</p>						
+						</aside>
+					</section>
+					<section>
+						<h2>Typed Arrays</h2>
+						<img src="assets/wasm/typed_arrays.png">
+
+						<aside class="notes">
+							<p>Ex.: substitui toda variável global por um objeto HEAP, que é um objeto Typed Array, que é muito otimizado para performance.</p>
+							<p>Isso faz com que o código asm seja traduzido diretamente para assembly, sem ter que interpretá-lo.</p>
+						</aside>
+					</section>
+					<section>
+						<h3>Mas afinal, o que é wasm?</h3>
 						<ul>
 							<span class="fragment"><li>Uma melhoria para o JavaScript</li></span>
 							<span class="fragment"><li>Uma melhoria para o Navegador</li></span>
@@ -535,18 +587,27 @@
 						</ul>
 					</section>
 					<section>
+						<h2>Web Assembly (WASM)</h2>
+						<h3>O que é <span class="fragment">EXATAMENTE?</span></h3>
+						<p class="fragment">Define uma "Abstract Sintax Tree" que é armazenada num formato binário.</p>
+						<p class="fragment">binário === menor</p>
+					</section>
+					<section>
 							<h2>Pra que serve?</h2>
 							<ul>
 								<li>Dá acesso a um conjunto de funcionalidades de baixo nível.</li>
 							</ul>
 					</section>
-					<section data-background="/assets/what.gif"></section>
+					<section data-background="/assets/what.gif" data-transition="none">
+						<aside class="notes">
+							<p>testando...</p>
+						</aside>
+					</section>
 					<section>
 						<h2>Pra que serve?</h2>
 						<span>Maior diversidade para linguagens Web: </span><span class="fragment">uma alternativa!</span>
 						<span class="fragment">Criação de novas linguagens.</span>
 					</section>
-
 					<section>
 						<div>
 							<h2>Como?</h2>
@@ -577,10 +638,7 @@
 						<img src="assets/wasm/unreal.jpg" />
 						<p class="fragment">Milhões de linhas de código portadas em SOMENTE 4 dias!</p>
 					</section>				
-					<section data-background="assets/wasm-mindblow.gif"></section>
-					<section class="stretch">
-						<iframe width="100%" height="100%" src="http://localhost:6666" frameborder="0"></iframe>
-					</section>
+					<section data-background="assets/wasm-mindblow.gif"></section>				
 				</section>
 
 				<!-- NODEBOTS -->
