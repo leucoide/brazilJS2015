@@ -410,6 +410,114 @@
 					<div class="slogan-box">Tecnologias</div>
 				</section>
 
+				<!-- NODEBOTS -->
+				<section>
+					<section>
+						<div class="slogan-box">NODEBOTS</div>
+						<div><img src="assets/nodebots.png" width="600px"></div>
+					</section>
+
+					<section data-background='assets/lights.gif'>
+						<pre>
+							<code>
+	$("livingroom").bind("motion", function() {
+	  $(this).find("lights").on();
+	});
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<img src="assets/platforms-nodebots.jpg" width="900px">
+
+						<aside class="notes">
+	      					Particle,Respberrypi,Tessel(first 100% javascript support),IntelGalileo,BeagleBone Black
+	   					</aside>
+					</section>
+
+					<section class='nodebots'>
+
+						<figure>
+							<img src="assets/chris-williams.jpg" width="200px" height="200px">
+							<figcaption>
+								<a href="https://github.com/voodootikigod/node-serialport">
+								Chris Williams: node-serialport
+								</a>
+							</figcaption>
+						</figure>
+
+						<figure>
+							<img src="assets/julian-gautier.jpg" width="200px" height="200px">
+							<figcaption>
+								<a href="https://github.com/jgautier/firmata">
+								Julian Gautier: firmata
+								</a>
+							</figcaption>
+						</figure>
+
+						<figure>
+							<img src="assets/rick-waldron.jpg" width="200px" height="200px">
+							<figcaption>
+								<a href="https://github.com/rwaldron/johnny-five">
+								Rick Waldron: johnny-five
+								</a>
+							</figcaption>
+						</figure>
+					</section>
+
+					<section data-background='assets/johnny-five-bkg.png'>
+						<div style='position:absolute'>
+							<h2>Abstraction...</h2>
+							<ul>
+								<li>Accelerometer</li>
+								<li>LCD Screens</li>
+								<li>Relays</li>
+								<li>Motors</li>
+								<li>Sensors</li>
+							...
+							</ul>
+						</div>
+
+					</section>
+
+					<section>
+						<h1>Get Started!</h1>
+
+						<ol>
+							<li class='fragment'>Install Node.js</li>
+							<li class='fragment'>Setup your board</li>
+							<li class='fragment'>npm install johnny-five</li>
+						</ol>
+					</section>
+
+					<section>
+						<h4>Hello World!</h4>
+
+						<pre>
+							<code>
+	var five = require("johnny-five");
+	var board = new five.Board();
+
+	board.on("ready", function() {
+
+	  // Create a standard `led` component instance
+	  var led = new five.Led(13);
+
+	  // "blink" the led in 500ms on-off phase periods
+	  led.blink(500);
+	});
+							</code>
+						</pre>
+						<pre>
+						<img src="assets/hello-johnny.png" width="200px">
+					</section>
+
+					<section data-background='assets/robots.jpg'>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/zIioT7wzBYQ" frameborder="0" allowfullscreen></iframe>
+					</section>
+				</section>
+				<!-- NODEBOTS END-->
+
 				<section>
 					<section>
 						<div class="slogan-box">WebVR &amp; Web AR</div>
@@ -605,8 +713,11 @@
 					</section>
 					<section>
 						<h2>Pra que serve?</h2>
-						<span>Maior diversidade para linguagens Web: </span><span class="fragment">uma alternativa!</span>
-						<span class="fragment">Criação de novas linguagens.</span>
+							<ul>
+								<li>Dá acesso a um conjunto de funcionalidades de baixo nível.</li>
+								<li>Maior diversidade para linguagens Web: <span class="fragment">uma alternativa!</span></li>
+								<li class="fragment">Criação de novas linguagens.</li>
+							</ul>
 					</section>
 					<section>
 						<div>
@@ -616,10 +727,12 @@
 					</section>
 					<section>
 						<h2>Como a compilação funciona?</h2>
-						<p><span style="color: #F85">C/C++ </span>=>
-							 <span style="color: #58F">LLVM </span>=>
-							 <span style="color: #8f5">Emscripten </span>=>
-							 <span style="color: #85F">JavaScript</span></p>
+						<p>
+							<span style="color: #F85">C/C++ </span>
+							<span class="fragment">=><span style="color: #58F">LLVM </span></span>
+							<span class="fragment">=><span style="color: #8f5">Emscripten </span></span>
+							<span class="fragment">=><span style="color: #85F">JavaScript</span></span>
+						 </p>
 					</section>
 					<section>
 						<h3>LLVM Optimizations vs JavaScript Engine Optimizations</h3>
@@ -640,114 +753,6 @@
 					</section>				
 					<section data-background="assets/wasm-mindblow.gif"></section>				
 				</section>
-
-				<!-- NODEBOTS -->
-				<section>
-					<section>
-						<div class="slogan-box">NODEBOTS</div>
-						<div><img src="assets/nodebots.png" width="600px"></div>
-					</section>
-
-					<section data-background='assets/lights.gif'>
-						<pre>
-							<code>
-	$("livingroom").bind("motion", function() {
-	  $(this).find("lights").on();
-	});
-							</code>
-						</pre>
-					</section>
-
-					<section>
-						<img src="assets/platforms-nodebots.jpg" width="900px">
-
-						<aside class="notes">
-	      					Particle,Respberrypi,Tessel(first 100% javascript support),IntelGalileo,BeagleBone Black
-	   					</aside>
-					</section>
-
-					<section class='nodebots'>
-
-						<figure>
-							<img src="assets/chris-williams.jpg" width="200px" height="200px">
-							<figcaption>
-								<a href="https://github.com/voodootikigod/node-serialport">
-								Chris Williams: node-serialport
-								</a>
-							</figcaption>
-						</figure>
-
-						<figure>
-							<img src="assets/julian-gautier.jpg" width="200px" height="200px">
-							<figcaption>
-								<a href="https://github.com/jgautier/firmata">
-								Julian Gautier: firmata
-								</a>
-							</figcaption>
-						</figure>
-
-						<figure>
-							<img src="assets/rick-waldron.jpg" width="200px" height="200px">
-							<figcaption>
-								<a href="https://github.com/rwaldron/johnny-five">
-								Rick Waldron: johnny-five
-								</a>
-							</figcaption>
-						</figure>
-					</section>
-
-					<section data-background='assets/johnny-five-bkg.png'>
-						<div style='position:absolute'>
-							<h2>Abstraction...</h2>
-							<ul>
-								<li>Accelerometer</li>
-								<li>LCD Screens</li>
-								<li>Relays</li>
-								<li>Motors</li>
-								<li>Sensors</li>
-							...
-							</ul>
-						</div>
-
-					</section>
-
-					<section>
-						<h1>Get Started!</h1>
-
-						<ol>
-							<li class='fragment'>Install Node.js</li>
-							<li class='fragment'>Setup your board</li>
-							<li class='fragment'>npm install johnny-five</li>
-						</ol>
-					</section>
-
-					<section>
-						<h4>Hello World!</h4>
-
-						<pre>
-							<code>
-	var five = require("johnny-five");
-	var board = new five.Board();
-
-	board.on("ready", function() {
-
-	  // Create a standard `led` component instance
-	  var led = new five.Led(13);
-
-	  // "blink" the led in 500ms on-off phase periods
-	  led.blink(500);
-	});
-							</code>
-						</pre>
-						<pre>
-						<img src="assets/hello-johnny.png" width="200px">
-					</section>
-
-					<section data-background='assets/robots.jpg'>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/zIioT7wzBYQ" frameborder="0" allowfullscreen></iframe>
-					</section>
-				</section>
-				<!-- NODEBOTS END-->
 
 				<section>
 					<section data-transition="none">
@@ -1228,9 +1233,11 @@ Reveal.addEventListener( 'customevent', function() {
 						break
 					case 'circulo':
 						document.querySelector('.slide-background.present.stack .present').classList.add('move-ass')
+						break;
 					case 'network':
 						ev.fragment.previousElementSibling.style.display = 'none'
 						ev.fragment.style.display = 'block'
+						break;
 				}
 			})
 
@@ -1244,6 +1251,11 @@ Reveal.addEventListener( 'customevent', function() {
 						ev.fragment.style.display = 'none'
 				}
 			})
+
+			Reveal.addEventListener( 'ready', function( event ) {
+				console.clear()
+			});
+
 		</script>
 	</body>
 </html>
