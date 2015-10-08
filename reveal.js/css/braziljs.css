@@ -439,9 +439,10 @@ img.webtorrent {
 
 /* Deal with it */
 
-.fim-box {
+.reveal section .fim-box {
   display: inline-block;
   position: relative;
+  margin-bottom: 50px;
 }
 
 .deal-with-it {

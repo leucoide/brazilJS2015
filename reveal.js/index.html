@@ -1006,7 +1006,8 @@
 								<img src="assets/oculos.png" width="290px" class="oculos fragment" id="oclin">
 							</div>
 						</div>
-					</section>					
+						<h2 class="fragment">Always bet on JS</h2>
+					</section>
 				</section>
 
 				<!-- FIM BRAZILJS2015 -->
@@ -1075,6 +1076,9 @@
 					case 'network':
 						ev.fragment.previousElementSibling.style.display = 'block'
 						ev.fragment.style.display = 'none'
+					case 'oclin':
+						ev.fragment.classList.remove('down');
+						break;
 				}
 			})
 
