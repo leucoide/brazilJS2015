@@ -230,54 +230,63 @@
 				</section>
 
 				<section>
-					<section data-transition="none">
+					<!-- <section data-transition="none">
 						<img src="assets/js.jpg" width="200px">
 						<div class="clearboth"></div>
 						<div class="slogan-box">O Javascript está em todo lugar<br />e porque você deveria se interessar</div>
-					</section>
+					</section> -->
 
 					<section data-background="assets/uncle-sam.jpg" data-transition="none">
 						<div class="part"><div class="number">2</div></div>
 						<div class="clearboth"></div>
 						<div class="slogan-box"><span id="circulo" class="fragment fade-out" data-fragment-index="1">Javascript está em todo lugar<br />e porque </span><span class="fragment highlight-red" data-fragment-index="1">você</span><span class="fragment fade-out" data-fragment-index="1"> deveria se interessar</span><span class="fragment" data-fragment-index="1"><img class="circulo" width="170px" src="assets/circulo.png" /></span></div>
+						<aside class="notes">
+							<p>Vamos continuar descontruindo a frase tema da nossa apresentação. Primeiro a gente viu como ele tava, agora a gente vai falar do VOCÊ. O VOCÊ é quem já programa em JS ou quem quer ou deve programar.</p>
+							<p>Não importa o que vc faz, é fácil aprender o js. E começar.</p>
+						</aside>
 					</section>
 				</section>
 
 				<section>
 					<section>
-						<h2>É para todos!</h2>
+						<h1>É para todos!</h1>
+					</section>
+					<section>
 						<p>Desenvolvedores backend, desenvolvedores frontend, designers, curiosos...</p>
 						<img src="assets/designer-or-coder.jpg" class="fragment" width="700px">
 
 						<aside class="notes">
-							<p>Cada um tem uma historia com javascript</p>
+							<p>E quem são essas pessoas que programam em JS? Essa é uma parte legal do JS, ele é pra todos! Por isso ele se popularizou tanto.</p>
+							<ul>
+								<li>desenvolvedores backend</li>
+								<li>desenvolvedores frontend</li>
+								<li>designers</li>
+								<li>curiosos</li>
+								<li>qualquer um</li>
+							</ul>
+							<p>Cada um tem uma história com javascript.</p>
+							<p>Eu, por exemplo, venho do design e da usabilidade... inclusive eu era essa cara do jQuery que o Raposo falou...e acabei decidindo entra mais afundo no mundo do JS, e não só mexer em DOM e com jQuery.</p>
 						</aside>
 					</section>
 					<section>
 						<img src="assets/javascript-in-fe-and-be.jpg" class="round-border">
 					</section>
-					<section data-background="assets/yes.gif" data-state="header-white"></section>
+					<section data-background="assets/yes.gif" data-state="header-white">
+						<aside class="notes">
+							<p>Pois é, sem precisar mudar de linguagem, de contexto... vc programa em backend e frontend!</p>
+						</aside>
+					</section>
 				</section>
 
 				<section>
 					<section>
 						<h1>Facilidade</h1>
-						<img src="assets/facilidade1.png" class="fragment" height="300px">
-						<img src="assets/facilidade2.png" class="fragment" height="300px">
-						<img src="assets/facilidade3.png" class="fragment" height="300px">
-					</section>
-					<section>
-						<h1>Devtools!</h1>
-					</section>
-					<section data-background="assets/500days.jpg">
 						<aside class="notes">
-					    	Rafael Amorim conta que resolveu aprender Javascript porque tava na moda, os amigos falavam bem etc. Foi lá, aprendeu e se baseou em um gringo pra fazer os 500 dias de commits (500 dias seguidos que teria que fazer pelo menos um commit útil). Isso ajudaria em outro objetivo dele que era aprender a fundo o git.
-					   	</aside>
+							<p>Outro fator importante é a facilidade.</p>
+							<p>É fácil porque o aprendizado é interativo. A própria linguagem pode ser usada pra ensinar</p>
+						</aside>
 					</section>
-				</section>
-
-				<section data-state="header-white" data-background="assets/quadro-negro.jpg" class="white">
-					<section>
+					<section data-state="header-white" data-background="assets/quadro-negro.jpg" class="white">
 						<h2>Infinitos recursos para aprender</h2>
 						<ul class="fragment aprender">
 							<li><a href="http://nodeschool.io" target="nodeschool">nodeschool.io</a></li>
@@ -288,13 +297,37 @@
 							<li><a href="http://bevacqua.github.io/promisees" target="promises">bevacqua.github.io/promisees</a></li>
 							<li>&infin;</li>
 						</ul>
-
 						<aside class="notes">
-							<p>É fácil porque o aprendizado é interativo. A linguagem pode ser usada para ensinar</p>
+							Hoje tem tanto recurso que..... do dia pra noite vc pode virar um expert em js.
 						</aside>
 					</section>
 					<section data-background="assets/quadro-negro.jpg" class="white">
 						<img src="assets/lastnight.jpg" class="round-border">
+					</section>
+					
+					<section>
+						<img src="assets/facilidade1.png" height="320px">
+						<img src="assets/facilidade2.png" class="fragment" height="320px">
+						<img src="assets/facilidade3.png" class="fragment" height="320px">
+						<aside class="notes">
+							<p>A gente viu os vários recursos que têm pra aprender</p>
+							<p>Baixa uma IDE qualquer ou acha alguma online. Pode ser até um bloco de notas.</p>
+							<p>Pronto! A grosso modo vc já tem tudo o que precisa pra começar!</p>
+						</aside>
+					</section>
+					<section>
+						<h1 class="devtools">Devtools!</h1>
+						<aside class="notes">
+							<p>Outra facilidade que o JS te proporciona são os devtools dos browsers. Vc faz o que vc quer ali mesmo no browser, além de facilitar demais pra debugar.</p>
+							<p>document.querySelector(".devtools").style.marginTop = "-165px"</p>
+							<p>document.querySelector(".devtools").innerHTML = "<div>Fui criado no devtools!</div>"</p>
+						</aside>
+					</section>
+					<section data-background="assets/500days.jpg">
+						<aside class="notes">
+					    	<p>Rafael Amorim conta que resolveu aprender Javascript porque tava na moda, os amigos falavam bem etc. Foi lá, aprendeu e se baseou em um gringo pra fazer os 500 dias de commits (500 dias seguidos que teria que fazer pelo menos um commit útil). Isso ajudaria em outro objetivo dele que era aprender a fundo o git.</p>
+
+					   	</aside>
 					</section>
 				</section>
 
