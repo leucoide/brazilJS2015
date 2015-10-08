@@ -308,6 +308,8 @@ img.webtorrent {
   font-weight: bold;
   position: absolute;
   display: inline-block;
+  text-shadow: 0 0 2px #fff;
+  color: #000;
 }
 
 .reveal .slides section .tljs {
@@ -345,11 +347,11 @@ img.webtorrent {
   text-align: left;
   width: 500px;
   color: #000;
-  text-shadow: 1px 1px 1px #333333;
+  text-shadow: 0 0 2px #fff;
 }
 
 .reveal .slides section .highlight{
-  color: #F00!important;
+  color: #B30C0C !important;
 }
 
 .reveal .slides section .tl1995 {
@@ -442,7 +444,11 @@ img.webtorrent {
 .reveal section .fim-box {
   display: inline-block;
   position: relative;
-  margin-bottom: 50px;
+  margin-left: -160px;
+}
+
+.reveal section .bet {
+  margin-top: 200px;
 }
 
 .deal-with-it {
