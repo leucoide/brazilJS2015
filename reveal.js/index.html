@@ -204,7 +204,8 @@
 					<section class="white" data-background="assets/braziljs-brendan-eich.jpg" data-state="header-white">
 						<h3 class="box padding">Hoje o JavaScript faz 20 anos</h3>
 						<aside class="notes">
-		        	<p>Óbvio que o js teria os seus problemas [passa o slide]</p>
+							<p>Tivemos essa palestra fantástica do Brendan Eich na BRJS aonde ele falou sobre a história da criação. A guerra dos browsers e como ele fez para criar uma linguagem em apenas 10 dias. Na época não tinha muito espaço pra pensar, não tinha memória e nem o processamento. Por isso que é óbvio que js tem suas esquisitices</p>
+		        	<p>[passa o slide]</p>
 					   </aside>
 					</section>
 
@@ -1076,6 +1077,14 @@
 						ev.fragment.style.display = 'none'
 				}
 			})
+
+			if (window.location.href.indexOf('controls') > -1) {
+				document.querySelector('.topo').style.display = 'none';
+				document.querySelector('.footer').style.display = 'none';
+				
+			}
+
+			console.log('window.location', window.location.href, location.href);
 		</script>
 	</body>
 </html>
