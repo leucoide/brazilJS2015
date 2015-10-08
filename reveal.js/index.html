@@ -488,6 +488,114 @@
 					<div class="slogan-box">Tecnologias</div>
 				</section>
 
+				<!-- NODEBOTS -->
+				<section>
+					<section>
+						<div class="slogan-box">NODEBOTS</div>
+						<div><img src="assets/nodebots.png" width="600px"></div>
+					</section>
+
+					<section data-background='assets/lights.gif'>
+						<pre>
+							<code>
+	$("livingroom").bind("motion", function() {
+	  $(this).find("lights").on();
+	});
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<img src="assets/platforms-nodebots.jpg" width="900px">
+
+						<aside class="notes">
+	      					Particle,Respberrypi,Tessel(first 100% javascript support),IntelGalileo,BeagleBone Black
+	   					</aside>
+					</section>
+
+					<section class='nodebots'>
+
+						<figure>
+							<img src="assets/chris-williams.jpg" width="200px" height="200px">
+							<figcaption>
+								<a href="https://github.com/voodootikigod/node-serialport">
+								Chris Williams: node-serialport
+								</a>
+							</figcaption>
+						</figure>
+
+						<figure>
+							<img src="assets/julian-gautier.jpg" width="200px" height="200px">
+							<figcaption>
+								<a href="https://github.com/jgautier/firmata">
+								Julian Gautier: firmata
+								</a>
+							</figcaption>
+						</figure>
+
+						<figure>
+							<img src="assets/rick-waldron.jpg" width="200px" height="200px">
+							<figcaption>
+								<a href="https://github.com/rwaldron/johnny-five">
+								Rick Waldron: johnny-five
+								</a>
+							</figcaption>
+						</figure>
+					</section>
+
+					<section data-background='assets/johnny-five-bkg.png'>
+						<div style='position:absolute'>
+							<h2>Abstraction...</h2>
+							<ul>
+								<li>Accelerometer</li>
+								<li>LCD Screens</li>
+								<li>Relays</li>
+								<li>Motors</li>
+								<li>Sensors</li>
+							...
+							</ul>
+						</div>
+
+					</section>
+
+					<section>
+						<h1>Get Started!</h1>
+
+						<ol>
+							<li class='fragment'>Install Node.js</li>
+							<li class='fragment'>Setup your board</li>
+							<li class='fragment'>npm install johnny-five</li>
+						</ol>
+					</section>
+
+					<section>
+						<h4>Hello World!</h4>
+
+						<pre>
+							<code>
+	var five = require("johnny-five");
+	var board = new five.Board();
+
+	board.on("ready", function() {
+
+	  // Create a standard `led` component instance
+	  var led = new five.Led(13);
+
+	  // "blink" the led in 500ms on-off phase periods
+	  led.blink(500);
+	});
+							</code>
+						</pre>
+						<pre>
+						<img src="assets/hello-johnny.png" width="200px">
+					</section>
+
+					<section data-background='assets/robots.jpg'>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/zIioT7wzBYQ" frameborder="0" allowfullscreen></iframe>
+					</section>
+				</section>
+				<!-- NODEBOTS END-->
+
 				<section>
 					<section>
 						<div class="slogan-box">WebVR &amp; Web AR</div>
@@ -516,7 +624,6 @@
 						<span class="fragment"><div>Peer-to-Peer <span class="fragment">(really!)</span></div></span>
 						<span class="fragment"><div>Chats ao vivo com vídeo</div></span>
 						<span class="fragment"><div>Acesso à câmera e microfone</div></span>
-						<span class="fragment"><div>WebTorrent</div></span>
 					</section>
 					<section>
 						<div>
@@ -527,6 +634,9 @@
 								<li><em>RTCDataChannel</em> permite a troca de <span class="fragment highlight-red mygrow">DADOS</span> peer-to-peer</li>
 							</ul>
 						</div>
+					</section>
+					<section>
+						<div class="slogan-box">Web Torrent</div>
 					</section>
 					<section>
 						Web Torrent = <span class="fragment">Protocolo Torrent</span><span class="fragment"> + Javascript</span><span class="fragment"> + Browser</span>
@@ -570,7 +680,7 @@
 					</section>
 
 					<section class="white" data-background="assets/browsers.gif">
-						<h3 class="box padding">Que tal se cada acesso se transformasse em um peer do site?</h3>
+						<h3 class="box padding">Que tal se cada acesso se transformasse em um peer/seeder do site?</h3>
 						<h3 class="box padding fragment">Maaaaaas, tem um porém...</h3>
 						<aside class="notes">
 							<p>Agora imaginem que, ao acessar um site, o seu navegador passa a ser um seeder do próprio site que está sendo acessado?</p>
@@ -579,6 +689,7 @@
 					</section>
 
 					<section class="white" data-background="assets/man-in-middle.jpg">
+						<h3 class="box padding">Segurança</h3>
 						<h3 class="box padding">Quem garante que não vai ter um <em>man in the middle</em>?</h3>
 					</section>
 
@@ -739,114 +850,6 @@
 						<h2><a href="examples/BananaBread/index.html" target="bananabread">Demo: BananaBread</a></h2>
 					</section>
 				</section>
-
-				<!-- NODEBOTS -->
-				<section>
-					<section>
-						<div class="slogan-box">NODEBOTS</div>
-						<div><img src="assets/nodebots.png" width="600px"></div>
-					</section>
-
-					<section data-background='assets/lights.gif'>
-						<pre>
-							<code>
-	$("livingroom").bind("motion", function() {
-	  $(this).find("lights").on();
-	});
-							</code>
-						</pre>
-					</section>
-
-					<section>
-						<img src="assets/platforms-nodebots.jpg" width="900px">
-
-						<aside class="notes">
-	      					Particle,Respberrypi,Tessel(first 100% javascript support),IntelGalileo,BeagleBone Black
-	   					</aside>
-					</section>
-
-					<section class='nodebots'>
-
-						<figure>
-							<img src="assets/chris-williams.jpg" width="200px" height="200px">
-							<figcaption>
-								<a href="https://github.com/voodootikigod/node-serialport">
-								Chris Williams: node-serialport
-								</a>
-							</figcaption>
-						</figure>
-
-						<figure>
-							<img src="assets/julian-gautier.jpg" width="200px" height="200px">
-							<figcaption>
-								<a href="https://github.com/jgautier/firmata">
-								Julian Gautier: firmata
-								</a>
-							</figcaption>
-						</figure>
-
-						<figure>
-							<img src="assets/rick-waldron.jpg" width="200px" height="200px">
-							<figcaption>
-								<a href="https://github.com/rwaldron/johnny-five">
-								Rick Waldron: johnny-five
-								</a>
-							</figcaption>
-						</figure>
-					</section>
-
-					<section data-background='assets/johnny-five-bkg.png'>
-						<div style='position:absolute'>
-							<h2>Abstraction...</h2>
-							<ul>
-								<li>Accelerometer</li>
-								<li>LCD Screens</li>
-								<li>Relays</li>
-								<li>Motors</li>
-								<li>Sensors</li>
-							...
-							</ul>
-						</div>
-
-					</section>
-
-					<section>
-						<h1>Get Started!</h1>
-
-						<ol>
-							<li class='fragment'>Install Node.js</li>
-							<li class='fragment'>Setup your board</li>
-							<li class='fragment'>npm install johnny-five</li>
-						</ol>
-					</section>
-
-					<section>
-						<h4>Hello World!</h4>
-
-						<pre>
-							<code>
-	var five = require("johnny-five");
-	var board = new five.Board();
-
-	board.on("ready", function() {
-
-	  // Create a standard `led` component instance
-	  var led = new five.Led(13);
-
-	  // "blink" the led in 500ms on-off phase periods
-	  led.blink(500);
-	});
-							</code>
-						</pre>
-						<pre>
-						<img src="assets/hello-johnny.png" width="200px">
-					</section>
-
-					<section data-background='assets/robots.jpg'>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/zIioT7wzBYQ" frameborder="0" allowfullscreen></iframe>
-					</section>
-				</section>
-				<!-- NODEBOTS END-->
 
 				<section>
 					<section data-transition="none">
