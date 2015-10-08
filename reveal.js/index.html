@@ -954,7 +954,17 @@
 
 				</section>
 
-				<section>FIM</section>
+				<section>
+					<section>
+						<div class="fim-box">
+							<div class="fim fade-out">FIM</div>
+							<div class="deal-with-it fragment fade-in">
+								<img src="assets/js.jpg" width="200px">
+								<img src="assets/oculos.png" width="290px" class="oculos fragment" id="oclin">
+							</div>
+						</div>
+					</section>					
+				</section>
 
 				<!-- FIM BRAZILJS2015 -->
 
@@ -992,7 +1002,6 @@
 	    editor.setTheme("ace/theme/monokai");
 	    editor.getSession().setMode("ace/mode/ruby");
 	    editor.getSession().setTabSize(2);
-
 		</script>
 
 		<script type="text/javascript">
@@ -1009,6 +1018,9 @@
 					case 'network':
 						ev.fragment.previousElementSibling.style.display = 'none'
 						ev.fragment.style.display = 'block'
+					case 'oclin':
+						ev.fragment.classList.add('down');
+						break;
 				}
 			})
 

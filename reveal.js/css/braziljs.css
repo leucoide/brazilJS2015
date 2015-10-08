@@ -230,6 +230,16 @@
   color: #2E2E2C;
 }
 
+.reveal .slides .fim {
+  background-color: #F8DC3D;
+  margin: 0 auto;
+  color: #2E2E2C;
+  font-weight: bold;
+  padding: 30px;
+  display: inline-block;
+  font-size: 85px;
+}
+
 .slide-background .move-ass {
   background-position: 400px -350px;
 }
@@ -424,4 +434,31 @@ img.webtorrent {
   height: 40px !important;
   color: #fff !important;
   font-size: 40px !important;
+}
+
+
+/* Deal with it */
+
+.fim-box {
+  display: inline-block;
+  position: relative;
+}
+
+.deal-with-it {
+  position: absolute;
+  display: inline-block;
+  width: 300px;
+  left: -51px;
+  top: -28px;
+}
+
+.deal-with-it .oculos {
+  position: absolute;
+  left: 0;
+  top: -150px; 
+  transition: all 2s !important;
+}
+
+.deal-with-it .oculos.down {
+  top: 12px;
 }
