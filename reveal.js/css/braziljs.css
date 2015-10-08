@@ -442,7 +442,11 @@ img.webtorrent {
 .reveal section .fim-box {
   display: inline-block;
   position: relative;
-  margin-bottom: 50px;
+  margin-left: -160px;
+}
+
+.reveal section .bet {
+  margin-top: 200px;
 }
 
 .deal-with-it {
