@@ -230,6 +230,16 @@
   color: #2E2E2C;
 }
 
+.reveal .slides .fim {
+  background-color: #F8DC3D;
+  margin: 0 auto;
+  color: #2E2E2C;
+  font-weight: bold;
+  padding: 30px;
+  display: inline-block;
+  font-size: 85px;
+}
+
 .slide-background .move-ass {
   background-position: 400px -350px;
 }
@@ -260,7 +270,7 @@ img.webtorrent {
   height: 10px;
   background-color: red;
   margin-left:250px;
-  margin-top: -20px;
+  margin-top: -190px;
 }
 
 .reveal .slides section hr.banned.x1 {
@@ -272,12 +282,15 @@ img.webtorrent {
 
 /* TIMELINE */
 
+.tl-section {
+  top: 0!important;
+}
+
 .reveal .slides section hr {
   background-color: #555;
   height: 2px;
   width: 100%;
   position: absolute;
-  top: 331px;
   border: 0;
 }
 
@@ -297,54 +310,98 @@ img.webtorrent {
   display: inline-block;
 }
 
+.reveal .slides section .tljs {
+  top: 300px;
+  position: absolute;
+  width: 100%;
+}
+
+.reveal .slides section .tlapps {
+  top: 560px;
+  position: absolute;
+  width: 100%;
+}
+
+.reveal .slides section .tljs p.tltext {
+  top: -215px;
+}
+
+.reveal .slides section .tljs p.tldate {
+  top: 10px;
+}
+
+.reveal .slides section .tlapps p.tltext {
+  top: -215px;
+}
+
+.reveal .slides section .tlapps p.tldate {
+  top: 10px;
+}
+
 .reveal .slides section p.tltext {
   transform: rotate(-41deg);
-  top: 113px;
   line-height: 23px;
   margin-left: -50px;
   text-align: left;
   width: 500px;
-}
-
-.reveal .slides section p.tltext:nth-child(odd),
-.reveal .slides section p.tldate:nth-child(odd) {
-  color: #484847;
-}
-.reveal .slides section p.tltext:nth-child(even),
-.reveal .slides section p.tldate:nth-child(even) {
   color: #000;
+  text-shadow: 1px 1px 1px #333333;
 }
 
-.reveal .slides section p.tldate {
-  top: 340px;
-}
-
-.reveal .slides section .tl1994 {
-  left: 100px;
+.reveal .slides section .highlight{
+  color: #F00!important;
 }
 
 .reveal .slides section .tl1995 {
-  left:180px;
+  left:100px;
+}
+
+.reveal .slides section .tl1996 {
+  left:150px;
 }
 
 .reveal .slides section .tl1997 {
-  left:288px;
+  left:200px;
 }
 
-.reveal .slides section .tl2002 {
-  left:413px;
+.reveal .slides section .tl1998 {
+  left:250px;
+}
+
+.reveal .slides section .tl1999 {
+  left:300px;
+}
+
+.reveal .slides section .tl2000 {
+  left:350px;
+}
+
+.reveal .slides section .tl2001 {
+  left:400px;
 }
 
 .reveal .slides section .tl2004 {
-  left:516px;
+  left:500px;
+}
+
+.reveal .slides section .tl2005 {
+  left:550px;
 }
 
 .reveal .slides section .tl2006 {
-  left:619px;
+  left:600px;
+}
+
+.reveal .slides section .tl2008 {
+  left:650px;
 }
 
 .reveal .slides section .tl2009 {
-  left:747px;
+  left:700px;
+}
+
+.reveal .slides section .tl2015 {
+  left:800px;
 }
 
 
@@ -377,4 +434,32 @@ img.webtorrent {
   height: 40px !important;
   color: #fff !important;
   font-size: 40px !important;
+}
+
+
+/* Deal with it */
+
+.reveal section .fim-box {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.deal-with-it {
+  position: absolute;
+  display: inline-block;
+  width: 300px;
+  left: -51px;
+  top: -28px;
+}
+
+.deal-with-it .oculos {
+  position: absolute;
+  left: 0;
+  top: -150px; 
+  transition: all 2s !important;
+}
+
+.deal-with-it .oculos.down {
+  top: 12px;
 }
