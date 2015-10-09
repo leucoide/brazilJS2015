@@ -262,6 +262,10 @@ img.webtorrent {
   margin: auto;
 }
 
+.pronto {
+  margin-top: 40px;
+}
+
 /* WEBTORRENT */
 
 .reveal .slides section hr.banned {
