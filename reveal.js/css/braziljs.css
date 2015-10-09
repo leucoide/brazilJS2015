@@ -263,7 +263,7 @@ img.webtorrent {
 }
 
 .pronto {
-  margin-top: 40px;
+  margin-top: 40px !important;
 }
 
 /* WEBTORRENT */
