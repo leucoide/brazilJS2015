@@ -473,3 +473,7 @@ img.webtorrent {
 .deal-with-it .oculos.down {
   top: 12px;
 }
+
+.tooling a {
+  color: black !important;
+}
