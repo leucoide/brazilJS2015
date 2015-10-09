@@ -100,13 +100,13 @@
 
 					<aside class="notes">
 						<p>Fomos na brjs e pelo que foi visto lá, ao invés de fazer uma aprensentação apenas sobre o evento, resolvemos fazer algo mais abrangente</p>
-						<p>O js faz 20 anos, e vamos tentar atualizar todo mundo sobre essa linguagem muito difundida, mas muitas vezes controversa. Quase um ame-a ou odeie-a</p>
+						<p>O js faz 20 anos, e vamos tentar atualizar todo mundo sobre essa linguagem muito difundida, mas muitas vezes controversa. Quase um ame-a ou deixe-a</p>
 						<p>Esperamos que, assim como nós saimos inspirados e instigados do evento, vocês entendam um porque</p>
 						<p>[passa o slide]</p>
 					</aside>
 				</section>
 
-				<section class="white">
+				<section class="white" data-background="assets/dom.jpg">
 					<h2 class="box padding">DOM (Document Object Model)</h2>
 
 					<aside class="notes">
@@ -272,7 +272,7 @@
 					</section>
 
 					<section class="white" data-state="white-cover" class="white" data-background="assets/no.gif">
-						<img src="assets/ovos-omelete.jpg" class="fragment round-border" />
+						<img src="assets/jquery.jpg" class="fragment round-border" />
 						<div class="box padding fragment">jQuery é o designer falando que sabe JavaScript</div>
 						<aside class="notes">
 							<p>Existe muito programador jQuery que não sabe javascript</p>
@@ -283,14 +283,15 @@
 				</section>
 
 				<section class="white box" data-background="assets/road.jpg">
-					<h1>ECMAScript 6, 7, 8...</h1>
-					<h4>O futuro do JavaScript</h4>
+					<h2>O futuro do JavaScript</h2>
+					<h3>ECMAScript 6, 7, 8...</h3>
+					<h3>ECMAScript 2015, 2016, 2017...</h3>
 					<h4>
 						<span class="fragment">Class</span>
 						<span class="fragment">, Arrow functions (lambdas)</span>
-						<span class="fragment">, Decorators</span>
-						<span class="fragment">, Macros</span>
 						<span class="fragment">, Tipos</span>
+						<span class="fragment">, Decorators</span>
+						<span class="fragment" data-autoslide="500">, Macros</span>
 					</h4>
 					<h4 class="fragment">And much more =D</h4>
 				</section>
@@ -451,8 +452,8 @@
 					</section>
 
 					<section>
-					  <h2>browser</h2>
-					  <img src="assets/browser-logos.jpg" alt="" />
+					  <h2>Browser</h2>
+					  <img src="assets/browser-logos.jpg" alt="" height="300px" />
 					</section>
 
 					<section>
@@ -474,8 +475,18 @@
 					  </aside>
 					</section>
 
+					<section >
+						<img src="assets/html-code.png" class="stretch" />
+					</section>
+
+					<section >
+						<img src="assets/backend.jpg" class="stretch" />
+					</section>
+
 					<section class="white center" data-background="assets/node.jpg">
-					  <h2 class="box padding">
+
+						<h2 class="box padding">
+
 					  	<p>nodejs</p>
 					  	<p>iojs</p>
 				  	</h2>
@@ -486,31 +497,54 @@
 					</section>
 
 					<section>
-					  <h2 >mobile</h2>
-						<img width="200" class='fragment' src="assets/cordova.png"/>
-						<img width="200" class='fragment' src="assets/ionic.png"/>
-					  <img width="400" src="assets/mobile-logo.png"/>
 
+					  <h2 >mobile <span class="fragment red" data-fragment-index=2>"</span><span class="fragment red" data-fragment-index=1> (nativo!)</span><span class="fragment red" data-fragment-index=2>"</span></h2>
+						<img width="200" class='fragment' data-fragment-index=3 src="assets/cordova.png"/>
+						<img width="200" class='fragment' data-fragment-index=4 src="assets/ionic.png"/>
+						<div>
+								<img width="400" src="assets/mobile-logo.png"/>
+						</div>
+
+					</section>
+
+					<section >
+						<img src="assets/back-front.png" class="stretch" />
+					</section>
+					<section >
+						<img src="assets/nokia.jpg" class="stretch" />
+					</section>
+
+					<section >
+						<img src="assets/here-comes-a-new-challenger.png" class="stretch" />
 					</section>
 
 					<section>
 					  <h2>Desktop</h2>
-				    <img src="assets/nwjs.png" width="200" />
-				    <span class="fragment">
-							<img width="400" src="assets/popcorn-time.png" />
-						</span>
-					</section>
-					<section>
-						<img src="assets/claps.gif" />
+						<div class="box white fragment padding">
+							<h3 class="fragment">node/io</h3>
+							<h3 class="fragment">+</h3>
+							<h3 class="fragment"> webkit/chromium</h3>
+						</div>
+						<div class="fragment">
+							<img src="assets/nwjs.png" width="200" />
+						</div>
+				    <!-- <div class="fragment">
+							<img width="600" src="assets/popcorn-time.png" />
+						</div> -->
 					</section>
 
 					<section>
+						<img src="assets/claps.gif"/>
+					</section>
+
+
+					<section>
 					  <h2>Desktop</h2>
-				    <img src="assets/atom-icon.png" class="fragment" width="200" />
-						<img src="assets/electron.png" class="fragment" width="200" />
-						<span class="fragment">
-							<img width="400" src="assets/electron-apps.jpg" />
-						</span>
+				    	<div>
+					    	<img src="assets/atom-icon.png" class="fragment round-border" height="100" />
+							<img src="assets/electron.png" class="fragment round-border" height="100" />
+						</div>
+						<img class="fragment round-border" height="300" src="assets/electron-apps.jpg" />
 					</section>
 
 					<section class="white">
@@ -523,7 +557,7 @@
 					</section>
 				</section>
 
-				<section>
+				<section class="tooling">
 					<section>
 						<div class="part"><div class="number">3.2</div></div>
 						<div class="clearboth"></div>
@@ -553,6 +587,7 @@
 						<img height="400px" src="assets/tooling/dependency4.png">
 					</section>
 					<section>
+						<h2><a href="http://semver.org/" taget="semver">Semantic Versioning</a></h2>
 						<img src="assets/tooling/semver1.png">
 					</section>
 					<section>
@@ -563,11 +598,17 @@
 						</ul>
 					</section>
 					<section>
+						<p>npm install express@2 --save</p>
+					</section>
+					<section>
+						<img class="stretch" src="assets/tooling/packagejson.png">
+					</section>
+					<section>
 						<h2>Task Runners</h2>
 						<img height="300px" src="assets/tooling/grunt.png">
 						<img height="300px" src="assets/tooling/gulp.png">
 					</section>
-					<section><img class="stretch" height="300px" src="assets/tooling/gulpdemo.png"></section>					
+					<section><img class="stretch" height="300px" src="assets/tooling/gulpdemo.png"></section>
 				</section>
 
 				<section>
@@ -619,7 +660,7 @@
 					<section class='nodebots'>
 
 						<figure>
-							<img src="assets/chris-williams.jpg" width="200px" height="200px">
+							<img src="assets/chris-williams.jpg" width="200px" class="round-border" height="200px">
 							<figcaption>
 								<a href="https://github.com/voodootikigod/node-serialport">
 								Chris Williams: node-serialport
@@ -628,7 +669,7 @@
 						</figure>
 
 						<figure>
-							<img src="assets/julian-gautier.jpg" width="200px" height="200px">
+							<img src="assets/julian-gautier.jpg" class="round-border" width="200px" height="200px">
 							<figcaption>
 								<a href="https://github.com/jgautier/firmata">
 								Julian Gautier: firmata
@@ -637,7 +678,7 @@
 						</figure>
 
 						<figure>
-							<img src="assets/rick-waldron.jpg" width="200px" height="200px">
+							<img src="assets/rick-waldron.jpg" class="round-border" width="200px" height="200px">
 							<figcaption>
 								<a href="https://github.com/rwaldron/johnny-five">
 								Rick Waldron: johnny-five
@@ -917,7 +958,7 @@
 								<li>Um modo de outras linguagens conseguirem suporte binário por toda a plataforma web.</li>
 							</ul>
 						</aside>
-					</section>					
+					</section>
 					<section>
 						<h3>Interpretador Ruby - C++ => JavaScript</h3>
 						<div id="code-form">
@@ -950,7 +991,7 @@
 					<section data-transition="none">
 						<div class="part"><div class="number">4</div></div>
 						<div class="clearboth"></div>
-						<div class="slogan-box">porque você deveria se interessar</div>
+						<div class="slogan-box">porque você deveria se interessar?</div>
 						<aside class="notes">
 							<p>Então... essa é a parte final da nossa frase. Pq vc deveria se interessar.</p>
 							<p> Não é só pq tá na moda.</p>
@@ -959,22 +1000,43 @@
 				</section>
 
 				<section>
+					<section class="white" data-background="assets/bg-amarelo.jpg">
+						<div class="box padding">
+							<h2>Além de:</h2>
+							<h3>Estar em todo lugar</h3>
+							<h3>Ser fácil de aprender</h3>
+							<h3>Ser acessível a todos</h3>
+						</div>
+					</section>
+
+					<section class="white" data-background="assets/not-impressed1.gif">
+						<h3 class="box padding">Se isso não é motivo suficiente...</h3>
+					</section>
+
+					<section class="white" data-background="assets/graficos.jpg">
+						<h1 class="box padding">GRÁFICOS</h1>
+					</section>
+
+					<section>
+						<img class="stretch" src="assets/popularity.png">
+					</section>
+					<section>
+						<img class="stretch" src="assets/module-counts.png">
+					</section>
+
+					<section class="white" data-background="assets/not-impressed2.gif">
+						<h3 class="box padding">Se isso AINDA não é o suficiente...</h3>
+					</section>
+
 					<section data-background="assets/favela.jpg" class="white">
 						<div class="slogan-box">Comunidade</div>
-						<div class="clearboth"></div>
-						<img src="assets/stackoverflow-logo.jpg" class="fragment round-border" height="140px" />
-						<img src="assets/github.gif" class="fragment round-border" height="140px" />
-						<img src="assets/google-code.png" class="fragment round-border" height="140px" />
-						<img src="assets/slack.png" class="fragment round-border" height="140px" />
-						<img src="assets/fb.png" class="fragment round-border" height="140px" />
-						<img src="assets/braziljs.png" class="fragment round-border" height="140px" />
+						<aside class="notes">
+							<p>A comunidade gigantesca é um grande atrativo. São várias opções... Stackoverflow, Github, Google Code, Slack, Facebook e muitos outros! E tem tb os eventos.</p>
+							<p>Aí entra o braziljs, que foi um marco na comunidade de JS do Brasil.</p>
+							<p>Foi a partir da braziljs que o Brasil passou a ser alvo de grande palestrantes e se disseminou em vários outros eventos menores.</p>
+							<p>Frontins pelo Brasil e até Frontin Amsterdã criado por brasileiros do booking.com</p>
+						</aside>
 					</section>
-					<aside class="notes">
-						<p>A comunidade gigantesca é um grande atrativo. São várias opções... Stackoverflow, Github, Google Code, Slack, Facebook e muitos outros! E tem tb os eventos.</p>
-						<p>Aí entra o braziljs, que foi um marco na comunidade de JS do Brasil.</p>
-						<p>Foi a partir da braziljs que o Brasil passou a ser alvo de grande palestrantes e se disseminou em vários outros eventos menores.</p>
-						<p>Frontins pelo Brasil e até Frontin Amsterdã criado por brasileiros do booking.com</p>
-					</aside>
 				</section>
 
 				<section data-background="assets/barra-shopping-sul.jpg">
@@ -1008,7 +1070,16 @@
 						</div>
 					</section>
 					<section data-background="assets/palmas.gif"></section>
-					<section class="fotos" data-background="assets/braziljs-pano.jpg">
+					<section data-background="assets/braziljs-pano.jpg"></section>
+					<section data-background="assets/braziljs-entrada.jpg"></section>
+					<section data-background="assets/braziljs-geral.jpg"></section>
+					<section data-background="assets/braziljs-intro.jpg"></section>
+					<section data-background="assets/braziljs-brendan-eich.jpg"></section>
+					<section data-background="assets/braziljs-substack.jpg"></section>
+					<section data-background="assets/bolo.jpg"></section>
+					<section data-background="assets/braziljs-show.jpg"></section>
+					<section data-background="assets/braziljs-participantes.jpg"></section>
+					<!-- <section class="fotos" data-background="assets/braziljs-pano.jpg">
 						<img src="assets/braziljs-entrada.jpg" class="fragment">
 						<img src="assets/braziljs-geral.jpg" class="fragment">
 					</section>
@@ -1029,7 +1100,7 @@
 					<section class="fotos" data-background="assets/braziljs-pano.jpg">
 						<img src="assets/braziljs-show.jpg">
 						<img src="assets/braziljs-participantes.jpg" class="fragment">
-					</section>
+					</section> -->
 				</section>
 
 				<section>
