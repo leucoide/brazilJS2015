@@ -263,7 +263,7 @@ img.webtorrent {
 }
 
 .pronto {
-  margin-top: 40px;
+  margin-top: 40px !important;
 }
 
 /* WEBTORRENT */
@@ -474,7 +474,12 @@ img.webtorrent {
   top: 12px;
 }
 
+
 /* misc */
 .red {
   color: red;
+
+.tooling a {
+  color: black !important;
+
 }
