@@ -86,7 +86,7 @@
 
 .topo .header {
   background: url("../assets/header.png") 0 0 no-repeat transparent;
-  width: 307px; 
+  width: 307px;
   height: 54px;
   margin: 10px;
   background-size: 300px;
@@ -131,7 +131,7 @@
 
 .academia {
   background: url("../assets/academia.jpg") 0 0 no-repeat transparent;
-  width: 208px; 
+  width: 208px;
   height: 81px;
   position: absolute;
   bottom: -15px;
@@ -141,7 +141,7 @@
 
 .tecnologia {
   background: url("../assets/tecnologia_globo.png") 0 0 no-repeat transparent;
-  width: 317px; 
+  width: 317px;
   height: 45px;
   background-size: 70% 70%;
   position: absolute;
@@ -420,11 +420,11 @@ img.webtorrent {
   padding: 0 10px;
 }
 
-#editor .ace_layer.ace_text-layer .ace_line .ace_identifier, 
+#editor .ace_layer.ace_text-layer .ace_line .ace_identifier,
 #editor .ace_layer.ace_text-layer .ace_line .ace_numeric,
 #editor .ace_layer.ace_text-layer .ace_line .ace_line,
 #editor .ace_layer.ace_text-layer .ace_line .ace_lparen,
-#editor .ace_layer.ace_text-layer .ace_line .ace_rparen, 
+#editor .ace_layer.ace_text-layer .ace_line .ace_rparen,
 #editor .ace_layer.ace_text-layer .ace_line span,
 #editor .ace_layer.ace_text-layer .ace_line {
   text-align: left;
@@ -466,10 +466,15 @@ img.webtorrent {
 .deal-with-it .oculos {
   position: absolute;
   left: 0;
-  top: -150px; 
+  top: -150px;
   transition: all 2s !important;
 }
 
 .deal-with-it .oculos.down {
   top: 12px;
+}
+
+/* misc */
+.red {
+  color: red;
 }
