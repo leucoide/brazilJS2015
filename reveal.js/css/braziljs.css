@@ -478,8 +478,22 @@ img.webtorrent {
 /* misc */
 .red {
   color: red;
+}
+
+.subtitle {
+    font-size: 19px !important;
+    text-align: left;
+    color: firebrick;
+}
+
+code{
+  font-size: 17px !important
+}
+
+.inline{
+  display: inline-block; !important;
+}
 
 .tooling a {
   color: black !important;
-
 }

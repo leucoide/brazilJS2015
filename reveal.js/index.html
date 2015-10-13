@@ -463,14 +463,51 @@
 					  <h3>
 					    <ul>
 					      <li class="fragment"> Embarcado</li>
-					      <li class="fragment"> Browser API</li>
-					      <li class="fragment"> DOM API</li>
+					      <li class="fragment">Centrado na web</li>
 					    </ul>
 					  </h3>
 					  <aside class="notes">
 					    <p>O javascript nasceu embarcado</p>
 					    <p>HTML extends XML</p>
 					  </aside>
+					</section>
+
+					<section class='white' data-background='peru'>
+						<h2>Chamada do js no browser</h2>
+						<h4 class="fragment">Apenas um recurso da página...</h4>
+
+						<div class="fragment">
+							<span class="subtitle">index.html</span>
+							<pre ><code data-trim>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+	...
+  &lt;/body&gt;
+  &lt;script src=&quot;/js/libs/lodash.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;/js/src/main.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;/html&gt;
+							</code></pre>
+						</div>
+					</section>
+
+					<section class='white' data-background='peru'>
+						<h2>Chamada do js no browser</h2>
+						<h4 class="fragment">carregamento != lógica</h4>
+						<div class="fragment">
+							<span class="subtitle">main.js</span>
+							<pre ><code data-trim>
+//...
+var active_users = _.filter(users, function(user){
+	return user.isActive;
+});
+//...
+								</code></pre>
+						</div>
 					</section>
 
 					<section >
@@ -481,13 +518,22 @@
 						<img src="assets/backend.jpg" class="stretch" />
 					</section>
 
-					<section class="white center" data-background="assets/nodejs.png">
+					<section data-background="assets/nodejs.png"/></section>
 
-						<h2 class="box padding">
+					<section class='white' data-background='peru'>
+						<h2>Módulos ligados logicamente</h2>
+						<div class="fragment">
+							<span class="subtitle">main.js</span>
+							<pre><code>
+var _ = require('lodash');
+//...
+var active_users = _.filter(users, function(user){
+	return user.isActive;
+});
+//...
+							</code></pre>
+						</div>
 
-					  	<p>nodejs</p>
-					  	<p>iojs</p>
-				  	</h2>
 					</section>
 
 					<section>
@@ -526,11 +572,12 @@
 						<div class="fragment">
 							<img src="assets/nwjs.png" width="200" />
 						</div>
-				    <!-- <div class="fragment">
-							<img width="600" src="assets/popcorn-time.png" />
-						</div> -->
-					</section>
 
+
+					</section>
+					<section>
+							<img width='1000' src="assets/popcorn-time.png" />
+					</section>
 					<section data-background="assets/claps.gif"></section>
 
 
@@ -737,7 +784,7 @@
 						<!-- <div class="fragment">
 							<img src='assets/thats-all.jpg' width='250px' height='250px'/>
 						</div> -->
-						
+
 					</section>
 
 					<section>
