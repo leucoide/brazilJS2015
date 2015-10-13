@@ -109,7 +109,7 @@
 				<section data-background="assets/braziljs-participantes.jpg"></section>
 
 				<section class="white" data-background="assets/dom.jpg">
-					<h2 class="box padding">DOM (Document Object Model)</h2>
+					<div class="slogan-box">DOM (Document Object Model)</div>
 
 					<aside class="notes">
 						<p>Mas antes precisamos falar do DOM</p>
@@ -119,6 +119,31 @@
 						<p>Pode ser estilizado com CSS e manipulado por JS</p>
 					</aside>
 				</section>
+
+				<section>
+					<section><div class="slogan-box">Assincronismo</div></section>
+					<section>
+						<h2>JS vs Python </h2>
+						<span class="subtitle">Python</span>
+						<pre><code>
+	with open("file.txt") as f:
+		data = f.read()
+		#...
+						</code></pre>
+						<span class="subtitle">node.js</span>
+						<pre><code>
+	fs = require('fs')
+	fs.readFile('file.txt', 'utf8', function (err,data) {
+	if (err) {
+	  return console.error(err);
+	}
+	//...
+	});
+	//... começa a ser executado antes do fim da leitura
+						</code></pre>
+					</section>
+				</section>
+
 
 				<section>
 					<section data-transition="none">
@@ -540,27 +565,6 @@ var active_users = _.filter(users, function(user){
 
 					<section>
 					  <img class='stretch round-border' src="assets/event-loop.png"/>
-					</section>
-
-					<section>
-						<h2>JS vs Python </h2>
-						<span class="subtitle">Python</span>
-						<pre><code>
-with open("file.txt") as f:
-		data = f.read()
-		#...
-						</code></pre>
-						<span class="subtitle">node.js</span>
-						<pre><code>
-fs = require('fs')
-fs.readFile('file.txt', 'utf8', function (err,data) {
-  if (err) {
-    return console.error(err);
-  }
-  //...
-});
-//... começa a ser executado antes do fim da leitura
-						</code></pre>
 					</section>
 
 					<section data-background='assets/io.jpg'></section>
