@@ -497,7 +497,7 @@
 
 					<section class='white' data-background='peru'>
 						<h2>Chamada do js no browser</h2>
-						<h4 class="fragment">carregamento != lógica</h4>
+						<h4 class="fragment">carregamento !== lógica</h4>
 						<div class="fragment">
 							<span class="subtitle">main.js</span>
 							<pre ><code data-trim>
@@ -541,10 +541,47 @@ var active_users = _.filter(users, function(user){
 					</section>
 
 					<section>
+						<h2>JS vs python </h2>
+						<span class="subtitle">python</span>
+						<pre><code>
+with open("file.txt") as f:
+		data = f.read()
+		#...
+						</code></pre>
+						<span class="subtitle">node.js</span>
+						<pre><code>
+fs = require('fs')
+fs.readFile('file.txt', 'utf8', function (err,data) {
+  if (err) {
+    return console.error(err);
+  }
+  //...
+});
+//... começa a ser executado antes do fim da leitura
+						</code></pre>
+					</section>
+
+					<section data-background='assets/io.jpg'></section>
+
+					<section>
+						<h2>io vs node</h2>
+						<ul>
+							<li class="fragment">Open Governance vs Benevolent Dictator For Life</li>
+							<li class="fragment">Atualização do V8</li>
+							<li class="fragment">ES6+ !!</li>
+							<li class="fragment">merge resultando no nodejs v4</li>
+
+						</ul>
+					</section>
+
+					<section>
 
 					  <h2 >Mobile <span class="fragment red" data-fragment-index=2>"</span><span class="fragment red" data-fragment-index=1> (nativo!)</span><span class="fragment red" data-fragment-index=2>"</span></h2>
-						<img width="200" class='fragment' data-fragment-index=3 src="assets/cordova.png"/>
-						<img width="200" class='fragment' data-fragment-index=4 src="assets/ionic.png"/>
+						<img width="150" class='fragment' data-fragment-index=3 src="assets/cordova.png"/>
+						<img width="150" class='fragment' data-fragment-index=4 src="assets/plus.gif"/>
+						<img width="150" class='fragment' data-fragment-index=5 src="assets/angular.png"/>
+						<img width="150" class='fragment' data-fragment-index=6 src="assets/equal.png"/>
+						<img width="150" class='fragment' data-fragment-index=7 src="assets/ionic.png"/>
 						<div>
 								<img width="400" src="assets/mobile-logo.png"/>
 						</div>
