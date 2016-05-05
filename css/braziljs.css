@@ -1,0 +1,499 @@
+/*********************************************
+ * BRAZILJS
+ *********************************************/
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    text-transform: none !important;
+    font-style: italic;
+    color: #000 !important;
+ }
+
+ .white h1, .white h2, .white h3, .white h4, .white h5, .white h6, .white ul li {
+    text-transform: none !important;
+    font-style: italic;
+    color: #fff !important;
+
+ ]}
+
+.white .fragment {
+  color: #FFF;
+
+}
+
+.reveal section img {
+    border: 0 !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
+.clearboth {
+	clear: both;
+}
+
+.capa .topo,
+.capa .footer {
+  display: none;
+}
+
+.slide-capa {
+	height: 400px;
+}
+
+.academia-capa {
+	position: absolute;
+	bottom: 0;
+	left: 50px;
+}
+
+.tecnologia-capa {
+	position: absolute;
+	bottom: 0;
+	right: 50px;
+}
+
+.slogan-box {
+	background-color: #000;
+	color: #fff;
+	padding: 20px 40px 30px !important;
+	margin: 20px 0 20px !important;
+	font-family: 'Source Sans Pro', sans-serif !important;
+	font-weight: 900 !important;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	-ms-transform: skew(-15deg);
+    -webkit-transform: skew(-15deg);
+    transform: skew(-15deg);
+}
+
+.box {
+  background: rgba(0, 0, 0, 0.7);
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.box.padding {
+  padding: 20px 30px !important;
+}
+
+.topo {
+  position: absolute;
+  width: 100%;
+  /*background: url("../bg-devolta.jpg") -17px -175px no-repeat transparent;*/
+  padding: 15px !important;
+  z-index: 2;
+}
+
+.topo .header {
+  background: url("../assets/header.png") 0 0 no-repeat transparent;
+  width: 307px;
+  height: 54px;
+  margin: 10px;
+  background-size: 300px;
+  float: left;
+}
+
+.topo .delorean {
+  background: url("../assets/delorean.png") 0 0 no-repeat transparent;
+  width: 302px;
+  height: 78px;
+  position: absolute;
+  top: 18px;
+  right: 30px;
+}
+
+.topo .slogan {
+  font-size: 20px !important;
+  font-weight: bold !important;
+  float: left;
+  margin: 16px 0 0 -3px !important;
+  background-color: #000;
+  color: #fff;
+  transform: skew(-15deg);
+  padding: 12px 20px;
+  text-transform: uppercase;
+}
+
+.header-white .topo .slogan {
+  color: #EFEDED;
+}
+
+.footer {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 90px;
+  width: 480px;
+  z-index: 2;
+  border-top-right-radius: 25px;
+}
+
+.academia {
+  background: url("../assets/academia.jpg") 0 0 no-repeat transparent;
+  width: 208px;
+  height: 81px;
+  position: absolute;
+  bottom: -15px;
+  left: 10px;
+  z-index: 2;
+}
+
+.tecnologia {
+  background: url("../assets/tecnologia_globo.png") 0 0 no-repeat transparent;
+  width: 317px;
+  height: 45px;
+  background-size: 70% 70%;
+  position: absolute;
+  bottom: 10px;
+  left: 265px;
+  z-index: 2;
+}
+
+.circulo {
+  position: absolute;
+  left: 176px;
+  top: -9px;
+}
+
+.voce .fragment.highlight-red.visible {
+  color: #FC4C51 !important;
+}
+
+.round-border {
+  border-radius: 10px;
+}
+
+.parte {
+  color: #000;
+  border: 6px solid #000 !important;
+  background-color: #FFDE17;
+  font-size: 70px !important;
+  padding: 10px !important;
+  border-radius: 50%;
+  display: inline-block;
+  width: 95px;
+}
+
+.reveal section.fotos img {
+  width: 470px;
+  border-radius: 10px;
+  border: 2px solid #fff !important;
+  box-shadow: 4px 4px 10px #000 !important;
+}
+
+.reveal section.fotos img.pano {
+  width: 920px;
+  border-radius: 10px;
+}
+
+.opacidade-fundo .backgrounds {
+  opacity: 0.3;
+}
+
+.reveal .slides section .over-webrtc {
+  width: 650px;
+  margin-left: 270px;
+  border-top: 3px solid rgb(34, 34, 34);
+}
+
+.reveal .slides section .fragment.mygrow.visible {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.reveal .slides section .fragment.highlight-yellow.visible {
+  color: yellow;
+}
+
+.reveal .slides section .fragment.inplace {
+  display:none;
+}
+.reveal .slides section .fragment.inplace.visible {
+  display:inline;
+}
+
+.reveal .slides section .part {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #F8DC3D;
+  margin: 0 auto;
+}
+
+.reveal .slides section .part .number {
+  position: absolute;
+  font-weight: bold;
+  bottom: -15px;
+  right: 15px;
+  font-size: 120px;
+  color: #2E2E2C;
+}
+
+.reveal .slides .fim {
+  background-color: #F8DC3D;
+  margin: 0 auto;
+  color: #2E2E2C;
+  font-weight: bold;
+  padding: 30px;
+  display: inline-block;
+  font-size: 85px;
+}
+
+.slide-background .move-ass {
+  background-position: 400px -350px;
+}
+
+.nodebots figure{
+    width: 33.33333%;
+    float: left;
+}
+
+ul li .small {
+  font-size: 20px;
+}
+
+.aprender li a {
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+img.webtorrent {
+  margin: auto;
+}
+
+.pronto {
+  margin-top: 40px !important;
+}
+
+/* WEBTORRENT */
+
+.reveal .slides section hr.banned {
+  border: 0;
+  width: 470px;
+  height: 10px;
+  background-color: red;
+  margin-left:250px;
+  margin-top: -190px;
+}
+
+.reveal .slides section hr.banned.x1 {
+  transform: rotate(45deg);
+}
+.reveal .slides section hr.banned.x2 {
+  transform: rotate(-45deg);
+}
+
+/* TIMELINE */
+
+.tl-section {
+  top: 0!important;
+}
+
+.reveal .slides section hr {
+  background-color: #555;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  border: 0;
+}
+
+.reveal .slides section hr.tlrule {
+  width: 12px;
+  height: 2px;
+  position: absolute;
+  transform: rotate(90deg);
+  margin-left: 15px;
+  border: 0;
+}
+
+.reveal .slides section p.tl {
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  display: inline-block;
+  text-shadow: 0 0 2px #fff;
+  color: #000;
+}
+
+.reveal .slides section .tljs {
+  top: 300px;
+  position: absolute;
+  width: 100%;
+}
+
+.reveal .slides section .tlapps {
+  top: 560px;
+  position: absolute;
+  width: 100%;
+}
+
+.reveal .slides section .tljs p.tltext {
+  top: -215px;
+}
+
+.reveal .slides section .tljs p.tldate {
+  top: 10px;
+}
+
+.reveal .slides section .tlapps p.tltext {
+  top: -215px;
+}
+
+.reveal .slides section .tlapps p.tldate {
+  top: 10px;
+}
+
+.reveal .slides section p.tltext {
+  transform: rotate(-41deg);
+  line-height: 23px;
+  margin-left: -50px;
+  text-align: left;
+  width: 500px;
+  color: #000;
+  text-shadow: 0 0 2px #fff;
+}
+
+.reveal .slides section .highlight{
+  color: #B30C0C !important;
+}
+
+.reveal .slides section .tl1995 {
+  left:100px;
+}
+
+.reveal .slides section .tl1996 {
+  left:150px;
+}
+
+.reveal .slides section .tl1997 {
+  left:200px;
+}
+
+.reveal .slides section .tl1998 {
+  left:250px;
+}
+
+.reveal .slides section .tl1999 {
+  left:300px;
+}
+
+.reveal .slides section .tl2000 {
+  left:350px;
+}
+
+.reveal .slides section .tl2001 {
+  left:400px;
+}
+
+.reveal .slides section .tl2004 {
+  left:500px;
+}
+
+.reveal .slides section .tl2005 {
+  left:550px;
+}
+
+.reveal .slides section .tl2006 {
+  left:600px;
+}
+
+.reveal .slides section .tl2008 {
+  left:650px;
+}
+
+.reveal .slides section .tl2009 {
+  left:700px;
+}
+
+.reveal .slides section .tl2015 {
+  left:800px;
+}
+
+
+/* Editor Ruby */
+
+#editor .ace_line {
+  font-size: 30px;
+  height: 40px !important;
+  background-color: #49483E;
+  padding: 0 10px;
+}
+
+#editor .ace_layer.ace_text-layer .ace_line .ace_identifier,
+#editor .ace_layer.ace_text-layer .ace_line .ace_numeric,
+#editor .ace_layer.ace_text-layer .ace_line .ace_line,
+#editor .ace_layer.ace_text-layer .ace_line .ace_lparen,
+#editor .ace_layer.ace_text-layer .ace_line .ace_rparen,
+#editor .ace_layer.ace_text-layer .ace_line span,
+#editor .ace_layer.ace_text-layer .ace_line {
+  text-align: left;
+}
+
+#editor-container .ace_cursor.ace_hidden {
+  height: 40px !important;
+  color: #fff !important;
+  font-size: 40px !important;
+}
+
+#editor-container .ace_marker-layer .ace_active_line {
+  height: 40px !important;
+  color: #fff !important;
+  font-size: 40px !important;
+}
+
+
+/* Deal with it */
+
+.reveal section .fim-box {
+  display: inline-block;
+  position: relative;
+  margin-left: -160px;
+}
+
+.reveal section .bet {
+  margin-top: 200px;
+}
+
+.deal-with-it {
+  position: absolute;
+  display: inline-block;
+  width: 300px;
+  left: -51px;
+  top: -28px;
+}
+
+.deal-with-it .oculos {
+  position: absolute;
+  left: 0;
+  top: -150px;
+  transition: all 2s !important;
+}
+
+.deal-with-it .oculos.down {
+  top: 12px;
+}
+
+
+/* misc */
+.red {
+  color: red;
+}
+
+.subtitle {
+    font-size: 19px !important;
+    text-align: left;
+    color: firebrick;
+}
+
+code{
+  font-size: 17px !important
+}
+
+.inline{
+  display: inline-block; !important;
+}
+
+.tooling a {
+  color: black !important;
+}

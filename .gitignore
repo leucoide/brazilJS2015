@@ -1,0 +1,8 @@
+bower_components
+node_modules
+build
+dist
+*.log
+reveal.min.js
+BananaBread
+drafts

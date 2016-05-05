@@ -1,0 +1,1327 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>TECHDAY.JS - O Javascript está em todo lugar e porque você deveria se interessar</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/braziljs.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<link rel="shortcut icon" href="favicon.png" type="image/png">
+
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900' rel='stylesheet' type='text/css'>
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--ACE-->
+		<link rel="stylesheet" href="lib/css/ace/aceeditor.css">
+		<link rel="stylesheet" href="lib/css/ace/acetm.css">
+		<link rel="stylesheet" href="lib/css/ace/acemonokai.css">
+
+		<script src="lib/js/jquery-1.9.1.min.js"></script>
+		<script src="lib/js/events.js"></script>
+		<script src="lib/js/webruby.js"></script>
+
+		<script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/theme-monokai.js"></script>
+		<script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/mode-ruby.js"></script>
+
+		<style type="text/css">
+	    #editor-container {
+	    	position: relative;
+	      height: 200px;
+	      width: 100%;
+	      overflow-y: hidden;
+	    }
+
+	    #editor {
+	      width: 100%;
+	      height: 100%;
+	    }
+
+	    #output {
+	    	background-color: #EEE;
+	    	border: 1px solid black;
+	    	overflow-y: scroll;
+	    	height: 100px;
+	    	max-height: 100px;
+	    	font-size: 18px;
+	    }
+
+	    #editor .ace_line {
+	    	font-size: 32px;
+	    }
+		</style>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="topo">
+				<div class="header"></div>
+				<div class="slogan">O Javascript está em todo lugar e porque você deveria se interessar</div>
+			</div>
+			<div class="footer">
+				<div class="tecnologia"></div>
+				<div class="academia"></div>
+			</div>
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section data-state="capa" data-background="assets/bg-intro.jpg" class="slide-capa">
+					<img src="assets/header.png" />
+					<div class="slogan-box">O Javascript está em todo lugar<br />e porque você deveria se interessar</div>
+					<img class="academia-capa" src="assets/academia-de-tecnologia.png" />
+					<img class="tecnologia-capa" src="assets/tecnologia-globo.png" />
+
+					<aside class="notes">
+						<p>Fomos na brjs e pelo que foi visto lá, ao invés de fazer uma aprensentação apenas sobre o evento, resolvemos fazer algo mais abrangente</p>
+						<p>O js faz 20 anos, e vamos tentar atualizar todo mundo sobre essa linguagem muito difundida, mas muitas vezes controversa. Quase um ame-a ou deixe-a</p>
+						<p>Esperamos que, assim como nós saimos inspirados e instigados do evento, vocês entendam um porque</p>
+						<p>[passa o slide]</p>
+					</aside>
+				</section>
+
+				<section data-background="assets/braziljs-participantes.jpg"></section>
+
+				<section class="white" data-background="assets/dom.jpg">
+					<div class="slogan-box">DOM (Document Object Model)</div>
+
+					<aside class="notes">
+						<p>Mas antes precisamos falar do DOM</p>
+						<p>Como vamos citar ele durante a apresentação, é bom que todo mundo entenda mais ou menos o que isso é</p>
+						<p>É o modelo usado para representar e interagir com objetos em HTML ou XML</p>
+						<p>Estruturado em forma de árvore</p>
+						<p>Pode ser estilizado com CSS e manipulado por JS</p>
+					</aside>
+				</section>
+
+				<section>
+					<section><div class="slogan-box">Assincronismo</div></section>
+					<section>
+						<h2>JS vs Python </h2>
+						<span class="subtitle">Python</span>
+						<pre><code>
+	with open("file.txt") as f:
+		data = f.read()
+		#...
+						</code></pre>
+						<span class="subtitle">node.js</span>
+						<pre><code>
+	fs = require('fs')
+	fs.readFile('file.txt', 'utf8', function (err,data) {
+	if (err) {
+	  return console.error(err);
+	}
+	//...
+	});
+	//... começa a ser executado antes do fim da leitura
+						</code></pre>
+					</section>
+				</section>
+
+
+				<section>
+					<section data-transition="none">
+						<img src="assets/js.jpg" width="200px">
+						<div class="clearboth"></div>
+						<div class="slogan-box">O Javascript está em todo lugar<br />e porque você deveria se interessar</div>
+
+						<aside class="notes">
+							<p>Estamos fazendo algumas afirmações e vamos tentar provar elas ao longo da apresentação</p>
+							<p>Alguém aqui nunca ouviu falar em js?</p>
+						</aside>
+					</section>
+
+					<section data-background="assets/wally1.jpg" data-transition="none">
+						<div class="part"><div class="number">1</div></div>
+						<div class="clearboth"></div>
+						<div class="slogan-box">O Javascript <span id="esta">está</span> <span class="fragment inplace grow highlight-red" data-fragment-index="1" id="estava">estava</span> em todo lugar<span class="fragment" data-fragment-index="1">?</span></div>
+						<aside class="notes">
+							<p>A primeira afirmação é essa</p>
+							<p>Quando estavamos pensando na apresentação nós percebemos que o javascript está em todo lugar, mas logo veio uma indagação: Se hoje ele está, será que eles estava?</p>
+							<p>[passa fragmento</p>
+							<p>Vamos ver um pouco da história do JS</p>
+							<p>[passa slide]</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section class="tl-section" data-background="assets/old-paper.jpg">
+						<h2>Linha do tempo</h2>
+						<div class="tljs">
+							<hr>
+							<p class="tl tl1995 tldate" data-fragment-index="2">1995</p>
+							<hr class="tl1995 tlrule"   data-fragment-index="2">
+							<p class="tl tl1995 tltext" data-fragment-index="2">Nasce o JavaScript</p>
+							<p class="tl tl1996 tldate fragment" data-fragment-index="3">1996</p>
+							<hr class="tl1996 tlrule fragment"   data-fragment-index="3">
+							<p class="tl tl1996 tltext fragment" data-fragment-index="3">JScript, o concorrente da MS</p>
+							<p class="tl tl1997 tldate fragment" data-fragment-index="4">1997</p>
+							<hr class="tl1997 tlrule fragment"   data-fragment-index="4">
+							<p class="tl tl1997 tltext fragment" data-fragment-index="4">Padrão ECMAScript é criado<br>O JavaScript é sua implementação</p>
+							<p class="tl tl1999 tldate fragment highlight" data-fragment-index="5">1999</p>
+							<hr class="tl1999 tlrule fragment highlight"   data-fragment-index="5">
+							<p class="tl tl1999 tltext fragment highlight" data-fragment-index="5">XMLHttpRequest &amp;<br>ECMAScript versão 3</p>
+							<p class="tl tl2001 tldate fragment" data-fragment-index="6">2001</p>
+							<hr class="tl2001 tlrule fragment"   data-fragment-index="6">
+							<p class="tl tl2001 tltext fragment" data-fragment-index="6">JSON é especificado</p>
+							<p class="tl tl2005 tldate fragment highlight" data-fragment-index="8">2005</p>
+							<hr class="tl2005 tlrule fragment highlight"   data-fragment-index="8">
+							<p class="tl tl2005 tltext fragment highlight" data-fragment-index="8">Ajax</p>
+							<p class="tl tl2009 tldate fragment" data-fragment-index="11">2009</p>
+							<hr class="tl2009 tlrule fragment"   data-fragment-index="11">
+							<p class="tl tl2009 tltext fragment" data-fragment-index="11">ECMAScript 5</p>
+							<p class="tl tl2015 tldate fragment highlight" data-fragment-index="12">2015</p>
+							<hr class="tl2015 tlrule fragment highlight"   data-fragment-index="12">
+							<p class="tl tl2015 tltext fragment highlight" data-fragment-index="12">ECMAScript 6</p>
+						</div>
+
+						<div class="tlapps">
+							<hr>
+							<p class="tl tl1995 tldate" data-fragment-index="2">1995</p>
+							<hr class="tl1995 tlrule"   data-fragment-index="2">
+							<p class="tl tl1995 tltext" data-fragment-index="2">Netscape 2.0</p>
+							<p class="tl tl1996 tldate fragment" data-fragment-index="3">1996</p>
+							<hr class="tl1996 tlrule fragment"   data-fragment-index="3">
+							<p class="tl tl1996 tltext fragment" data-fragment-index="3">Internet Explorer 3</p>
+							<p class="tl tl1997 tldate fragment highlight" data-fragment-index="4">1997</p>
+							<hr class="tl1997 tlrule fragment highlight"   data-fragment-index="4">
+							<p class="tl tl1997 tltext fragment highlight" data-fragment-index="4">DHTML e  IE 4</p>
+							<p class="tl tl1999 tldate fragment" data-fragment-index="5">1999</p>
+							<hr class="tl1999 tlrule fragment"   data-fragment-index="5">
+							<p class="tl tl1999 tltext fragment" data-fragment-index="5">Internet Explorer 5</p>
+							<p class="tl tl2001 tldate fragment" data-fragment-index="6">2001</p>
+							<hr class="tl2001 tlrule fragment"   data-fragment-index="6">
+							<p class="tl tl2001 tltext fragment" data-fragment-index="6">Internet Explorer 6</p>
+							<p class="tl tl2004 tldate fragment highlight" data-fragment-index="7">2004</p>
+							<hr class="tl2004 tlrule fragment"   data-fragment-index="7">
+							<p class="tl tl2004 tltext fragment highlight" data-fragment-index="7">Gmail e FIREFOX</p>
+							<p class="tl tl2005 tldate fragment highlight" data-fragment-index="8">2005</p>
+							<hr class="tl2005 tlrule fragment"   data-fragment-index="8">
+							<p class="tl tl2005 tltext fragment highlight" data-fragment-index="8">Google Maps</p>
+							<p class="tl tl2006 tldate fragment" data-fragment-index="9">2006</p>
+							<hr class="tl2006 tlrule fragment"   data-fragment-index="9">
+							<p class="tl tl2006 tltext fragment" data-fragment-index="9">FIREBUG e JQUERY</p>
+							<p class="tl tl2008 tldate fragment" data-fragment-index="10">2008</p>
+							<hr class="tl2008 tlrule fragment"   data-fragment-index="10">
+							<p class="tl tl2008 tltext fragment" data-fragment-index="10">Google Chrome e <span class="highlight">Engine V8</span></p>
+							<p class="tl tl2009 tldate fragment highlight" data-fragment-index="11">2009</p>
+							<hr class="tl2009 tlrule fragment highlight"   data-fragment-index="11">
+							<p class="tl tl2009 tltext fragment highlight" data-fragment-index="11">NODEJS</p>
+						</div>
+
+						<aside class="notes">
+							<p>Surgiu em 95</p>
+							<p>1995 - Mocha era o nome original, depois livescript, e então JavaScript após a sun dar licença para uso do nome</p>
+							<p>1995 - Foi criado em apenas 10 dias para que Netscape pudesse ganhar em competitividade com a microsoft</p>
+							<p>1997 - O ECMAScript é definido como um padrão para que outros navegadores possam implementa-lo. JScript foi feito pela MS e o ActionScript que é usado no flash até hoje</p>
+							<p>1999 - Um marco importante. Em 99 é criado a base do javascript moderno que usamos até hoje</p>
+							<p>2001 - </p>
+		        	<!-- <p>Arrays eram só objetos com a propriedade "length"</p> -->
+		        	<!-- <p>O Date foi portado direto do Java e por isso que é um troço tão estranho com mês indexado pelo 0</p> -->
+			    	</aside>
+					</section>
+
+					<section class="white" data-background="assets/braziljs-brendan-eich.jpg" data-state="header-white">
+						<h3 class="box padding">Hoje o JavaScript faz 20 anos</h3>
+						<aside class="notes">
+							<p>Tivemos essa palestra fantástica do Brendan Eich na BRJS aonde ele falou sobre a história da criação. A guerra dos browsers e como ele fez para criar uma linguagem em apenas 10 dias. Na época não tinha muito espaço pra pensar, não tinha memória e nem o processamento. Por isso que é óbvio que js tem suas esquisitices</p>
+		        	<p>[passa o slide]</p>
+					   </aside>
+					</section>
+
+					<section data-background="#000">
+						<video class="stretch" data-autoplay="true" src="assets/wat.mp4" controls></video>
+
+						<aside class="notes">
+							<p>{} + {} é uma string "[object Object]"</p>
+							<p>tudo que não pode ser somado como número vira string</p>
+							<p>{} + [] : {} é um bloco, e +[] é um type cast pra number e por isso dá 0</p>
+							<p>Por causa disso e de outras coisas que o javascript tem suas próprias confusões [muda slide]</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>JavaScript === Java <img src="assets/meme-duvida.png" width="200px"></h2>
+
+						<aside class="notes">
+							<p>Primeira confusão</p>
+							<p>Perguntar: JavaScript é igual a JAVA</p>
+						</aside>
+					</section>
+
+					<section data-state="white-cover" class="white" data-background="assets/no.gif">
+						<img src="assets/java-hamster.jpg" class="fragment round-border" />
+
+						<aside class="notes">
+		        	<p>Apesar disso, o nome realmente veio do Java</p>
+		        	<p>Havia uma encomenda interna para que o javascript fosse igual a java</p>
+		        	<p>Java é tipado e javascript não é</p>
+			    	</aside>
+					</section>
+
+					<section>
+						<h2>JavaScript === jQuery <img src="assets/meme-duvida.png" width="200px"></h2>
+
+						<aside class="notes">
+							<p>Outra grande confusão</p>
+							<p>Perguntar: JavaScript é igual a jQuery</p>
+							<p>Perguntar: JavaScript é igual a jQuery?</p>
+						</aside>
+					</section>
+
+					<section class="white" data-state="white-cover" class="white" data-background="assets/no.gif">
+						<img src="assets/jquery.jpg" class="fragment round-border" />
+						<div class="box padding fragment">jQuery é o designer falando que sabe JavaScript</div>
+						<aside class="notes">
+							<p>Existe muito programador jQuery que não sabe javascript</p>
+							<p>Dúvidas em javascript no google muitas vezes tem a solução em jQuery</p>
+							<p>Tomar cuidado com as apis do jquery pois muitas vezes difere da api do javascript, exemplo, forEach</p>
+						</aside>
+					</section>
+				</section>
+
+				<section class="white box" data-background="assets/road.jpg">
+					<h2>O futuro do JavaScript</h2>
+					<h3>ECMAScript 6, 7, 8...</h3>
+					<h3>ECMAScript 2015, 2016, 2017...</h3>
+					<h4>
+						<span class="fragment">Class</span>
+						<span class="fragment">, Arrow functions (lambdas)</span>
+						<span class="fragment">, Tipos</span>
+						<span class="fragment">, Decorators</span>
+						<span class="fragment">, Macros</span>
+					</h4>
+					<h4 class="fragment">And much more =D</h4>
+				</section>
+
+				<section>
+					<!-- <section data-transition="none">
+						<img src="assets/js.jpg" width="200px">
+						<div class="clearboth"></div>
+						<div class="slogan-box">O Javascript está em todo lugar<br />e porque você deveria se interessar</div>
+					</section> -->
+
+					<section data-background="assets/uncle-sam.jpg" data-transition="none">
+						<div class="part"><div class="number">2</div></div>
+						<div class="clearboth"></div>
+						<div class="slogan-box"><span id="circulo" class="fragment fade-out" data-fragment-index="1">Javascript está em todo lugar<br />e porque </span><span class="fragment highlight-red" data-fragment-index="1">você</span><span class="fragment fade-out" data-fragment-index="1"> deveria se interessar</span><span class="fragment" data-fragment-index="1"><img class="circulo" width="170px" src="assets/circulo.png" /></span></div>
+						<aside class="notes">
+							<p>Vamos continuar descontruindo a frase tema da nossa apresentação. Primeiro a gente viu como o JS tava, agora a gente vai falar do VOCÊ. O VOCÊ é quem já programa em JS ou quem quer ou deve programar.</p>
+							<p>Não importa o que vc faz, é fácil aprender o js. E começar.</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>É para todos!</h1>
+					</section>
+					<section>
+						<img src="assets/designer-or-coder.jpg" width="700px" />
+						<p class="fragment">Desenvolvedores backend, desenvolvedores frontend, designers, curiosos...</p>
+
+						<aside class="notes">
+							<p>E quem são essas pessoas que programam em JS? Essa é uma parte legal do JS, ele é pra todos! Por isso ele se popularizou tanto.</p>
+							<ul>
+								<li>desenvolvedores backend</li>
+								<li>desenvolvedores frontend</li>
+								<li>designers</li>
+								<li>curiosos</li>
+								<li>qualquer um</li>
+							</ul>
+							<p>Cada um tem uma história com javascript.</p>
+							<p>Eu, por exemplo, venho do design e da usabilidade... inclusive eu era essa cara do jQuery que o Raposo falou...e acabei decidindo entra mais afundo no mundo do JS, e não só mexer em DOM e com jQuery.</p>
+							<p>[passa slide]
+						</aside>
+					</section>
+					<section>
+						<img src="assets/javascript-in-fe-and-be.jpg" class="round-border">
+						<aside class="notes">
+							<p>Então vc tem JS no frontend e no backend? Exatamente.</p>
+						</aside>
+					</section>
+					<section data-background="assets/yes.gif" data-state="header-white">
+						<aside class="notes">
+							<p>Pois é, sem precisar mudar de linguagem, de contexto... vc programa em backend e frontend!</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Facilidade</h1>
+						<aside class="notes">
+							<p>Outro fator importante é a facilidade.</p>
+							<p>O aprendizado pode ser interativo. E a própria linguagem pode ser usada pra ensinar.</p>
+						</aside>
+					</section>
+					<section data-state="header-white" data-background="assets/quadro-negro.jpg" class="white">
+						<h2>Infinitos recursos para aprender</h2>
+						<ul class="fragment aprender">
+							<li><a href="http://nodeschool.io" target="nodeschool">nodeschool.io</a></li>
+							<li><a href="http://codeschool.com" target="codeschool">codeschool.com</a></li>
+							<li><a href="https://www.codecademy.com" target="codeacademy">codecademy.com</a></li>
+							<li><a href="https://thimble.mozilla.org" target="thimble">thimble.mozilla.org</a></li>
+							<li><a href="http://github.com/ericelliott/essential-javascript-links" target="essential">github.com/ericelliott/essential-javascript-links</a></li>
+							<li><a href="http://bevacqua.github.io/promisees" target="promises">bevacqua.github.io/promisees</a></li>
+							<li>&infin;</li>
+						</ul>
+						<aside class="notes">
+							Esses são só alguns exemplos de lugares que vc pode aprender de uma maneira simples, intuitiva e inclusive prática.
+						</aside>
+					</section>
+					<section data-background="assets/quadro-negro.jpg" class="white">
+						<img src="assets/lastnight.jpg" class="round-border">
+						<aside class="notes">
+							Hoje tem tanto recurso que..... do dia pra noite vc pode virar um expert em js.
+						</aside>
+					</section>
+
+					<section>
+						<img src="assets/facilidade1.png" height="320px">
+						<img src="assets/facilidade2.png" class="fragment" height="320px">
+						<img src="assets/facilidade3.png" class="fragment" height="320px">
+						<hr>
+						<h3 class="fragment pronto">Pronto!</h3>
+						<aside class="notes">
+							<p>Então... gente viu os vários recursos que têm pra aprender.</p>
+							<p>[passa]</p>
+							<p>Vc baixa um editor de texto qualquer ou acha alguma online. Pode ser até um bloco de notas.</p>
+							<p>[passa]</p>
+							<p>Pronto! A grosso modo vc já tem tudo o que precisa pra começar!</p>
+						</aside>
+					</section>
+					<section data-background="assets/paraiso.jpg">
+						<h1 class="devtools fragment">Devtools!</h1>
+						<aside class="notes">
+							<p>Outra facilidade que o JS te proporciona são os devtools dos browsers. Vc faz o que vc quer aqui mesmo no browser. Além disso ainda facilita demais pra debugar.</p>
+							<p>Um exemplo simples aqui usando o console de devtools pra mexer no CSS da apresentação.</p>
+							<p>document.querySelector(".devtools").style.marginTop = "-165px"</p>
+							<p>document.querySelector(".devtools").innerHTML = "<div>Fui criado no devtools!</div>"</p>
+						</aside>
+					</section>
+					<section data-background="assets/500days.jpg">
+						<aside class="notes">
+					    	<p>Rafael Amorim conta que resolveu aprender Javascript porque tava na moda, os amigos falavam bem etc. Foi lá, aprendeu e se baseou em um gringo pra fazer os 500 dias de commits (500 dias seguidos que teria que fazer pelo menos um commit útil). Isso ajudaria em outro objetivo dele que era aprender a fundo o git.</p>
+					   	</aside>
+					</section>
+				</section>
+
+
+				<section>
+					<section data-transition="none">
+						<img src="assets/js.jpg" width="200px">
+						<div class="clearboth"></div>
+						<div class="slogan-box">O Javascript está em todo lugar<br />e porque você deveria se interessar</div>
+					</section>
+
+					<section data-background="assets/wally2.jpg" data-transition="none">
+						<div class="part"><div class="number">3</div></div>
+						<div class="clearboth"></div>
+						<div class="slogan-box">O Javascript está em todo lugar!</div>
+					</section>
+				</section>
+
+				<section class='white'>
+					<p><strong>Lei de Jeff Atwood</strong></p>
+					<h3 class="box padding fragment" data-fragment-index="2">
+						<em>"Any application that CAN be written in JavaScript, WILL eventually be written in JavaScript" - Jeff Atwood, 2007</em>
+					</h3>
+					<div class="fragment" data-fragment-index="1">
+						<a href="http://stackoverflow.com/" target="stackoverflow"><img src="assets/stackoverflow-logo.jpg" height="200px" /></a>
+						<a href="http://blog.codinghorror.com/" target="codinghorror"><img src="assets/codinghorror-app-icon.png" height="200px" /></a>
+					</div>
+
+					<aside class="notes">
+						<p>Jeff Atwood cunhou uma lei que se prova verdadeira a medida que o tempo passa</p>
+						<p>Ele é o criador do StackOverflow e tem um blog chamado Coding Horror</p>
+					</aside>
+				</section>
+				<section>
+
+					<section>
+						<div class="part"><div class="number">3.1</div></div>
+						<div class="clearboth"></div>
+						<div class="slogan-box">Plataformas</div>
+					</section>
+
+					<section>
+					  <h2>Browser</h2>
+					  <img src="assets/browser-logos.jpg" alt="" height="300px" />
+					</section>
+
+					<section>
+					  <img class='stretch round-border' src="assets/captain_obvious.jpg"/>
+					</section>
+
+					<section>
+					  <h2>Not so obvious!</h2>
+					  <h3>
+					    <ul>
+					      <li class="fragment"> Embarcado</li>
+					      <li class="fragment">Centrado na web</li>
+					    </ul>
+					  </h3>
+					  <aside class="notes">
+					    <p>O JavaScript nasceu embarcado</p>
+					    <p>HTML extends XML</p>
+					  </aside>
+					</section>
+
+					<section class='white' data-background='peru'>
+						<h2>Chamada do JS no browser</h2>
+						<h4 class="fragment">Apenas um recurso da página...</h4>
+
+						<div class="fragment">
+							<span class="subtitle">index.html</span>
+							<pre ><code data-trim>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+	...
+  &lt;/body&gt;
+  &lt;script src=&quot;/js/libs/lodash.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;/js/src/main.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;/html&gt;
+							</code></pre>
+						</div>
+					</section>
+
+					<section class='white' data-background='peru'>
+
+						<h2>Chamada do JS no browser</h2>
+						<h4 class="fragment">carregamento !== lógica</h4>
+
+						<div class="fragment">
+							<span class="subtitle">main.js</span>
+							<pre ><code data-trim>
+//...
+var active_users = _.filter(users, function(user){
+	return user.isActive;
+});
+//...
+								</code></pre>
+						</div>
+					</section>
+
+					<section >
+						<img src="assets/html-code.png" class="stretch" />
+					</section>
+
+					<section >
+						<img src="assets/backend.jpg" class="stretch" />
+					</section>
+
+					<section data-background="assets/nodejs.png"/></section>
+
+					<section class='white' data-background='peru'>
+						<h2>Módulos ligados logicamente</h2>
+						<div class="fragment">
+							<span class="subtitle">main.js</span>
+							<pre><code>
+var _ = require('lodash');
+//...
+var active_users = _.filter(users, function(user){
+	return user.isActive;
+});
+//...
+							</code></pre>
+						</div>
+
+					</section>
+
+					<section>
+					  <img class='stretch round-border' src="assets/event-loop.png"/>
+					</section>
+
+					<section data-background='assets/io.jpg'></section>
+
+					<section>
+						<h2>io vs node</h2>
+						<ul>
+							<li class="fragment">Open Governance vs Benevolent Dictator For Life</li>
+							<li class="fragment">Atualização do V8</li>
+							<li class="fragment">ES6+ !!</li>
+							<li class="fragment">merge resultando no nodejs v4</li>
+
+						</ul>
+					</section>
+
+					<section>
+
+					  <h2 >Mobile <span class="fragment red" data-fragment-index=2>"</span><span class="fragment red" data-fragment-index=1> (nativo!)</span><span class="fragment red" data-fragment-index=2>"</span></h2>
+						<img width="150" class='fragment' data-fragment-index=3 src="assets/cordova.png"/>
+						<img width="150" class='fragment' data-fragment-index=4 src="assets/plus.gif"/>
+						<img width="150" class='fragment' data-fragment-index=5 src="assets/angular.png"/>
+						<img width="150" class='fragment' data-fragment-index=6 src="assets/equal.png"/>
+						<img width="150" class='fragment' data-fragment-index=7 src="assets/ionic.png"/>
+						<div>
+								<img width="400" src="assets/mobile-logo.png"/>
+						</div>
+
+					</section>
+
+					<section >
+						<img src="assets/back-front.png" class="stretch" />
+					</section>
+					<section >
+						<img src="assets/nokia.jpg" class="stretch" />
+					</section>
+
+					<section >
+						<img src="assets/here-comes-a-new-challenger.png" class="stretch" />
+					</section>
+
+					<section>
+					  <h2>Desktop</h2>
+						<div class="box white fragment padding">
+							<h3 class="fragment">node/io</h3>
+							<h3 class="fragment">+</h3>
+							<h3 class="fragment"> webkit/chromium</h3>
+						</div>
+						<div class="fragment">
+							<img src="assets/nwjs.png" width="200" />
+						</div>
+
+
+					</section>
+					<section>
+							<img width='1000' src="assets/popcorn-time.png" />
+					</section>
+					<section data-background="assets/claps.gif"></section>
+
+
+					<section>
+					  <h2>Desktop</h2>
+				    	<div>
+					    	<img src="assets/atom-icon.png" class="fragment round-border" height="100" />
+							<img src="assets/electron.png" class="fragment round-border" height="100" />
+						</div>
+						<img class="fragment round-border" height="300" src="assets/electron-apps.jpg" />
+					</section>
+
+					<section class="white">
+						<h2 class="box padding">Resumindo</h2>
+						<div><img src="assets/plataformas.jpg" height="400px"></div>
+					</section>
+
+					<section>
+					  <img class='stretch round-border' src="assets/buzz-woody.jpg"/>
+					</section>
+				</section>
+
+				<section class="tooling">
+					<section>
+						<div class="part"><div class="number">3.2</div></div>
+						<div class="clearboth"></div>
+						<div class="slogan-box">Tooling</div>
+					</section>
+					<section>
+						<img height="100px" src="assets/tooling/npm.png"><!--  class="fragment" -->
+						<img height="100px" src="assets/tooling/browserify.png">
+						<img height="100px" src="assets/tooling/grunt.png">
+						<img height="100px" src="assets/tooling/gulp.png">
+					</section>
+					<section>
+						<h2><img src="assets/tooling/npm.png"></h2>
+					</section>
+					<section>
+						<h2>Dependency Hell</h2>
+						<img height="400px" src="assets/tooling/dependency1.png">
+					</section>
+					<section>
+						<img height="400px" src="assets/tooling/dependency2.png">
+					</section>
+					<section>
+						<img height="400px" src="assets/tooling/dependency3.png">
+					</section>
+					<section data-background="assets/tooling/bomb.gif"></section>
+					<section>
+						<h2>O que o npm faz?</h2>
+						<img height="400px" src="assets/tooling/dependency4.png">
+					</section>
+					<section>
+						<h2><a href="http://semver.org/" taget="semver">Semantic Versioning</a></h2>
+						<img src="assets/tooling/semver1.png">
+					</section>
+					<section>
+						<ul>
+							<li><strong>major</strong>&nbsp;- breaking</li>
+							<li><strong>minor</strong>&nbsp;- new functionality</li>
+							<li><strong>patch</strong>&nbsp;- bug fixes</li>
+						</ul>
+					</section>
+					<section>
+						<p>npm install express@2 --save</p>
+					</section>
+					<section>
+						<img class="stretch" src="assets/tooling/packagejson.png">
+					</section>
+					<section>
+						<img src="assets/tooling/browserify.jpg">
+					</section>
+					<section>
+						<h2>Task Runners</h2>
+						<img height="300px" src="assets/tooling/grunt.png">
+						<img height="300px" src="assets/tooling/gulp.png">
+					</section>
+					<section><img class="stretch" height="300px" src="assets/tooling/gulpdemo.png"></section>
+				</section>
+
+				<section>
+					<div class="part"><div class="number">3.3</div></div>
+					<div class="clearboth"></div>
+					<div class="slogan-box">Tecnologias</div>
+				</section>
+
+				<!-- NODEBOTS -->
+				<section>
+					<section>
+						<div class="slogan-box">NODEBOTS</div>
+						<div><img src="assets/nodebots.png" width="600px"></div>
+						<aside class="notes">
+							<p>Comunidade javascript tentando ganhar novas vertentes</p>
+							<p>espaço no mundo da eletronica e da robotica</p>
+							<p>O termo é usado para designar qualquer hardware, em sua maioria microcontroladores, que possam ser controlado por javascript através do ambiente de execução do node</p>
+							<p>Surgiu da iniciativa de alguns desenvolvedores de tornar mais facil a codificação pra controle de hardware e permitir que mais desenvolvedores (alto nível) pudessem usar suas ideias em projetos que envolvessem hardware</p>
+						</aside>
+					</section>
+
+					<section>
+						<img width="600px" src='assets/microcontrollers.png'>
+					</section>
+
+					<section data-background='assets/lights.gif'>
+						<pre>
+							<code>
+	$("livingroom").bind("motion", function() {
+	  $("livingroom").find("lights").on();
+	});
+							</code>
+						</pre>
+						<aside class="notes">
+							<p>Esse trecho de codigo mostra bem o que é pretendido com a filosofia nodebots (Perguntar se alguém consegue entender o que o código faz)</p>
+							<p>Fazer analogia com JQuery (facilidade de manipulação dos elementos na arvore do DOM)</p>
+							<p>A idéia por trás do Nodebots é criar abstrações mais próximas ao mundo real (Explicar código)</p>
+						</aside>
+					</section>
+
+					<section>
+						<img src="assets/platforms-nodebots.jpg" width="900px">
+
+						<aside class="notes">
+	      					<p>Particle,Respberrypi,Tessel(first 100% javascript support),IntelGalileo,BeagleBone Black</p>
+	      					<p>Nodebots surgiu 2012 com pouco suporte as plataformas, a principio só para Arduino</p>
+	      					<p>Chirs WIlliams criou o primeiro modulo que vizava a comunicação entre hardware, o modulo node serial port, varios outros modulos para comunicação por outros meios e com implementações de protocolos vieram, assim um maior suporte também</p>
+	      					<p>Mais plataformas vierarm, inclusive algumas fornecendo microcontroladores que funcionam 100% controlado por javascript como é o caso dos micros da Tessel</p>
+	      					<p>Temos também o particle que é muito usado em projetos de iot pq ele ja vem com um modulo wi-fi e tem um modulo especifico pra comunicao com ele, que é particleJS</p>
+	   					</aside>
+					</section>
+
+					<section class='nodebots'>
+
+						<figure>
+							<img src="assets/chris-williams.jpg" width="200px" class="round-border" height="200px">
+							<figcaption>
+								<a href="https://github.com/voodootikigod/node-serialport" target="nodeserialport">
+								Chris Williams: node-serialport
+								</a>
+							</figcaption>
+						</figure>
+
+						<figure>
+							<img src="assets/julian-gautier.jpg" class="round-border" width="200px" height="200px">
+							<figcaption>
+								<a href="https://github.com/jgautier/firmata" target="firmata">
+								Julian Gautier: firmata
+								</a>
+							</figcaption>
+						</figure>
+
+						<figure>
+							<img src="assets/rick-waldron.jpg" class="round-border" width="200px" height="200px">
+							<figcaption>
+								<a href="https://github.com/rwaldron/johnny-five" target="johnnyfive">
+								Rick Waldron: johnny-five
+								</a>
+							</figcaption>
+						</figure>
+					</section>
+
+					<section data-background='assets/johnny-five-bkg.png'>
+						<div style='position:absolute'>
+							<h2>Abstração...</h2>
+							<ul>
+								<li>Acelerometros</li>
+								<li>Displays LCD</li>
+								<li>Relés</li>
+								<li>Motores</li>
+								<li>Sensores</li>
+							...
+							</ul>
+						</div>
+
+					</section>
+
+					<section>
+						<h4>Hello World!</h4>
+
+						<pre>
+							<code>
+	var five = require("johnny-five");
+	var board = new five.Board();
+
+	board.on("ready", function() {
+
+	  // Create a standard `led` component instance
+	  var led = new five.Led(13);
+
+	  // "blink" the led in 500ms on-off phase periods
+	  led.blink(500);
+	});
+							</code>
+						</pre>
+						<pre>
+						<img src="assets/hello-johnny.png" width="200px">
+					</section>
+
+					<section>
+						<h1>Get Started</h1>
+						<br>
+						<br>
+						<ol>
+							<li class='fragment'>npm install johnny-five</li>
+						</ol>
+						<br><br>
+						<!-- <div class="fragment">
+							<img src='assets/thats-all.jpg' width='250px' height='250px'/>
+						</div> -->
+
+					</section>
+
+					<section>
+						<img src="assets/thats-all.jpg" class='stretch'>
+					</section>
+
+					<section data-background='assets/robots.jpg'>
+						<video class="stretch" src="assets/nodebots.mp4" controls></video>
+					</section>
+
+					<section>
+						<h1><a href='http://localhost:5005' target="ledemo">Nodebots Demo</a></h1>
+						<h3><a href="https://github.com/mNalon/led-demo" target="ledrepo">Repo</a></h3>
+					</section>
+
+				</section>
+				<!-- NODEBOTS END-->
+
+				<section>
+					<section>
+						<div class="slogan-box">WebVR &amp; Web AR</div>
+						<div>Realidade virtual no browser</div>
+						<div class="fragment">Porque?</div>
+						<ul class="fragment">
+							<li>Browser é o app mais instalado</li>
+							<li>Desktop e mobile</li>
+							<li>Código único</li>
+						</ul>
+					</section>
+					<section data-state="header-white" data-background-video="assets/webvr.mp4" data-background="#000"></section>
+					<section>
+						<h2>Exemplos</h2>
+						<ul>
+							<li><a href="http://webglvr.tumblr.com/" target="webvr-tumblr">WebVR Tumblr</a></li>
+							<li><a href="http://mozvr.com/" target="webvr-mozilla">Mozilla</a></li>
+							<li><a href="http://www.eyesinspace.com/mobile/vr/" target="webvr-eyes">Eyes in space</a></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<div class="slogan-box">WebRTC (Real-Time Communications)</div>
+						<span class="fragment"><div>Peer-to-Peer <span class="fragment">(really!)</span></div></span>
+						<span class="fragment"><div>Chats ao vivo com vídeo</div></span>
+						<span class="fragment"><div>Acesso à câmera e microfone</div></span>
+					</section>
+					<section>
+						<div>Exemplo:</div>
+						<div><a href="https://appear.in/" target="appearin">Appear In</a></div>
+					</section>
+					<section>
+						<div>
+							<span>3 componentes</span>
+							<ul>
+								<li><em>getUserMedia</em> para ter acesso a câmera e ao microfone</li>
+								<li><em>RTCPeerConnection</em> para viabilizar a comunicação de audio/vídeo</li>
+								<li><em>RTCDataChannel</em> permite a troca de <span class="fragment highlight-red mygrow">DADOS</span> peer-to-peer</li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<div class="slogan-box">Web Torrent</div>
+					</section>
+					<section>
+						Web Torrent = <span class="fragment">Protocolo Torrent</span><span class="fragment"> + Javascript</span><span class="fragment"> + Browser</span>
+						<div><span class="fragment"><div class="over-webrtc">WebRTC</div></span></div>
+					</section>
+					<section data-background="https://media.giphy.com/media/pXPOApWXuJaMw/giphy.gif" data-transition="none">
+						Web Torrent = Protocolo Torrent + Javascript + Browser
+						<div><div class="over-webrtc">WebRTC</div></div>
+
+						<aside class="notes">
+							<p>Não sei vocês, mas quando eu vi isso fiquei assim</p>
+							<p>Torrents, no browser?</p>
+							<p>Mas tudo bem, isso pode ser meio confuso [muda slide]</p>
+						</aside>
+					</section>
+					<section class="white fotos" data-background="assets/confused.gif">
+						<h3 class="box padding">Legal, maaaaaas, pra que serve?</h3>
+						<p id="pirate" class="fragment webtorrent" data-fragment-index="1">
+							<img src="assets/pirate-bay.png"/>
+						</p>
+
+						<p id="network" style="display:none" class="fragment webtorrent" data-fragment-index="3">
+							<img src="assets/networktypes.png">
+						</p>
+
+						<span class="fragment" data-fragment-index="2"><hr class="fragment banned x1 fade-out" data-fragment-index="3"></span>
+						<span class="fragment" data-fragment-index="2"><hr class="fragment banned x2 fade-out" data-fragment-index="3"></span>
+
+						<aside class="notes">
+							<p>Pra que serve torrent no browser?</p>
+							<p>Primera coisa que vem a cabeça é: torrent = pirataria</p>
+							<p>Se pensarmos em teoria de redes, temos esses 3 modelos. Centralzado, decentralizado e distribuido</p>
+							<p>Hoje os sites estão no primeiro modelo. Alguns sites federados como o Diaspora estão no segundo, aonde há nós centrais e os nós se comunicam</p>
+							<p>Torrent como todos sabem está no terceiro modelo.</p>
+							<p>Quer falar de escala?</p>
+						</aside>
+					</section>
+
+					<section class="white" data-background="assets/servers.jpg">
+						<h3 class="box padding">Quer falar de escala?</h3>
+					</section>
+
+					<section class="white" data-background="assets/browsers.gif">
+						<h3 class="box padding">Que tal se cada acesso se transformasse em um peer/seeder do site?</h3>
+						<h3 class="box padding fragment">Maaaaaas, tem um porém...</h3>
+						<aside class="notes">
+							<p>Agora imaginem que, ao acessar um site, o seu navegador passa a ser um seeder do próprio site que está sendo acessado?</p>
+							<p>Deploy distribuído de todos os assets</p>
+						</aside>
+					</section>
+
+					<section class="white" data-background="assets/man-in-middle.jpg">
+						<h3 class="box padding">Segurança</h3>
+						<h3 class="box padding">Quem garante que não vai ter um <em>man in the middle</em>?</h3>
+					</section>
+
+					<section class="white" data-background="assets/math.png">
+						<h3 class="box padding">
+							Matemática e criptografia
+						</h3>
+
+						<aside class="notes">
+							<p>Os arquivos via torrent são endereçáveis pelos hashes criptográficos do seu conteúdo.</p>
+							<p>Então é praticamente garantido que uma vez que se requisite um conteúdo pelo seu hash, este conteúdo é matematicamente verificável</p>
+						</aside>
+					</section>
+					<section data-background="assets/tooling/shia.gif"></section>
+
+				</section>
+
+				<section>
+					<section>
+						<div class="slogan-box">Web Assembly (WASM)</div>
+						<img class="fragment" src="assets/wasm/wasm.jpg">
+					</section>
+					<section class="white box padding" data-background="assets/webassembly-back.jpeg" data-state="header-white">
+						<h2>WASM</h2>
+						<p class="fragment">Definição de "assembly language": é uma linguagem de programação de baixo nível para um computador, ou outros dispositivos programaveis, que possui uma correspondência muito forte com as instruções da arquitetura da máquina.</p>
+
+						<aside class="notes">
+							<p>JavaScript é uma linguagem de programação de alto nível. Ela é interpretada para bytecode que, por sua vez, é traduzido para linguagem de máquina. Cada browser - navegador - possui a sua VM que "entende" JavaScript.</p>
+						</aside>
+
+					</section>
+					<section>
+						<h3>JavaScript - VM ubíqua instalada em todas as máquinas</h3>
+						<div class="fragment">
+							<p>Um ótimo "alvo" de compilação</p>
+							<img src="assets/wasm/target.jpg" width="300px">
+						</div>
+					</section>
+					<section>
+						<h3>Algumas linguagens...</h3>
+						<img class="fragment round-border" height="140px" src="assets/wasm/ts.png">
+						<img class="fragment round-border" height="140px" src="assets/wasm/coffeescript.png">
+						<img class="fragment round-border" height="140px" src="assets/wasm/dart.png">
+
+						<aside class="notes">
+							<p>Elas são transformadas e não compiladas e, além disso, tendem a gerar códigos JavaScript diversos.</p>
+						</aside>
+					</section>
+					<section>
+						<h2>ASM.JS</h2>
+						<p class="fragment">sub-conjunto do JavaScript</p>
+
+						<aside class="notes">
+							<p>Pensando nisso, por que não ter como "alvo" um subconjunto do JavaScript OTIMIZADO? Com foco em performance?</p>
+							<p> It’s a specialized subset of JavaScript that’s optimized for performance, especially for this use case of applications compiled to JavaScript</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Características e Limitações</h2>
+						<img src="assets/wasm/asm.png">
+
+						<aside class="notes">
+							<p>ASM.JS só é capaz de manipular uma seleção de diferentes tipos de números e nenhum outro tipo de dado ou estrutura de dados (incluindo strings, booleans, ou objects).</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Typed Arrays</h2>
+						<img src="assets/wasm/typed_arrays.png">
+
+						<aside class="notes">
+							<p>Ex.: substitui toda variável global por um objeto HEAP, que é um objeto Typed Array, que é muito otimizado para performance.</p>
+							<p>Isso faz com que o código asm seja traduzido diretamente para assembly, sem ter que interpretá-lo.</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Como a compilação funciona?</h2>
+						<p><span style="color: #F85">C/C++ </span>
+							<span style="color: #58F" class="fragment">=> LLVM </span>
+							<span style="color: #8f5" class="fragment">=> Emscripten </span>
+							<span style="color: #85F" class="fragment">=> JavaScript</span>
+						</p>
+						<aside class="notes">
+							<p>Os otimizadores LLVM usam informações de tipo para realizar otimizações úteis. Tais otimizações estão disponíveis
+							somente para código compilado. Fazer isso diretamente em JavaScript não seria prático e seria difícil de manter.</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Benchmarks realísticos</h2>
+						<img src="assets/wasm/asmbench.png">
+					</section>
+					<section>
+						<h3>Mas afinal, o que é wasm?</h3>
+						<ul>
+							<span class="fragment"><li>Uma melhoria para o JavaScript</li></span>
+							<span class="fragment"><li>Uma melhoria para o Navegador</li></span>
+							<span class="fragment"><li>Uma nova linguagem</li></span>
+							<span class="fragment"><li>Um alvo de compilação</li></span>
+						</ul>
+
+						<aside class="notes">
+							<ul>
+								<li>Implementa código performance e importa como módulo
+								<li>Browsers vão entender formato binário. Menores payloads, enrega mais rápida</li>
+								<li>... binária que pode ser debugada em formato texto</li>
+								<li>Um modo de outras linguagens conseguirem suporte binário por toda a plataforma web.</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h3>Interpretador Ruby - C++ => JavaScript</h3>
+						<div id="code-form">
+					    <div id="editor-container">
+					      <div id="editor" class=" ace_editor ace-monokai ace_dark"><textarea wrap="off" style="position: fixed; z-index: 100000; left: 324px; top: 477px;"></textarea><div class="ace_gutter"><div class="ace_gutter_active_line" style="top: 0px; height: 15.427px;"></div><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 231.854px; width: 39px;"></div></div><div class="ace_scroller" style="height: 201px; left: 39px; right: 15px;"><div class="ace_content" style="margin-top: 0px; width: 906px; height: 231.854px;"><div class="ace_layer ace_marker-layer"><div class="ace_active_line start" style="height:15.426997184753418px;width:898px;top:0px;left:0px;"></div></div><div class="ace_print_margin_layer"><div class="ace_print_margin" style="left: 483.339px; visibility: visible;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:15.426997184753418px"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer"><div class="ace_cursor ace_hidden" style="left: 4px; top: 0px; width: 5.99174px; height: 15.427px;"></div></div></div></div><div class="ace_sb" style="width: 20px; height: 201px;"><div style="height: 15.427px;"></div></div></div>
+					    </div>
+					    <button class="btn primary" id="submit-button" href="#">Submit</button>
+					  </div>
+					</section>
+					<section>
+						<h2>Ainda não está convencido?</h2>
+						<img src="assets/wasm/unreal.jpg" />
+						<p class="fragment">Milhões de linhas de código portadas em SOMENTE 4 dias!</p>
+
+					</section>
+					<section data-background="assets/wasm-mindblow.gif"></section>
+					<section>
+						<h2><a href="examples/BananaBread/index.html" target="bananabread">Demo: BananaBread</a></h2>
+					</section>
+				</section>
+
+				<!-- NODEBOTS -->
+				<section>
+					<section data-transition="none">
+						<img src="assets/js.jpg" width="200px">
+						<div class="clearboth"></div>
+						<div class="slogan-box">O Javascript está em todo lugar<br />e porque você deveria se interessar</div>
+					</section>
+
+					<section data-transition="none">
+						<div class="part"><div class="number">4</div></div>
+						<div class="clearboth"></div>
+						<div class="slogan-box">porque você deveria se interessar?</div>
+						<aside class="notes">
+							<p>Então... essa é a parte final da nossa frase. Pq vc deveria se interessar.</p>
+							<p> Não é só pq tá na moda.</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section class="white" data-background="assets/bg-amarelo.jpg">
+						<div class="box padding">
+							<h2>Além de:</h2>
+							<h3>- Estar em todo lugar</h3>
+							<h3>- Ser fácil de aprender</h3>
+							<h3>- Ser acessível a todos</h3>
+						</div>
+					</section>
+
+					<section class="white" data-background="assets/not-impressed1.gif">
+						<h3 class="box padding">Se isso não é motivo suficiente...</h3>
+					</section>
+
+					<section class="white" data-background="assets/graficos.jpg">
+						<h1 class="box padding">GRÁFICOS</h1>
+					</section>
+
+					<section>
+						<img class="stretch" src="assets/popularity.png">
+					</section>
+					<section>
+						<img class="stretch" src="assets/module-counts2.png">
+					</section>
+
+					<section class="white" data-background="assets/not-impressed2.gif">
+						<h3 class="box padding">Se isso AINDA não é o suficiente...</h3>
+					</section>
+
+					<section data-background="assets/favela.jpg" class="white">
+						<div class="slogan-box">Comunidade</div>
+						<aside class="notes">
+							<p>A comunidade gigantesca é um grande atrativo. São várias opções... Stackoverflow, Github, Google Code, Slack, Facebook e muitos outros! E tem tb os eventos.</p>
+							<p>Aí entra o braziljs, que foi um marco na comunidade de JS do Brasil.</p>
+							<p>Foi a partir da braziljs que o Brasil passou a ser alvo de grande palestrantes e se disseminou em vários outros eventos menores.</p>
+							<p>Frontins pelo Brasil e até Frontin Amsterdã criado por brasileiros do booking.com</p>
+						</aside>
+					</section>
+				</section>
+
+				<section data-background="assets/barra-shopping-sul.jpg">
+					<section>
+						<div class="slogan-box">BrazilJS</div>
+					</section>
+
+					<section class="white">
+						<span>
+							<img src="assets/braziljs.svg" width="300px">
+							<img src="assets/ticket.png" width="300px">
+						</span>
+						<h3 class="box padding">
+							<strong>A MAIOR CONFERÊNCIA JAVASCRIPT DO UNIVERSO</strong>
+						</h3>
+						<h6 class="box padding">Porto Alegre / RS</h6>
+					</section>
+					<section class="white">
+						<h3 class="box padding">1300 participantes</h3>
+						<h3 class="box padding fragment">22 palestrantes</h3>
+					</section>
+					<section class="white">
+						<div class="box padding">
+							<ul>
+								<li><strong>CHRISTIAN HEILMANN</strong> <span class="small">/ Microsoft</span></li>
+								<li class="fragment"><strong>FELIPE RIBEIRO</strong> <span class="small">/ Spotify</span></li>
+								<li class="fragment"><strong>SEBASTIAN MCKENZIE</strong> <span class="small">/ Criador do BabelJS</span></li>
+								<li class="fragment"><strong>JAMES HALLIDAY (SUBSTACK)</strong> <span class="small">/ Criador do Browserify</span></li>
+								<li class="fragment"><strong>BRENDAN EICH</strong> <span class="small">/ Criador do JavaScript</span></li>
+							</ul>
+						</div>
+					</section>
+					<section data-background="assets/palmas.gif"></section>
+					<section data-background="assets/braziljs-pano.jpg"></section>
+					<section data-background="assets/braziljs-entrada.jpg"></section>
+					<section data-background="assets/braziljs-geral.jpg"></section>
+					<section data-background="assets/braziljs-intro.jpg"></section>
+					<section data-background="assets/braziljs-brendan-eich.jpg"></section>
+					<section data-background="assets/braziljs-substack.jpg"></section>
+					<section data-background="assets/bolo.jpg"></section>
+					<section data-background="assets/braziljs-show.jpg"></section>
+					<!-- <section class="fotos" data-background="assets/braziljs-pano.jpg">
+						<img src="assets/braziljs-entrada.jpg" class="fragment">
+						<img src="assets/braziljs-geral.jpg" class="fragment">
+					</section>
+					<section class="fotos" data-background="assets/braziljs-pano.jpg">
+						<img src="assets/braziljs-pano.jpg" class="pano">
+					</section>
+					<section class="fotos" data-background="assets/braziljs-pano.jpg">
+						<img src="assets/braziljs-intro.jpg">
+						<img src="assets/braziljs-vr.jpg" class="fragment">
+					</section>
+					<section class="fotos" data-background="assets/braziljs-pano.jpg">
+						<img src="assets/braziljs-brendan-eich.jpg">
+						<img src="assets/braziljs-substack.jpg" class="fragment">
+					</section>
+					<section class="fotos" data-background="assets/braziljs-pano.jpg">
+						<img src="assets/bolo.jpg" class="round-border" width="600px">
+					</section>
+					<section class="fotos" data-background="assets/braziljs-pano.jpg">
+						<img src="assets/braziljs-show.jpg">
+						<img src="assets/braziljs-participantes.jpg" class="fragment">
+					</section> -->
+				</section>
+
+				<section>
+					<section data-transition="none">
+						<div class="part"><div class="number">5</div></div>
+						<div class="clearboth"></div>
+						<div class="slogan-box">DEMOS</div>
+						<div>Powered by Streams</div>
+					</section>
+
+					<section>
+						<div class="slogan-box">PEERFLIX</div>
+					</section>
+
+					<section>
+						<div class="slogan-box">TORRENT-MOUNT</div>
+					</section>
+
+				</section>
+
+				<section>
+					<img src="assets/js.jpg" width="200px">
+					<div class="clearboth"></div>
+					<div class="slogan-box">O Javascript está em todo lugar<br />e porque você deveria se interessar</div>
+				</section>
+
+				<section class="white">
+					<div class="box padding">
+						<h3>First they said JS couldn't be useful for building "rich Internet apps"</h3>
+						<h3>Then they said it couldn't be fast</h3>
+						<h3>Then they said it couldn't be fixed</h3>
+						<h3>Then it couldn't do multicore/GPU</h3>
+						<h3>Wrong every time!</h3>
+					</div>
+				</section>
+				<section>
+					<div class="fim-box">
+						<div class="deal-with-it">
+							<img src="assets/js.jpg" width="200px">
+							<img src="assets/oculos.png" width="290px" class="oculos fragment" data-autoslide="2000" id="oclin">
+						</div>
+					</div>
+					<h2 class="bet">
+						<div class="fragment" data-autoslide="2000">Always bet on JS</div>
+						<div class="fragment">Obrigado</div>
+					</h2>
+				</section>
+
+				<!-- FIM BRAZILJS2015 -->
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+	    var editor = ace.edit("editor");
+	    editor.setTheme("ace/theme/monokai");
+	    editor.getSession().setMode("ace/mode/ruby");
+	    editor.getSession().setTabSize(2);
+		</script>
+
+		<script type="text/javascript">
+			Reveal.addEventListener('fragmentshown', function (ev) {
+				switch (ev.fragment.id) {
+					case 'estava':
+						document.getElementById('esta').classList.add('strike', 'fragment', 'visible')
+						break
+					case 'porque':
+						ev.fragment.style.display = 'none'
+						break
+					case 'circulo':
+						document.querySelector('.slide-background.present.stack .present').classList.add('move-ass')
+					case 'network':
+						ev.fragment.previousElementSibling.style.display = 'none'
+						ev.fragment.style.display = 'block'
+					case 'oclin':
+						ev.fragment.classList.add('down');
+						break;
+				}
+			})
+
+			Reveal.addEventListener('fragmenthidden', function (ev) {
+				switch (ev.fragment.id) {
+					case 'circulo':
+						document.querySelector('.slide-background.present.stack .present').classList.remove('move-ass')
+						break
+					case 'network':
+						ev.fragment.previousElementSibling.style.display = 'block'
+						ev.fragment.style.display = 'none'
+					case 'oclin':
+						ev.fragment.classList.remove('down');
+						break;
+				}
+			})
+
+			if (window.location.href.indexOf('controls') > -1) {
+				document.querySelector('.topo').style.display = 'none';
+				document.querySelector('.footer').style.display = 'none';
+
+			}
+
+			console.log('window.location', window.location.href, location.href);
+		</script>
+	</body>
+</html>
